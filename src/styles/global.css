@@ -402,6 +402,24 @@ img {
   background: var(--surface);
 }
 
+.footer-note {
+  padding-top: 22px;
+}
+
+.footer-note p {
+  max-width: 62em;
+  margin: 0;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--line);
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.footer-note a {
+  color: var(--accent-deep);
+}
+
 .footer-inner {
   min-height: 100px;
 }
