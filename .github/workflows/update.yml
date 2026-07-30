@@ -30,6 +30,8 @@ jobs:
         run: npm ci
       - name: Update generated data
         if: github.event_name != 'push'
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run update
       - name: Commit generated data
         if: github.event_name != 'push'

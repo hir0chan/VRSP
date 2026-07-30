@@ -96,9 +96,9 @@ img {
   gap: 10px;
   align-items: center;
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 2.6vw, 1.05rem);
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.05em;
   text-decoration: none;
 }
 
@@ -486,8 +486,14 @@ img {
     min-height: 62px;
   }
 
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 2px;
+    padding-block: 10px;
+  }
+
   .header-inner > p {
-    display: none;
+    margin: 0;
   }
 
   .hero {

@@ -38,11 +38,11 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
   <body>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href={import.meta.env.BASE_URL} aria-label="VRSP ホーム">
+        <a class="brand" href={import.meta.env.BASE_URL} aria-label="VRChat Stream Schedule Portal ホーム">
           <span class="brand-mark" aria-hidden="true"></span>
-          <span>VRSP</span>
+          <span>VRChat Stream Schedule Portal</span>
         </a>
-        <p>VRChat Stream Schedule Portal</p>
+        <p>最終更新: <time datetime={updatedAt}>{updatedLabel} JST</time></p>
       </div>
     </header>
     <main class="shell">
@@ -81,7 +81,6 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
             </a>
           </span>
         </p>
-        <p>最終更新: <time datetime={updatedAt}>{updatedLabel} JST</time></p>
       </div>
     </footer>
   </body>

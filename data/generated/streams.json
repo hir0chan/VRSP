@@ -1,112 +1,235 @@
 {
-  "updatedAt": "2026-07-30T14:41:51.442Z",
+  "updatedAt": "2026-07-30T14:57:43.116Z",
   "streams": [
     {
-      "id": "mock-live-1",
-      "streamerId": "zasan",
-      "title": "ざぁさんのライブ配信 #1",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-live-1",
-      "status": "live",
-      "scheduledStart": "2026-07-30T13:56:51.442Z",
-      "actualStart": "2026-07-30T14:06:51.442Z",
-      "viewers": 128
-    },
-    {
-      "id": "mock-live-2",
+      "id": "wnWY0ZtIvXA",
       "streamerId": "miraicha",
-      "title": "みらいちゃのライブ配信 #2",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-live-2",
-      "status": "live",
-      "scheduledStart": "2026-07-30T13:36:51.442Z",
-      "actualStart": "2026-07-30T13:46:51.442Z",
-      "viewers": 445
+      "title": "【#雑談 】初見さん大歓迎！！Xフォロワーさん「５０人」で１万人だああ！！！【みらいちゃ/Miraicha】",
+      "thumbnail": "https://i.ytimg.com/vi/wnWY0ZtIvXA/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=wnWY0ZtIvXA",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T12:00:00Z",
+      "actualStart": "2026-07-30T12:06:50Z",
+      "actualEnd": "2026-07-30T14:13:36Z"
     },
     {
-      "id": "mock-upcoming-3",
-      "streamerId": "stanmi",
-      "title": "スタンミの配信予定 #1",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-3",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T14:46:23.581Z"
-    },
-    {
-      "id": "mock-upcoming-4",
-      "streamerId": "miruton",
-      "title": "みるとんの配信予定 #2",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-4",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T14:50:55.721Z"
-    },
-    {
-      "id": "mock-upcoming-5",
-      "streamerId": "moguin",
-      "title": "もぐいんの配信予定 #3",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-5",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T14:55:27.860Z"
-    },
-    {
-      "id": "mock-upcoming-6",
-      "streamerId": "nojaoji",
-      "title": "のじゃおじの配信予定 #1",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-6",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T14:41:51.442Z"
-    },
-    {
-      "id": "mock-upcoming-7",
+      "id": "7XhPGKY6jwo",
       "streamerId": "sobapro",
-      "title": "そばぷろっの配信予定 #2",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-7",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T20:41:51.442Z"
+      "title": "そばぷろ納涼花火大会　#vrchat 　#そばぷろ",
+      "thumbnail": "https://i.ytimg.com/vi/7XhPGKY6jwo/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=7XhPGKY6jwo",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T12:00:00Z",
+      "actualStart": "2026-07-30T12:01:18Z",
+      "actualEnd": "2026-07-30T13:09:22Z"
     },
     {
-      "id": "mock-upcoming-8",
-      "streamerId": "benishake",
-      "title": "紅シャケの配信予定 #3",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-8",
-      "status": "upcoming",
-      "scheduledStart": "2026-08-01T02:41:51.442Z"
-    },
-    {
-      "id": "mock-upcoming-9",
-      "streamerId": "bokutanuki",
-      "title": "ぼくたぬきの配信予定 #4",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-9",
-      "status": "upcoming",
-      "scheduledStart": "2026-08-01T08:41:51.442Z"
-    },
-    {
-      "id": "mock-ended-10",
+      "id": "Moelzf7sckA",
       "streamerId": "tachibana-rikka",
-      "title": "立花六華のアーカイブ #1",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-ended-10",
+      "title": "【VRChat】友達がモテ男すぎて嫉妬心が燃えてる",
+      "thumbnail": "https://i.ytimg.com/vi/Moelzf7sckA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=Moelzf7sckA",
       "status": "ended",
-      "scheduledStart": "2026-07-30T08:41:51.442Z",
-      "actualStart": "2026-07-30T08:51:51.442Z",
-      "actualEnd": "2026-07-30T10:51:51.442Z"
+      "scheduledStart": "2026-07-30T05:30:00Z",
+      "actualStart": "2026-07-30T05:30:25Z",
+      "actualEnd": "2026-07-30T07:02:45Z"
     },
     {
-      "id": "mock-ended-11",
+      "id": "yWLv8GFDN5A",
       "streamerId": "sushitaro",
-      "title": "ワイルド寿司太郎のアーカイブ #2",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-ended-11",
+      "title": "【VRChat】ありがとう。",
+      "thumbnail": "https://i.ytimg.com/vi/yWLv8GFDN5A/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=yWLv8GFDN5A",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T12:00:00Z"
+    },
+    {
+      "id": "NpV5K4UnDLg",
+      "streamerId": "okatsu-yusu",
+      "title": "【#雑談】かわいいVTuberのゆうすちゃんとデートができる雑談 【#VRChat】",
+      "thumbnail": "https://i.ytimg.com/vi/NpV5K4UnDLg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=NpV5K4UnDLg",
       "status": "ended",
-      "scheduledStart": "2026-07-30T06:41:51.442Z",
-      "actualStart": "2026-07-30T06:51:51.442Z",
-      "actualEnd": "2026-07-30T08:51:51.442Z"
+      "scheduledStart": "2026-07-30T12:30:00Z",
+      "actualStart": "2026-07-30T12:27:03Z",
+      "actualEnd": "2026-07-30T13:19:32Z"
+    },
+    {
+      "id": "L0yPx-jESSg",
+      "streamerId": "aomitsu-shisheru",
+      "title": "【VRChat】30分ほど雑談 【あおみつししぇる】",
+      "thumbnail": "https://i.ytimg.com/vi/L0yPx-jESSg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=L0yPx-jESSg",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T09:07:52Z",
+      "actualStart": "2026-07-30T09:08:18Z",
+      "actualEnd": "2026-07-30T09:41:46Z"
+    },
+    {
+      "id": "KizxUjTVFuY",
+      "streamerId": "higan-ryokan",
+      "title": "【VRChatイベント】おうまがとき4周年情報や新FAワールドなど！夏も祭りで楽しもう🍶✨【#おうまがときVRC】",
+      "thumbnail": "https://i.ytimg.com/vi/KizxUjTVFuY/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=KizxUjTVFuY",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T13:00:00Z",
+      "actualStart": "2026-07-30T13:02:44Z",
+      "actualEnd": "2026-07-30T14:32:57Z"
+    },
+    {
+      "id": "2lY8DTRSy4Y",
+      "streamerId": "shinroumei",
+      "title": "#27【Escape from Tarkov】シュタボやらなんやらかんやらやるっ！！！！！！！！！！！！！！！【個人勢｜清楼銘】",
+      "thumbnail": "https://i.ytimg.com/vi/2lY8DTRSy4Y/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=2lY8DTRSy4Y",
+      "status": "live",
+      "scheduledStart": "2026-07-30T14:45:00Z",
+      "actualStart": "2026-07-30T14:46:14Z",
+      "viewers": 5
+    },
+    {
+      "id": "5GAUGwIxpdA",
+      "streamerId": "shinroumei",
+      "title": "#9日目【RUST】スクラップ数50万個への道・・・残465,404個 #YGSRUST 【個人勢｜清楼銘】",
+      "thumbnail": "https://i.ytimg.com/vi/5GAUGwIxpdA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=5GAUGwIxpdA",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T14:00:00Z",
+      "actualStart": "2026-07-30T14:04:24Z",
+      "actualEnd": "2026-07-30T14:44:11Z"
+    },
+    {
+      "id": "5uKHitjtzgM",
+      "streamerId": "shinroumei",
+      "title": "【VRChat】雑談・ワールド探索配信【個人勢｜清楼銘】",
+      "thumbnail": "https://i.ytimg.com/vi/5uKHitjtzgM/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5uKHitjtzgM",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T06:00:00Z",
+      "actualStart": "2026-07-30T06:48:33Z",
+      "actualEnd": "2026-07-30T09:31:10Z"
+    },
+    {
+      "id": "T7GZfKIzGm4",
+      "streamerId": "shinroumei",
+      "title": "#26【Escape from Tarkov】アプデ前の駆け込みタスク消化！！！！！！！！！！！！！！！【個人勢｜清楼銘】",
+      "thumbnail": "https://i.ytimg.com/vi/T7GZfKIzGm4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=T7GZfKIzGm4",
+      "status": "ended",
+      "scheduledStart": "2026-07-29T17:00:00Z",
+      "actualStart": "2026-07-29T16:49:44Z",
+      "actualEnd": "2026-07-29T19:14:39Z"
+    },
+    {
+      "id": "V0EqMdBYunE",
+      "streamerId": "shinroumei",
+      "title": "#8日目【RUST】スクラップ数50万個への道・・・残486,481個 #YGSRUST 【個人勢｜清楼銘】",
+      "thumbnail": "https://i.ytimg.com/vi/V0EqMdBYunE/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=V0EqMdBYunE",
+      "status": "ended",
+      "scheduledStart": "2026-07-29T14:00:00Z",
+      "actualStart": "2026-07-29T14:02:00Z",
+      "actualEnd": "2026-07-29T16:48:38Z"
+    },
+    {
+      "id": "6o66vb3t_ts",
+      "streamerId": "koge",
+      "title": "【同時視聴会】VR演劇「つぎはぎファミリー」メンバーと裏話ありオマケあり⁉の感想会☆【Vtuber/こげ】",
+      "thumbnail": "https://i.ytimg.com/vi/6o66vb3t_ts/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=6o66vb3t_ts",
+      "status": "ended",
+      "scheduledStart": "2026-07-29T13:00:00Z",
+      "actualStart": "2026-07-29T13:01:02Z",
+      "actualEnd": "2026-07-29T15:04:48Z"
+    },
+    {
+      "id": "BsdMRjGfKF8",
+      "streamerId": "koge",
+      "title": "【VRChat/イベント中継配信】7/31(金)「まほろばのれん街」からイベント中継☆こげこげ亭へおいでませ～！【Vtuber/こげ】",
+      "thumbnail": "https://i.ytimg.com/vi/BsdMRjGfKF8/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=BsdMRjGfKF8",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T13:00:00Z"
+    },
+    {
+      "id": "pfCWfrEH_0A",
+      "streamerId": "yokibui",
+      "title": "【朝配信#488】ＮＥＷワールドを巡る【#VRChat /#よきぶいっ！】",
+      "thumbnail": "https://i.ytimg.com/vi/pfCWfrEH_0A/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=pfCWfrEH_0A",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T00:00:00Z",
+      "actualStart": "2026-07-29T23:59:51Z",
+      "actualEnd": "2026-07-30T04:16:34Z"
+    },
+    {
+      "id": "SCnpn2YIzUg",
+      "streamerId": "yokibui",
+      "title": "【朝配信#489】ＮＥＷワールドを巡る【#VRChat /#よきぶいっ！】",
+      "thumbnail": "https://i.ytimg.com/vi/SCnpn2YIzUg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=SCnpn2YIzUg",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-30T22:30:00Z"
+    },
+    {
+      "id": "4vHxIlnJN1A",
+      "streamerId": "nekozaki-ayane",
+      "title": "ねこざきあやねの「ねこねこおさんぽ旅」[100日目]",
+      "thumbnail": "https://i.ytimg.com/vi/4vHxIlnJN1A/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=4vHxIlnJN1A",
+      "status": "upcoming",
+      "scheduledStart": "2026-08-02T12:00:00Z"
+    },
+    {
+      "id": "jwFLdGEK_Sg",
+      "streamerId": "kamui-yuki",
+      "title": "【 #VR迷子 】Spice Of Tournament AGroup 予選【 #vrchat  】",
+      "thumbnail": "https://i.ytimg.com/vi/jwFLdGEK_Sg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=jwFLdGEK_Sg",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T13:00:00Z"
+    },
+    {
+      "id": "ozr7-fMSJoA",
+      "streamerId": "kazuraji",
+      "title": "第59回 カズらじっ！殻野さなぎさん",
+      "thumbnail": "https://i.ytimg.com/vi/ozr7-fMSJoA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=ozr7-fMSJoA",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T12:00:00Z"
+    },
+    {
+      "id": "UnbSGxA2UMc",
+      "streamerId": "jun3",
+      "title": "【雑談】第11回 お昼雑談",
+      "thumbnail": "https://i.ytimg.com/vi/UnbSGxA2UMc/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=UnbSGxA2UMc",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T03:00:00Z",
+      "actualStart": "2026-07-30T03:01:38Z",
+      "actualEnd": "2026-07-30T04:07:10Z"
+    },
+    {
+      "id": "510vfkmIuHc",
+      "streamerId": "mireha",
+      "title": "【VRChat/初見歓迎】1部のワールドに思うところがあってじゃな…【雑談配信】",
+      "thumbnail": "https://i.ytimg.com/vi/510vfkmIuHc/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=510vfkmIuHc",
+      "status": "ended",
+      "scheduledStart": "2026-07-29T12:30:00Z",
+      "actualStart": "2026-07-30T12:31:15Z",
+      "actualEnd": "2026-07-30T13:01:29Z"
+    },
+    {
+      "id": "hkhJ5gs5GJE",
+      "streamerId": "chitose-ai",
+      "title": "【朝活/雑談】おはよう、何回いえるかな！【 #千歳愛 / VRChat 】",
+      "thumbnail": "https://i.ytimg.com/vi/hkhJ5gs5GJE/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=hkhJ5gs5GJE",
+      "status": "ended",
+      "scheduledStart": "2026-07-29T23:30:00Z",
+      "actualStart": "2026-07-29T23:31:22Z",
+      "actualEnd": "2026-07-30T00:19:04Z"
     }
   ]
 }
