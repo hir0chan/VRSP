@@ -133,6 +133,27 @@ pushは私の指示あるまでしないで
 
 ---
 
+google analytics 仕込みたいです。
+今どういう手順でしたっけ？
+
+---
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1W4WBHBGE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B1W4WBHBGE');
+</script>
+```
+
+上記となります。
+
+---
+
 !
 skillsへの対応
 

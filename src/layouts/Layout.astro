@@ -34,6 +34,16 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
     />
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-B1W4WBHBGE"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-B1W4WBHBGE");
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -54,7 +64,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
           本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat
           以外のコンテンツが掲載されることがあります。掲載をご希望の方は
           X <a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">@hir0chan_vrc</a>
-          までご連絡ください。
+          までご連絡ください。本サイトはアクセス状況の把握のため Google Analytics を使用しています。
         </p>
       </div>
       <div class="shell footer-inner">
