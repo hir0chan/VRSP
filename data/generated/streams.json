@@ -1,0 +1,112 @@
+{
+  "updatedAt": "2026-07-30T12:19:48.177Z",
+  "streams": [
+    {
+      "id": "mock-live-1",
+      "streamerId": "neon-harbor",
+      "title": "ネオン・ハーバーのライブ配信 #1",
+      "thumbnail": "images/thumbnail-1.svg",
+      "url": "https://www.youtube.com/watch?v=mock-live-1",
+      "status": "live",
+      "scheduledStart": "2026-07-30T11:34:48.177Z",
+      "actualStart": "2026-07-30T11:44:48.177Z",
+      "viewers": 128
+    },
+    {
+      "id": "mock-upcoming-6",
+      "streamerId": "neon-harbor",
+      "title": "ネオン・ハーバーの配信予定 #1",
+      "thumbnail": "images/thumbnail-3.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-6",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T12:19:48.177Z"
+    },
+    {
+      "id": "mock-ended-11",
+      "streamerId": "neon-harbor",
+      "title": "ネオン・ハーバーのアーカイブ #2",
+      "thumbnail": "images/thumbnail-2.svg",
+      "url": "https://www.youtube.com/watch?v=mock-ended-11",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T04:19:48.177Z",
+      "actualStart": "2026-07-30T04:29:48.177Z",
+      "actualEnd": "2026-07-30T06:29:48.177Z"
+    },
+    {
+      "id": "mock-live-2",
+      "streamerId": "komorebi-lab",
+      "title": "木漏日ラボのライブ配信 #2",
+      "thumbnail": "images/thumbnail-2.svg",
+      "url": "https://www.youtube.com/watch?v=mock-live-2",
+      "status": "live",
+      "scheduledStart": "2026-07-30T11:14:48.177Z",
+      "actualStart": "2026-07-30T11:24:48.177Z",
+      "viewers": 445
+    },
+    {
+      "id": "mock-upcoming-7",
+      "streamerId": "komorebi-lab",
+      "title": "木漏日ラボの配信予定 #2",
+      "thumbnail": "images/thumbnail-1.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-7",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-31T18:19:48.177Z"
+    },
+    {
+      "id": "mock-upcoming-3",
+      "streamerId": "lunar-palette",
+      "title": "ルナ・パレットの配信予定 #1",
+      "thumbnail": "images/thumbnail-3.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-3",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-30T12:59:51.132Z"
+    },
+    {
+      "id": "mock-upcoming-8",
+      "streamerId": "lunar-palette",
+      "title": "ルナ・パレットの配信予定 #3",
+      "thumbnail": "images/thumbnail-2.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-8",
+      "status": "upcoming",
+      "scheduledStart": "2026-08-01T00:19:48.177Z"
+    },
+    {
+      "id": "mock-upcoming-4",
+      "streamerId": "virtual-picnic",
+      "title": "バーチャル・ピクニックの配信予定 #2",
+      "thumbnail": "images/thumbnail-1.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-4",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-30T13:39:54.088Z"
+    },
+    {
+      "id": "mock-upcoming-9",
+      "streamerId": "virtual-picnic",
+      "title": "バーチャル・ピクニックの配信予定 #4",
+      "thumbnail": "images/thumbnail-3.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-9",
+      "status": "upcoming",
+      "scheduledStart": "2026-08-01T06:19:48.177Z"
+    },
+    {
+      "id": "mock-upcoming-5",
+      "streamerId": "midnight-orbit",
+      "title": "ミッドナイト・オービットの配信予定 #3",
+      "thumbnail": "images/thumbnail-2.svg",
+      "url": "https://www.youtube.com/watch?v=mock-upcoming-5",
+      "status": "upcoming",
+      "scheduledStart": "2026-07-30T14:19:57.044Z"
+    },
+    {
+      "id": "mock-ended-10",
+      "streamerId": "midnight-orbit",
+      "title": "ミッドナイト・オービットのアーカイブ #1",
+      "thumbnail": "images/thumbnail-1.svg",
+      "url": "https://www.youtube.com/watch?v=mock-ended-10",
+      "status": "ended",
+      "scheduledStart": "2026-07-30T06:19:48.177Z",
+      "actualStart": "2026-07-30T06:29:48.177Z",
+      "actualEnd": "2026-07-30T08:29:48.177Z"
+    }
+  ]
+}

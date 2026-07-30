@@ -1,0 +1,39 @@
+---
+import type { JoinedStream } from "../lib/classify.js";
+
+interface Props {
+  stream: JoinedStream;
+  thumbnailUrl: string;
+}
+
+const { stream, thumbnailUrl } = Astro.props;
+const startLabel =
+  stream.actualStart === undefined
+    ? undefined
+    : new Intl.DateTimeFormat("ja-JP", {
+        timeZone: "Asia/Tokyo",
+        hour: "2-digit",
+        minute: "2-digit",
+      }).format(new Date(stream.actualStart));
+---
+
+<article class="live-card">
+  <div class="thumbnail-wrap">
+    <img src={thumbnailUrl} alt="" width="1280" height="720" loading="eager" />
+    <span class="live-badge"><span aria-hidden="true"></span>LIVE</span>
+  </div>
+  <div class="live-card-body">
+    <div>
+      <p class="streamer-name">{stream.streamer.name}</p>
+      <h3>{stream.title}</h3>
+      <div class="stream-meta">
+        {startLabel !== undefined && <span>{startLabel} 配信開始</span>}
+        {stream.viewers !== undefined && <span>{stream.viewers.toLocaleString("ja-JP")} 人が視聴中</span>}
+      </div>
+    </div>
+    <a class="watch-button" href={stream.url} target="_blank" rel="noreferrer">
+      YouTubeで視聴
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>

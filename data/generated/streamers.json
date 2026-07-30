@@ -1,0 +1,35 @@
+{
+  "updatedAt": "2026-07-30T12:19:48.177Z",
+  "streamers": [
+    {
+      "id": "neon-harbor",
+      "name": "ネオン・ハーバー",
+      "youtubeChannelId": "UC_MOCK_NEON_HARBOR",
+      "enabled": true
+    },
+    {
+      "id": "komorebi-lab",
+      "name": "木漏日ラボ",
+      "youtubeChannelId": "UC_MOCK_KOMOREBI_LAB",
+      "enabled": true
+    },
+    {
+      "id": "lunar-palette",
+      "name": "ルナ・パレット",
+      "youtubeChannelId": "UC_MOCK_LUNAR_PALETTE",
+      "enabled": true
+    },
+    {
+      "id": "virtual-picnic",
+      "name": "バーチャル・ピクニック",
+      "youtubeChannelId": "UC_MOCK_VIRTUAL_PICNIC",
+      "enabled": true
+    },
+    {
+      "id": "midnight-orbit",
+      "name": "ミッドナイト・オービット",
+      "youtubeChannelId": "UC_MOCK_MIDNIGHT_ORBIT",
+      "enabled": true
+    }
+  ]
+}

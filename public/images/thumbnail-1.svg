@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="配信サムネイルのプレースホルダー">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DDF2FF"/>
+      <stop offset="1" stop-color="#F6FBFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <circle cx="1060" cy="120" r="72" fill="#FFD982"/>
+  <g fill="#FFFFFF" opacity=".95">
+    <ellipse cx="218" cy="154" rx="112" ry="42"/>
+    <circle cx="162" cy="139" r="48"/>
+    <circle cx="239" cy="120" r="62"/>
+    <ellipse cx="820" cy="214" rx="104" ry="38"/>
+    <circle cx="777" cy="190" r="45"/>
+    <circle cx="846" cy="184" r="54"/>
+  </g>
+  <path d="M0 566 230 352 405 496 630 278 850 500 1035 344 1280 545V720H0Z" fill="#A9DCC7"/>
+  <path d="M0 626 250 470 470 602 710 424 930 590 1110 466 1280 574V720H0Z" fill="#72C3A6"/>
+  <circle cx="590" cy="390" r="86" fill="#FDEFEF"/>
+  <path d="m568 342 94 48-94 48Z" fill="#E8484E"/>
+</svg>

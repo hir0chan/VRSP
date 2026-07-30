@@ -1,0 +1,32 @@
+---
+import type { JoinedStream } from "../lib/classify.js";
+
+interface Props {
+  stream: JoinedStream;
+  thumbnailUrl: string;
+}
+
+const { stream, thumbnailUrl } = Astro.props;
+const startLabel =
+  stream.scheduledStart === undefined
+    ? "時刻未定"
+    : new Intl.DateTimeFormat("ja-JP", {
+        timeZone: "Asia/Tokyo",
+        hour: "2-digit",
+        minute: "2-digit",
+      }).format(new Date(stream.scheduledStart));
+---
+
+<article class="stream-card">
+  <a class="card-link" href={stream.url} target="_blank" rel="noreferrer" aria-label={`${stream.title}をYouTubeで見る`}>
+    <div class="thumbnail-wrap">
+      <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />
+      <time datetime={stream.scheduledStart}>{startLabel}</time>
+    </div>
+    <div class="stream-card-body">
+      <p class="streamer-name">{stream.streamer.name}</p>
+      <h3>{stream.title}</h3>
+      <span class="card-action">配信ページへ <span aria-hidden="true">↗</span></span>
+    </div>
+  </a>
+</article>

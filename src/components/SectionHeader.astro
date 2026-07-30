@@ -1,0 +1,17 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  count?: number;
+}
+
+const { eyebrow, title, count } = Astro.props;
+---
+
+<header class="section-header">
+  <div>
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+  </div>
+  {count !== undefined && <span class="count" aria-label={`${count}件`}>{count}</span>}
+</header>

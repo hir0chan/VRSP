@@ -1,0 +1,77 @@
+---
+import streamsData from "../../data/generated/streams.json";
+import streamersData from "../../data/generated/streamers.json";
+import LiveCard from "../components/LiveCard.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import StreamCard from "../components/StreamCard.astro";
+import Layout from "../layouts/Layout.astro";
+import { classifyStreams } from "../lib/classify.js";
+import type { GeneratedStreams } from "../../scripts/models.js";
+
+// generated は型付き update スクリプトだけが書き込むため、表示側では再検証しない。
+const generatedStreams = streamsData as unknown as GeneratedStreams;
+const sections = classifyStreams(
+  generatedStreams.streams,
+  streamersData.streamers,
+  new Date(),
+);
+const thumbnailUrl = (path: string): string => `${import.meta.env.BASE_URL}${path}`;
+---
+
+<Layout title="VRSP | VRChat 配信スケジュール" updatedAt={generatedStreams.updatedAt}>
+  <section class="hero" aria-labelledby="page-title">
+    <p class="eyebrow">VRCHAT STREAM SCHEDULE</p>
+    <h1 id="page-title">今日、バーチャルの<br /><em>どこへ行く？</em></h1>
+    <p class="hero-copy">VRChatを旅する配信者たちのライブと、これから始まる配信をひとつの場所で。</p>
+  </section>
+
+  {
+    sections.live.length > 0 && (
+      <section class="schedule-section live-section" aria-labelledby="live-heading">
+        <SectionHeader eyebrow="BROADCASTING NOW" title="NOW ON LIVE" count={sections.live.length} />
+        <div class="live-grid" id="live-heading">
+          {sections.live.map((stream) => (
+            <LiveCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="schedule-section" aria-labelledby="today-heading">
+    <SectionHeader eyebrow="TODAY IN JST" title="本日の配信" count={sections.today.length} />
+    {
+      sections.today.length > 0 ? (
+        <div class="card-grid" id="today-heading">
+          {sections.today.map((stream) => (
+            <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state" id="today-heading">本日の配信予定はありません。</p>
+      )
+    }
+  </section>
+
+  <section class="schedule-section" aria-labelledby="upcoming-heading">
+    <SectionHeader eyebrow="SAVE THE DATE" title="今後の配信" />
+    <div class="upcoming-list" id="upcoming-heading">
+      {
+        sections.upcoming.length > 0 ? (
+          sections.upcoming.map((group) => (
+            <section class="date-group">
+              <h3>{group.label}</h3>
+              <div class="card-grid">
+                {group.streams.map((stream) => (
+                  <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} />
+                ))}
+              </div>
+            </section>
+          ))
+        ) : (
+          <p class="empty-state">今後の配信予定はありません。</p>
+        )
+      }
+    </div>
+  </section>
+</Layout>

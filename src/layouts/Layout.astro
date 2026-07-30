@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  updatedAt: string;
+}
+
+const { title, updatedAt } = Astro.props;
+const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+}).format(new Date(updatedAt));
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="VRChatを楽しむ架空の配信者たちのライブ予定をまとめたMVPポータルです。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon.svg`} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href={import.meta.env.BASE_URL} aria-label="VRSP ホーム">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>VRSP</span>
+        </a>
+        <p>VRChat STREAM SCHEDULE</p>
+      </div>
+    </header>
+    <main class="shell">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>VRChat Schedule Portal</p>
+        <p>最終更新: <time datetime={updatedAt}>{updatedLabel} JST</time></p>
+      </div>
+    </footer>
+  </body>
+</html>
