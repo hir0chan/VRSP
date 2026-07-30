@@ -5,9 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
-  # モック期間中は自動更新せず、API 連携時に有効化する。
-  # schedule:
-  #   - cron: "*/15 * * * *"
+  schedule:
+    - cron: "*/15 * * * *"
 
 concurrency:
   group: pages-deploy
