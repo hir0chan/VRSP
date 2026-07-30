@@ -6,6 +6,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 import StreamCard from "../components/StreamCard.astro";
 import Layout from "../layouts/Layout.astro";
 import { classifyStreams } from "../lib/classify.js";
+import { resolveThumbnailUrl } from "../lib/thumbnail.js";
 import type { GeneratedStreams } from "../../scripts/models.js";
 
 // generated は型付き update スクリプトだけが書き込むため、表示側では再検証しない。
@@ -15,7 +16,8 @@ const sections = classifyStreams(
   streamersData.streamers,
   new Date(),
 );
-const thumbnailUrl = (path: string): string => `${import.meta.env.BASE_URL}${path}`;
+const thumbnailUrl = (path: string): string =>
+  resolveThumbnailUrl(path, import.meta.env.BASE_URL);
 ---
 
 <Layout title="VRSP | VRChat 配信スケジュール" updatedAt={generatedStreams.updatedAt}>

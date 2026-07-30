@@ -1,20 +1,21 @@
-- id: neon-harbor
-  name: ネオン・ハーバー
-  youtubeChannelId: UC_MOCK_NEON_HARBOR
+# channelId は YouTube Data API (channels.list) で実在・名称を検証済み (2026-07-30)
+- id: zasan
+  name: ざぁさん
+  youtubeChannelId: UCIZwudhBeEswXhLqZGJoomQ
   enabled: true
-- id: komorebi-lab
-  name: 木漏日ラボ
-  youtubeChannelId: UC_MOCK_KOMOREBI_LAB
+- id: miraicha
+  name: みらいちゃ
+  youtubeChannelId: UC01PjJltVgLI0BeA-Z4BARQ
   enabled: true
-- id: lunar-palette
-  name: ルナ・パレット
-  youtubeChannelId: UC_MOCK_LUNAR_PALETTE
+- id: stanmi
+  name: スタンミ
+  youtubeChannelId: UCcGSTI830YkwaocFV31Q7MA
   enabled: true
-- id: virtual-picnic
-  name: バーチャル・ピクニック
-  youtubeChannelId: UC_MOCK_VIRTUAL_PICNIC
+- id: miruton
+  name: みるとん
+  youtubeChannelId: UCaxX-RQJwuhnB5ajpYKVEVA
   enabled: true
-- id: midnight-orbit
-  name: ミッドナイト・オービット
-  youtubeChannelId: UC_MOCK_MIDNIGHT_ORBIT
+- id: moguin
+  name: もぐいん
+  youtubeChannelId: UCHQTizSjr-7hqhv35WnzaHA
   enabled: true

@@ -1,112 +1,38 @@
 {
-  "updatedAt": "2026-07-30T12:19:48.177Z",
+  "updatedAt": "2026-07-30T14:02:51.614Z",
   "streams": [
     {
-      "id": "mock-live-1",
-      "streamerId": "neon-harbor",
-      "title": "ネオン・ハーバーのライブ配信 #1",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-live-1",
-      "status": "live",
-      "scheduledStart": "2026-07-30T11:34:48.177Z",
-      "actualStart": "2026-07-30T11:44:48.177Z",
-      "viewers": 128
-    },
-    {
-      "id": "mock-upcoming-6",
-      "streamerId": "neon-harbor",
-      "title": "ネオン・ハーバーの配信予定 #1",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-6",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T12:19:48.177Z"
-    },
-    {
-      "id": "mock-ended-11",
-      "streamerId": "neon-harbor",
-      "title": "ネオン・ハーバーのアーカイブ #2",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-ended-11",
+      "id": "iRFUJqY2M1c",
+      "streamerId": "zasan",
+      "title": "VRChatで彼氏が出来て、結婚する予定の方。しかもそのきっかけが俺の動画の人と話す。【視聴者と話そう】",
+      "thumbnail": "https://i.ytimg.com/vi/iRFUJqY2M1c/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=iRFUJqY2M1c",
       "status": "ended",
-      "scheduledStart": "2026-07-30T04:19:48.177Z",
-      "actualStart": "2026-07-30T04:29:48.177Z",
-      "actualEnd": "2026-07-30T06:29:48.177Z"
+      "scheduledStart": "2026-07-29T12:00:00Z",
+      "actualStart": "2026-07-29T12:00:38Z",
+      "actualEnd": "2026-07-29T14:34:12Z"
     },
     {
-      "id": "mock-live-2",
-      "streamerId": "komorebi-lab",
-      "title": "木漏日ラボのライブ配信 #2",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-live-2",
+      "id": "wnWY0ZtIvXA",
+      "streamerId": "miraicha",
+      "title": "【#雑談 】初見さん大歓迎！！Xフォロワーさん「５０人」で１万人だああ！！！【みらいちゃ/Miraicha】",
+      "thumbnail": "https://i.ytimg.com/vi/wnWY0ZtIvXA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=wnWY0ZtIvXA",
       "status": "live",
-      "scheduledStart": "2026-07-30T11:14:48.177Z",
-      "actualStart": "2026-07-30T11:24:48.177Z",
-      "viewers": 445
+      "scheduledStart": "2026-07-30T12:00:00Z",
+      "actualStart": "2026-07-30T12:06:50Z",
+      "viewers": 43
     },
     {
-      "id": "mock-upcoming-7",
-      "streamerId": "komorebi-lab",
-      "title": "木漏日ラボの配信予定 #2",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-7",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T18:19:48.177Z"
-    },
-    {
-      "id": "mock-upcoming-3",
-      "streamerId": "lunar-palette",
-      "title": "ルナ・パレットの配信予定 #1",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-3",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T12:59:51.132Z"
-    },
-    {
-      "id": "mock-upcoming-8",
-      "streamerId": "lunar-palette",
-      "title": "ルナ・パレットの配信予定 #3",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-8",
-      "status": "upcoming",
-      "scheduledStart": "2026-08-01T00:19:48.177Z"
-    },
-    {
-      "id": "mock-upcoming-4",
-      "streamerId": "virtual-picnic",
-      "title": "バーチャル・ピクニックの配信予定 #2",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-4",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T13:39:54.088Z"
-    },
-    {
-      "id": "mock-upcoming-9",
-      "streamerId": "virtual-picnic",
-      "title": "バーチャル・ピクニックの配信予定 #4",
-      "thumbnail": "images/thumbnail-3.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-9",
-      "status": "upcoming",
-      "scheduledStart": "2026-08-01T06:19:48.177Z"
-    },
-    {
-      "id": "mock-upcoming-5",
-      "streamerId": "midnight-orbit",
-      "title": "ミッドナイト・オービットの配信予定 #3",
-      "thumbnail": "images/thumbnail-2.svg",
-      "url": "https://www.youtube.com/watch?v=mock-upcoming-5",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-30T14:19:57.044Z"
-    },
-    {
-      "id": "mock-ended-10",
-      "streamerId": "midnight-orbit",
-      "title": "ミッドナイト・オービットのアーカイブ #1",
-      "thumbnail": "images/thumbnail-1.svg",
-      "url": "https://www.youtube.com/watch?v=mock-ended-10",
+      "id": "FGa8blpi6ys",
+      "streamerId": "miraicha",
+      "title": "【#雑談 】Vket行ってきた話とか企画案が欲しい！ゆるゆる雑談～✨【みらいちゃ/Miraicha】",
+      "thumbnail": "https://i.ytimg.com/vi/FGa8blpi6ys/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FGa8blpi6ys",
       "status": "ended",
-      "scheduledStart": "2026-07-30T06:19:48.177Z",
-      "actualStart": "2026-07-30T06:29:48.177Z",
-      "actualEnd": "2026-07-30T08:29:48.177Z"
+      "scheduledStart": "2026-07-29T13:00:00Z",
+      "actualStart": "2026-07-29T13:00:25Z",
+      "actualEnd": "2026-07-29T14:32:35Z"
     }
   ]
 }

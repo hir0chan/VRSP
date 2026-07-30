@@ -63,6 +63,14 @@ privateからの公開ならば漏れないのでは？そんなことない？
 
 ---
 
+.envへ記入済です。
+
+配信者は下記はマスト、あと数名はあなたが探してください。
+https://www.youtube.com/@zasan.v2
+https://www.youtube.com/@%E3%81%BF%E3%82%89%E3%81%84%E3%81%A1%E3%82%83-channel
+
+---
+
 !
 skillsへの対応
 
