@@ -1,7 +1,6 @@
 ---
 import streamsData from "../../data/generated/streams.json";
 import streamersData from "../../data/generated/streamers.json";
-import LiveCard from "../components/LiveCard.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import StreamCard from "../components/StreamCard.astro";
 import Layout from "../layouts/Layout.astro";
@@ -29,11 +28,11 @@ const thumbnailUrl = (path: string): string =>
 
   {
     sections.live.length > 0 && (
-      <section class="schedule-section live-section" aria-labelledby="live-heading">
+      <section class="schedule-section" aria-labelledby="live-heading">
         <SectionHeader eyebrow="BROADCASTING NOW" title="NOW ON LIVE" count={sections.live.length} />
-        <div class="live-grid" id="live-heading">
+        <div class="card-grid" id="live-heading">
           {sections.live.map((stream) => (
-            <LiveCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} />
+            <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} live={true} />
           ))}
         </div>
       </section>
