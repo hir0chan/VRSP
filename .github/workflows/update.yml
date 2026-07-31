@@ -6,7 +6,8 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    # 毎時 0/15/30/45 分ちょうどは GitHub 全体で混雑し間引かれやすいため、3分オフセットする
+    - cron: "3,18,33,48 * * * *"
 
 concurrency:
   group: pages-deploy
