@@ -30,7 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Update generated data
+        id: update
         if: github.event_name != 'push'
+        continue-on-error: true
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run update
@@ -45,6 +47,9 @@ jobs:
           git add data/generated
           git commit -m "chore: update generated data [skip ci]"
           git push
+      - name: Fail if data update failed
+        if: github.event_name != 'push' && steps.update.outcome == 'failure'
+        run: exit 1
       - name: Test
         run: npm test
       - name: Check

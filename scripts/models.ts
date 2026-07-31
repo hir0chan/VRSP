@@ -22,10 +22,16 @@ export interface Stream {
 
 export interface GeneratedStreams {
   updatedAt: string;
+  tracked: Stream[];
   streams: Stream[];
 }
 
 export interface GeneratedStreamers {
   updatedAt: string;
   streamers: Streamer[];
+}
+
+export interface DiscoveryState {
+  discoveryAttemptedAt: string;
+  discoveredAt?: string;
 }

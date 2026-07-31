@@ -35,17 +35,19 @@ GitHub Actions が15分毎に YouTube Data API v3 からデータを取得し、
 
 ```
 GitHub Actions (15分毎 cron / workflow_dispatch)
-  → scripts/update.ts が data/streamers.yaml を読み YouTube Data API v3 を呼ぶ
-  → data/generated/{streams,streamers}.json を更新(差分があれば bot がコミット [skip ci])
+  → scripts/update.ts が約1時間毎に search.list で候補動画を発見し、既知動画を videos.list で更新
+  → data/generated/{discovery,streams,streamers}.json を更新(差分があれば bot がコミット [skip ci])
   → Astro build(generated JSON をビルド時 import)
   → GitHub Pages へデプロイ(push 時は update をスキップしコミット済みデータでビルドのみ)
 ```
 
-- **データ取得**(`scripts/youtube.ts`): search.list を使わないクォータ節約構成(channels.list → playlistItems.list → videos.list、30名で約33unit/回)。配信者ごとの成功/失敗を `FetchResult` 型で区別し、失敗配信者は前回データを引き継ぐ。全滅時は書き込まず非0終了
-- **モード切替**: `YOUTUBE_API_KEY` 未設定なら自動でモック生成(`scripts/mock.ts`、純関数)。CI では Secrets から注入(`update.yml` の env — **これを外すと本番がモックデータになる**)
+- **データ取得**(`scripts/youtube.ts`): `search.list(part=id)` の live / upcoming / completed 3クエリで候補を発見し、追跡集合を `videos.list`(50件バッチ)で毎回更新する。タイトルまたは説明文に `vrchat` を含む動画のみ採用。部分バッチ失敗は動画単位で前回値を引き継ぎ、全滅時は本体を書き込まず非0終了
+- **発見状態**: `data/generated/discovery.json` に試行時刻を原子的に保存し、60分クールダウンを CI 間で維持する。`--discover` はローカル手動実行専用
+- **追跡と表示**: `streams.json` の `tracked` は表示窓外も含む追跡集合、`streams` は UI 用表示窓。非 live の追跡上限は300件。チャンネル情報は動画 snippet から動的生成し、除外は `data/blocklist.yaml` で管理する
+- **モード切替**: `YOUTUBE_API_KEY` 未設定なら内蔵架空チャンネルから自動でモック生成(`scripts/mock.ts`、純関数)。CI では Secrets から注入(`update.yml` の env — **これを外すと本番がモックデータになる**)
 - **表示層**(`src/`): 分類ロジック(live/today/upcoming、JST 日付グループ化)は `src/lib/classify.ts` の純関数に分離。サムネ URL 解決は `src/lib/thumbnail.ts`(絶対 URL はそのまま、相対パスに BASE_URL 前置)
 - **データモデル**: `scripts/models.ts` の `Streamer` / `Stream`(status: upcoming | live | ended)。ended は取得後24時間保持・画面非表示
-- **書込**: 一時ファイル → rename のファイル単位原子的書込。streamers.yaml の設定エラー(id/channelId 重複、enabled 0件)は非0終了で既存データ保護
+- **書込**: 一時ファイル → rename のファイル単位原子的書込。`streamers.json` を先に、`streams.json` を後に rename し、配信者情報は前回参照分を2世代保持する。blocklist の設定エラーは非0終了で既存データを保護する
 
 ## 制約・慣習
 

@@ -1,5 +1,15 @@
 import type { Status, Stream, Streamer } from "./models.js";
 
+export const MOCK_STREAMERS: Streamer[] = Array.from(
+  { length: 5 },
+  (_, index) => ({
+    id: `mock-channel-${index + 1}`,
+    name: `架空配信者${index + 1}`,
+    youtubeChannelId: `UC_MOCK_${index + 1}`,
+    enabled: true,
+  }),
+);
+
 export interface MockOptions {
   liveCount?: number;
   todayUpcomingCount?: number;
@@ -92,13 +102,9 @@ function createStream(
 }
 
 export function generateMockStreams(
-  streamers: Streamer[],
   now: Date,
   options: MockOptions = {},
 ): Stream[] {
-  if (streamers.length === 0) {
-    return [];
-  }
   if (Number.isNaN(now.getTime())) {
     throw new Error("now は有効な日時で指定してください");
   }
@@ -118,7 +124,7 @@ export function generateMockStreams(
   let globalIndex = 0;
   return scenarios.flatMap((scenario) =>
     Array.from({ length: scenario.count }, (_, sequence) => {
-      const streamer = streamers[globalIndex % streamers.length];
+      const streamer = MOCK_STREAMERS[globalIndex % MOCK_STREAMERS.length];
       if (streamer === undefined) {
         throw new Error("配信者の選択に失敗しました");
       }

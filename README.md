@@ -20,7 +20,7 @@ GitHub Actions (15分毎)
       │
       ▼
 YouTube Data API v3 ── scripts/update.ts が取得
-      │                 (クォータ節約設計: 約1〜2unit/チャンネル)
+      │                 (約1時間毎に検索、既知動画は15分毎に更新)
       ▼
 data/generated/*.json ── 差分があれば bot がコミット
       │
@@ -31,7 +31,9 @@ Astro build ── JSON をビルド時に読み込み静的 HTML 化
 GitHub Pages
 ```
 
-- 取得失敗時は前回データを保持し、1チャンネルの失敗で全体は止まりません
+- `search.list` の live / upcoming / completed 3検索で VRChat 動画を発見し、発見済み動画は `videos.list` で継続追跡します
+- タイトルまたは説明文に「VRChat」を含むライブ配信だけを掲載します
+- 発見は60分のクールダウンでクォータを抑え、状態更新の部分失敗時は該当動画の前回データを保持します
 - `YOUTUBE_API_KEY` 未設定の環境では自動的にモックデータで動作します
 
 ## 技術スタック
@@ -55,13 +57,13 @@ cp .env.example .env   # YouTube Data API キーを記入(なければモック�
 
 ## 配信者の追加
 
-`data/streamers.yaml` にエントリを追加して push するだけです。
+配信者リストの登録は不要です。YouTube の検索結果から条件に合う配信を自動発見し、チャンネル情報も動画データから生成します。
+
+自動掲載から除外するチャンネルは `data/blocklist.yaml` に `channelId` を追加します。`note` は任意です。
 
 ```yaml
-- id: example            # 一意な英小文字 ID
-  name: 表示名
-  youtubeChannelId: UCxxxxxxxxxxxxxxxxxxxxxx
-  enabled: true
+- channelId: UCxxxxxxxxxxxxxxxxxxxxxx
+  note: 除外理由
 ```
 
 ## 掲載について
