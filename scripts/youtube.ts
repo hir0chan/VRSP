@@ -170,6 +170,10 @@ export function isVrchatContent(title: string, description: string): boolean {
   return VRCHAT_KEYWORDS.some((keyword) => text.includes(keyword));
 }
 
+export function isJapaneseContent(title: string, description: string): boolean {
+  return /[ぁ-ゖァ-ヺｦ-ｯｱ-ﾝ]/.test(`${title}\n${description}`);
+}
+
 function convertVideo(video: VideoItem): { stream: Stream; channel: ChannelInfo } | undefined {
   if (!isVrchatContent(video.snippet.title, video.snippet.description)) return undefined;
   const details = video.liveStreamingDetails;
@@ -198,6 +202,7 @@ function convertVideo(video: VideoItem): { stream: Stream; channel: ChannelInfo 
     thumbnail,
     url: `https://www.youtube.com/watch?v=${video.id}`,
     status,
+    isJapanese: isJapaneseContent(video.snippet.title, video.snippet.description),
     ...(scheduledStart === undefined ? {} : { scheduledStart }),
     ...(actualStart === undefined ? {} : { actualStart }),
     ...(actualEnd === undefined ? {} : { actualEnd }),

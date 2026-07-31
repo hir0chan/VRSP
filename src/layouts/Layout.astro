@@ -52,6 +52,13 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
     />
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
+    <script is:inline>
+      try {
+        if (localStorage.getItem("vrsp-ja-only") === "1") {
+          document.documentElement.setAttribute("data-ja-only", "");
+        }
+      } catch {}
+    </script>
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-B1W4WBHBGE"></script>
     <script is:inline>
@@ -80,7 +87,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
       <div class="shell footer-note">
         <p>
           本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat
-          以外のコンテンツが掲載されることがあります。掲載をご希望の方は
+          以外のコンテンツが掲載されることがあります。掲載の削除をご希望の場合は
           X <a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">@hir0chan_vrc</a>
           までご連絡ください。本サイトはアクセス状況の把握のため Google Analytics を使用しています。
         </p>
@@ -111,5 +118,23 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
         </p>
       </div>
     </footer>
+    <script is:inline>
+      const toggle = document.getElementById("ja-only-toggle");
+      if (toggle instanceof HTMLInputElement) {
+        const controls = toggle.closest(".filter-controls");
+        if (controls instanceof HTMLElement) controls.hidden = false;
+        toggle.checked = document.documentElement.hasAttribute("data-ja-only");
+        toggle.addEventListener("change", () => {
+          document.documentElement.toggleAttribute("data-ja-only", toggle.checked);
+          try {
+            if (toggle.checked) {
+              localStorage.setItem("vrsp-ja-only", "1");
+            } else {
+              localStorage.removeItem("vrsp-ja-only");
+            }
+          } catch {}
+        });
+      }
+    </script>
   </body>
 </html>

@@ -26,6 +26,13 @@ const thumbnailUrl = (path: string): string =>
     <p class="hero-copy">VRChatを旅する配信者たちのライブと、これから始まる配信をひとつの場所で。</p>
   </section>
 
+  <div class="filter-controls" hidden>
+    <div class="ja-only-toggle">
+      <input type="checkbox" id="ja-only-toggle" />
+      <label for="ja-only-toggle">日本語のみ</label>
+    </div>
+  </div>
+
   {
     sections.live.length > 0 && (
       <section class="schedule-section" aria-labelledby="live-heading">

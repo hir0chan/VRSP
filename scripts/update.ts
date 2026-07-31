@@ -56,7 +56,7 @@ function isMissingFile(error: unknown): boolean {
   return isRecord(error) && error.code === "ENOENT";
 }
 
-function isStream(value: unknown): value is Stream {
+export function isStream(value: unknown): value is Stream {
   if (
     !isRecord(value) ||
     typeof value.id !== "string" ||
@@ -69,7 +69,8 @@ function isStream(value: unknown): value is Stream {
   for (const field of ["scheduledStart", "actualStart", "actualEnd"]) {
     if (value[field] !== undefined && typeof value[field] !== "string") return false;
   }
-  return value.viewers === undefined || typeof value.viewers === "number";
+  return (value.viewers === undefined || typeof value.viewers === "number") &&
+    (value.isJapanese === undefined || typeof value.isJapanese === "boolean");
 }
 
 function isStreamer(value: unknown): value is Streamer {

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T15:32:29.491Z",
+  "updatedAt": "2026-07-31T15:49:19.008Z",
   "tracked": [
     {
       "id": "xRnSswq861s",
@@ -7,8 +7,11 @@
       "title": "[まったり】  ぶらり。ぶいあーるちゃっと旅 [第149回]",
       "thumbnail": "https://i.ytimg.com/vi/xRnSswq861s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=xRnSswq861s",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T15:30:00Z"
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-07-31T15:30:00Z",
+      "actualStart": "2026-07-31T15:47:48Z",
+      "viewers": 11
     },
     {
       "id": "pwL7-LQev2I",
@@ -17,9 +20,10 @@
       "thumbnail": "https://i.ytimg.com/vi/pwL7-LQev2I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=pwL7-LQev2I",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:30:00Z",
       "actualStart": "2026-07-31T15:31:46Z",
-      "viewers": 5
+      "viewers": 16
     },
     {
       "id": "0GiajeOUGn4",
@@ -28,6 +32,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0GiajeOUGn4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0GiajeOUGn4",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T15:00:00Z"
     },
     {
@@ -37,6 +42,7 @@
       "thumbnail": "https://i.ytimg.com/vi/a8aFVKbP7Uw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=a8aFVKbP7Uw",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T16:00:00Z"
     },
     {
@@ -46,6 +52,7 @@
       "thumbnail": "https://i.ytimg.com/vi/e8HHsU4j66E/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=e8HHsU4j66E",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-06T11:00:00Z"
     },
     {
@@ -55,6 +62,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bVhsGAxI0dY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=bVhsGAxI0dY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-06T11:00:00Z"
     },
     {
@@ -64,6 +72,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0TkTE0SsfxA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0TkTE0SsfxA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:04Z"
     },
     {
@@ -73,6 +82,7 @@
       "thumbnail": "https://i.ytimg.com/vi/qyqvP75QurA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=qyqvP75QurA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T05:00:00Z"
     },
     {
@@ -82,6 +92,7 @@
       "thumbnail": "https://i.ytimg.com/vi/-i0xC4peQgs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-i0xC4peQgs",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-01T02:00:00Z"
     },
     {
@@ -91,6 +102,7 @@
       "thumbnail": "https://i.ytimg.com/vi/R0ovOaB5CWw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=R0ovOaB5CWw",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:20:00Z"
     },
     {
@@ -100,6 +112,7 @@
       "thumbnail": "https://i.ytimg.com/vi/_bzaYXbhAN0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=_bzaYXbhAN0",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:14Z"
     },
     {
@@ -109,6 +122,7 @@
       "thumbnail": "https://i.ytimg.com/vi/V-0TBFoydSY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=V-0TBFoydSY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T22:30:00Z"
     },
     {
@@ -118,6 +132,7 @@
       "thumbnail": "https://i.ytimg.com/vi/SAAqCs0_9CA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=SAAqCs0_9CA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -127,6 +142,7 @@
       "thumbnail": "https://i.ytimg.com/vi/v8d5veOd7p8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=v8d5veOd7p8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -136,6 +152,7 @@
       "thumbnail": "https://i.ytimg.com/vi/hmsyKN4vmdk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=hmsyKN4vmdk",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T12:03:39Z",
       "actualEnd": "2026-07-31T13:41:20Z"
@@ -147,6 +164,7 @@
       "thumbnail": "https://i.ytimg.com/vi/PXGagsQtZ2U/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PXGagsQtZ2U",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T11:59:40Z",
       "actualEnd": "2026-07-31T12:39:11Z"
@@ -158,6 +176,7 @@
       "thumbnail": "https://i.ytimg.com/vi/2oxFUPxXbyc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2oxFUPxXbyc",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:56:52Z"
     },
     {
@@ -167,6 +186,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0Xd6ihOx230/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0Xd6ihOx230",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T17:40:00Z"
     },
     {
@@ -176,6 +196,7 @@
       "thumbnail": "https://i.ytimg.com/vi/U4g9ErgVkzY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=U4g9ErgVkzY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -184,10 +205,11 @@
       "title": "【#VRChat】キミの懐かしいって何年前さ？見せてやるよ本当の懐かしいを！【※設定年齢24才】",
       "thumbnail": "https://i.ytimg.com/vi/dL-BRQ9AUbE/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=dL-BRQ9AUbE",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:59:26Z",
-      "viewers": 1
+      "actualEnd": "2026-07-31T15:40:55Z"
     },
     {
       "id": "23_0LdR9508",
@@ -196,6 +218,7 @@
       "thumbnail": "https://i.ytimg.com/vi/23_0LdR9508/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=23_0LdR9508",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T11:00:00Z",
       "actualStart": "2026-07-31T11:01:12Z",
       "actualEnd": "2026-07-31T12:32:08Z"
@@ -207,6 +230,7 @@
       "thumbnail": "https://i.ytimg.com/vi/uTzYNlEDtf8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=uTzYNlEDtf8",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T07:00:00Z",
       "actualStart": "2026-07-31T07:04:20Z",
       "actualEnd": "2026-07-31T08:39:33Z"
@@ -218,6 +242,7 @@
       "thumbnail": "https://i.ytimg.com/vi/B4GqXlA2dkU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=B4GqXlA2dkU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-29T23:17:16Z"
     },
     {
@@ -227,6 +252,7 @@
       "thumbnail": "https://i.ytimg.com/vi/unG-TuORAb4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=unG-TuORAb4",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -236,6 +262,7 @@
       "thumbnail": "https://i.ytimg.com/vi/9ngkjGUGntk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9ngkjGUGntk",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-13T12:00:00Z"
     },
     {
@@ -245,6 +272,7 @@
       "thumbnail": "https://i.ytimg.com/vi/BsdMRjGfKF8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=BsdMRjGfKF8",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:24Z",
       "actualEnd": "2026-07-31T14:30:53Z"
@@ -256,6 +284,7 @@
       "thumbnail": "https://i.ytimg.com/vi/CudvhdyO858/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=CudvhdyO858",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T11:59:11Z",
       "actualEnd": "2026-07-31T13:45:00Z"
@@ -267,6 +296,7 @@
       "thumbnail": "https://i.ytimg.com/vi/G-mjGYuw0t0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=G-mjGYuw0t0",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-02T00:30:00Z"
     },
     {
@@ -276,6 +306,7 @@
       "thumbnail": "https://i.ytimg.com/vi/fWPhguMNKj8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=fWPhguMNKj8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -285,6 +316,7 @@
       "thumbnail": "https://i.ytimg.com/vi/63Pja99Hm1k/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=63Pja99Hm1k",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -294,6 +326,7 @@
       "thumbnail": "https://i.ytimg.com/vi/LkQajNDAyc4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=LkQajNDAyc4",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-02T23:00:00Z"
     },
     {
@@ -303,6 +336,7 @@
       "thumbnail": "https://i.ytimg.com/vi/oB2BkYZcESY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oB2BkYZcESY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T10:00:00Z"
     },
     {
@@ -312,6 +346,7 @@
       "thumbnail": "https://i.ytimg.com/vi/9ob-c4YL-QA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9ob-c4YL-QA",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T01:00:00Z"
     },
     {
@@ -321,6 +356,7 @@
       "thumbnail": "https://i.ytimg.com/vi/oIivk2SlELg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oIivk2SlELg",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T00:00:00Z"
     },
     {
@@ -330,6 +366,7 @@
       "thumbnail": "https://i.ytimg.com/vi/pzoVHILsyPM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=pzoVHILsyPM",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-28T22:59:34Z"
     },
     {
@@ -339,6 +376,7 @@
       "thumbnail": "https://i.ytimg.com/vi/2Np-340lfjI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2Np-340lfjI",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z"
     },
     {
@@ -348,6 +386,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YpGJfyEgReM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=YpGJfyEgReM",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T22:35:33Z"
     },
     {
@@ -357,6 +396,7 @@
       "thumbnail": "https://i.ytimg.com/vi/3s048Y8Jg9M/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=3s048Y8Jg9M",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T22:32:23Z"
     },
     {
@@ -366,6 +406,7 @@
       "thumbnail": "https://i.ytimg.com/vi/G_Gl2N_RHRU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=G_Gl2N_RHRU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T21:00:13Z"
     },
     {
@@ -375,6 +416,7 @@
       "thumbnail": "https://i.ytimg.com/vi/-EAcOhVnDzg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-EAcOhVnDzg",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -384,6 +426,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ztH6yp8Tq68/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=ztH6yp8Tq68",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-09-02T13:00:00Z"
     },
     {
@@ -393,6 +436,7 @@
       "thumbnail": "https://i.ytimg.com/vi/PkhI-FTuTy8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PkhI-FTuTy8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-08T00:30:00Z"
     },
     {
@@ -402,9 +446,10 @@
       "thumbnail": "https://i.ytimg.com/vi/jwFLdGEK_Sg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=jwFLdGEK_Sg",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:38Z",
-      "viewers": 32
+      "viewers": 31
     },
     {
       "id": "XpPATYJeu8I",
@@ -413,6 +458,7 @@
       "thumbnail": "https://i.ytimg.com/vi/XpPATYJeu8I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=XpPATYJeu8I",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:03:43Z",
       "viewers": 13
@@ -424,6 +470,7 @@
       "thumbnail": "https://i.ytimg.com/vi/b8FGJkn-nFU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=b8FGJkn-nFU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-26T21:30:06Z"
     },
     {
@@ -433,6 +480,7 @@
       "thumbnail": "https://i.ytimg.com/vi/W9LETJMeWQg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=W9LETJMeWQg",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-26T05:50:57Z"
     },
     {
@@ -442,6 +490,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bXejEkaVSOs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=bXejEkaVSOs",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-25T22:52:49Z"
     },
     {
@@ -451,6 +500,7 @@
       "thumbnail": "https://i.ytimg.com/vi/gUBgcmNgmG8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=gUBgcmNgmG8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T23:32:38Z",
       "actualStart": "2026-07-30T23:32:36Z",
       "actualEnd": "2026-07-31T00:24:09Z"
@@ -462,6 +512,7 @@
       "thumbnail": "https://i.ytimg.com/vi/xiHZ5t007SY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xiHZ5t007SY",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T23:30:00Z",
       "actualStart": "2026-07-30T23:30:21Z",
       "actualEnd": "2026-07-31T00:27:13Z"
@@ -473,6 +524,7 @@
       "thumbnail": "https://i.ytimg.com/vi/J0i9b0mWfqg/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=J0i9b0mWfqg",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:55:36Z",
       "actualStart": "2026-07-30T21:55:34Z",
       "actualEnd": "2026-07-30T23:54:00Z"
@@ -484,6 +536,7 @@
       "thumbnail": "https://i.ytimg.com/vi/RKOtkmXp85A/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=RKOtkmXp85A",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T23:00:00Z",
       "actualStart": "2026-07-30T23:00:08Z",
       "actualEnd": "2026-07-30T23:57:51Z"
@@ -495,6 +548,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ypbhhs9r-d4/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ypbhhs9r-d4",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T22:32:41Z",
       "actualStart": "2026-07-30T22:32:38Z",
       "actualEnd": "2026-07-30T23:44:59Z"
@@ -506,6 +560,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YA861FK1RCk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=YA861FK1RCk",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T22:15:00Z",
       "actualStart": "2026-07-30T22:24:39Z",
       "actualEnd": "2026-07-30T23:28:50Z"
@@ -517,6 +572,7 @@
       "thumbnail": "https://i.ytimg.com/vi/i0Oen7dgl5Y/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=i0Oen7dgl5Y",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T22:17:28Z",
       "actualStart": "2026-07-30T22:17:27Z",
       "actualEnd": "2026-07-30T23:32:06Z"
@@ -528,6 +584,7 @@
       "thumbnail": "https://i.ytimg.com/vi/JaK76-a1GF8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=JaK76-a1GF8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:15:51Z",
       "actualStart": "2026-07-30T21:16:23Z",
       "actualEnd": "2026-07-30T22:49:29Z"
@@ -539,6 +596,7 @@
       "thumbnail": "https://i.ytimg.com/vi/CI6ghizfh9g/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=CI6ghizfh9g",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:50:59Z",
       "actualStart": "2026-07-30T21:50:55Z",
       "actualEnd": "2026-07-30T22:45:56Z"
@@ -550,6 +608,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ZZq3L5hZXC0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ZZq3L5hZXC0",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:34:03Z",
       "actualStart": "2026-07-30T20:34:15Z",
       "actualEnd": "2026-07-30T22:11:59Z"
@@ -561,6 +620,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YIcnVhr_pu8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=YIcnVhr_pu8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:27:24Z",
       "actualStart": "2026-07-30T21:27:23Z",
       "actualEnd": "2026-07-30T21:46:16Z"
@@ -572,6 +632,7 @@
       "thumbnail": "https://i.ytimg.com/vi/o47yvOc7yEY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=o47yvOc7yEY",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-31T06:56:40Z",
       "actualEnd": "2026-07-31T09:28:30Z"
     },
@@ -582,6 +643,7 @@
       "thumbnail": "https://i.ytimg.com/vi/F7YUTmvxNBY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=F7YUTmvxNBY",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:46:52Z",
       "actualStart": "2026-07-30T20:47:04Z",
       "actualEnd": "2026-07-30T21:17:47Z"
@@ -593,6 +655,7 @@
       "thumbnail": "https://i.ytimg.com/vi/L5_6CONpUXc/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=L5_6CONpUXc",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:50:00Z",
       "actualStart": "2026-07-31T05:53:38Z",
       "actualEnd": "2026-07-31T09:01:57Z"
@@ -604,6 +667,7 @@
       "thumbnail": "https://i.ytimg.com/vi/_ISf2fzAg3w/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=_ISf2fzAg3w",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T19:17:53Z",
       "actualStart": "2026-07-30T19:17:51Z",
       "actualEnd": "2026-07-30T20:44:36Z"
@@ -615,6 +679,7 @@
       "thumbnail": "https://i.ytimg.com/vi/7KaMqO2JyOk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=7KaMqO2JyOk",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:42:59Z",
       "actualStart": "2026-07-30T20:42:58Z",
       "actualEnd": "2026-07-30T21:03:00Z"
@@ -626,6 +691,7 @@
       "thumbnail": "https://i.ytimg.com/vi/lnPSvB6v7IQ/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=lnPSvB6v7IQ",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-31T05:27:51Z",
       "actualEnd": "2026-07-31T07:54:46Z"
     },
@@ -636,6 +702,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bMr7IRJVmow/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=bMr7IRJVmow",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T05:45:00Z",
       "actualStart": "2026-07-31T05:53:08Z",
       "actualEnd": "2026-07-31T07:53:33Z"
@@ -647,6 +714,7 @@
       "thumbnail": "https://i.ytimg.com/vi/RhRcfHYH-Jc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=RhRcfHYH-Jc",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:36:48Z",
       "actualStart": "2026-07-31T05:35:57Z",
       "actualEnd": "2026-07-31T07:30:05Z"
@@ -658,31 +726,10 @@
       "thumbnail": "https://i.ytimg.com/vi/OL6FzlKs168/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=OL6FzlKs168",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T14:00:00Z",
       "actualStart": "2026-07-30T14:02:23Z",
       "actualEnd": "2026-07-30T15:58:26Z"
-    },
-    {
-      "id": "iPPlwpDO4EM",
-      "streamerId": "UCoazezn5EyjJfna6R0Mie8Q",
-      "title": "jugando vrchat",
-      "thumbnail": "https://i.ytimg.com/vi/iPPlwpDO4EM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=iPPlwpDO4EM",
-      "status": "ended",
-      "scheduledStart": "2026-07-30T15:30:50Z",
-      "actualStart": "2026-07-30T15:30:50Z",
-      "actualEnd": "2026-07-30T15:47:01Z"
-    },
-    {
-      "id": "Z0S1tpdOsLM",
-      "streamerId": "UCOaWlbiDxgJYPOPqydPDHxA",
-      "title": "Subscribe = Shouout Gorilla Tag and VRChat live stream",
-      "thumbnail": "https://i.ytimg.com/vi/Z0S1tpdOsLM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Z0S1tpdOsLM",
-      "status": "ended",
-      "scheduledStart": "2026-07-30T15:04:41Z",
-      "actualStart": "2026-07-30T15:04:38Z",
-      "actualEnd": "2026-07-30T15:38:48Z"
     },
     {
       "id": "eNmaXclE2rw",
@@ -691,6 +738,7 @@
       "thumbnail": "https://i.ytimg.com/vi/eNmaXclE2rw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=eNmaXclE2rw",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-30T20:15:41Z",
       "actualEnd": "2026-07-31T02:32:22Z"
     },
@@ -701,6 +749,7 @@
       "thumbnail": "https://i.ytimg.com/vi/M4hu9WuF63g/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=M4hu9WuF63g",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:00:00Z",
       "actualStart": "2026-07-30T21:06:59Z",
       "actualEnd": "2026-07-31T01:10:49Z"
@@ -712,6 +761,7 @@
       "thumbnail": "https://i.ytimg.com/vi/QLfKDaWKL6Q/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=QLfKDaWKL6Q",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-30T19:21:04Z",
       "actualEnd": "2026-07-31T00:23:04Z"
     },
@@ -722,6 +772,7 @@
       "thumbnail": "https://i.ytimg.com/vi/a4Uh7_mouiU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=a4Uh7_mouiU",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:02:03Z",
       "actualStart": "2026-07-30T20:02:20Z",
       "actualEnd": "2026-07-30T22:16:32Z"
@@ -733,6 +784,7 @@
       "thumbnail": "https://i.ytimg.com/vi/LSliDqRdHzQ/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=LSliDqRdHzQ",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T15:30:00Z",
       "actualStart": "2026-07-30T15:30:03Z",
       "actualEnd": "2026-07-30T20:13:24Z"
@@ -744,6 +796,7 @@
       "thumbnail": "https://i.ytimg.com/vi/zHbQentUcRs/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=zHbQentUcRs",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T09:30:00Z",
       "actualStart": "2026-07-30T09:23:00Z",
       "actualEnd": "2026-07-30T17:51:09Z"
@@ -755,9 +808,10 @@
       "thumbnail": "https://i.ytimg.com/vi/gDkkCz2x3vk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=gDkkCz2x3vk",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:11:12Z",
-      "viewers": 24
+      "viewers": 21
     },
     {
       "id": "eHz1rjNXMGM",
@@ -766,9 +820,10 @@
       "thumbnail": "https://i.ytimg.com/vi/eHz1rjNXMGM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=eHz1rjNXMGM",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:05:49Z",
-      "viewers": 5
+      "viewers": 3
     },
     {
       "id": "OynyrNVi-Lw",
@@ -777,6 +832,7 @@
       "thumbnail": "https://i.ytimg.com/vi/OynyrNVi-Lw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=OynyrNVi-Lw",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:13:43Z",
       "actualStart": "2026-07-31T14:13:43Z",
       "viewers": 2
@@ -788,9 +844,9 @@
       "thumbnail": "https://i.ytimg.com/vi/n9_JFRDzE3c/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=n9_JFRDzE3c",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
-      "actualStart": "2026-07-31T15:00:32Z",
-      "viewers": 1
+      "actualStart": "2026-07-31T15:00:32Z"
     },
     {
       "id": "FDNYQP1751I",
@@ -799,6 +855,7 @@
       "thumbnail": "https://i.ytimg.com/vi/FDNYQP1751I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=FDNYQP1751I",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:07:13Z",
       "actualStart": "2026-07-31T14:07:38Z",
       "actualEnd": "2026-07-31T15:28:15Z"
@@ -809,10 +866,11 @@
       "title": "＃１４：ラジネコフェア　７月が終わったけどこれからが夏本番　夏バテ気味だけど頑張ろう🐈　（ラジオ配信）",
       "thumbnail": "https://i.ytimg.com/vi/BItvib6-eW8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=BItvib6-eW8",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T13:59:04Z",
-      "viewers": 9
+      "actualEnd": "2026-07-31T15:41:22Z"
     },
     {
       "id": "aIwBBo0uRdQ",
@@ -821,9 +879,10 @@
       "thumbnail": "https://i.ytimg.com/vi/aIwBBo0uRdQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=aIwBBo0uRdQ",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:30:00Z",
       "actualStart": "2026-07-31T14:21:15Z",
-      "viewers": 1
+      "viewers": 4
     },
     {
       "id": "Vy8CgcmdYdc",
@@ -832,9 +891,10 @@
       "thumbnail": "https://i.ytimg.com/vi/Vy8CgcmdYdc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Vy8CgcmdYdc",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T14:05:00Z",
-      "viewers": 46
+      "viewers": 58
     },
     {
       "id": "psy75kkfHnA",
@@ -843,19 +903,22 @@
       "thumbnail": "https://i.ytimg.com/vi/psy75kkfHnA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=psy75kkfHnA",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T14:00:58Z",
-      "viewers": 20
+      "viewers": 18
     },
     {
       "id": "qDJe1rYfvSw",
       "streamerId": "UCSk1gfkLt64NfsTqIgSTaHw",
       "title": "VRChat Ecliptica 野良猫配信宅",
-      "thumbnail": "https://i.ytimg.com/vi/qDJe1rYfvSw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/qDJe1rYfvSw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=qDJe1rYfvSw",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:46:55Z",
-      "actualStart": "2026-07-31T12:47:12Z"
+      "actualStart": "2026-07-31T12:47:12Z",
+      "actualEnd": "2026-07-31T15:37:51Z"
     },
     {
       "id": "7T0Dk2UsV-s",
@@ -864,9 +927,10 @@
       "thumbnail": "https://i.ytimg.com/vi/7T0Dk2UsV-s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7T0Dk2UsV-s",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:06:44Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "5odGxrENJJ4",
@@ -874,10 +938,11 @@
       "title": "【💜FREE TALK VRCHAT💜】ชิลๆท้ายอาทิตย์ ไม่สนนอนอยู่ดี",
       "thumbnail": "https://i.ytimg.com/vi/5odGxrENJJ4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=5odGxrENJJ4",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:40:00Z",
       "actualStart": "2026-07-31T13:44:10Z",
-      "viewers": 6
+      "actualEnd": "2026-07-31T15:38:41Z"
     },
     {
       "id": "zOQUPO8tm4E",
@@ -886,9 +951,10 @@
       "thumbnail": "https://i.ytimg.com/vi/zOQUPO8tm4E/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=zOQUPO8tm4E",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:40Z",
-      "viewers": 5
+      "viewers": 6
     },
     {
       "id": "2FG5_en_U6k",
@@ -896,10 +962,11 @@
       "title": "「🔴LIVE」ปายเที่ยวววว【VRChat】",
       "thumbnail": "https://i.ytimg.com/vi/2FG5_en_U6k/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2FG5_en_U6k",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:51:25Z",
-      "viewers": 5
+      "actualEnd": "2026-07-31T15:45:29Z"
     },
     {
       "id": "1Q7IWd6I9VM",
@@ -908,9 +975,10 @@
       "thumbnail": "https://i.ytimg.com/vi/1Q7IWd6I9VM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=1Q7IWd6I9VM",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:09:50Z",
       "actualStart": "2026-07-31T12:10:04Z",
-      "viewers": 15
+      "viewers": 13
     },
     {
       "id": "TmrbFYcSshs",
@@ -918,10 +986,11 @@
       "title": "【#VRchat】極限SlashCo部　※誰でも気軽にどうぞ！",
       "thumbnail": "https://i.ytimg.com/vi/TmrbFYcSshs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=TmrbFYcSshs",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:05:03Z",
       "actualStart": "2026-07-31T12:05:19Z",
-      "viewers": 3
+      "actualEnd": "2026-07-31T15:42:04Z"
     },
     {
       "id": "fj3up76lp_s",
@@ -930,6 +999,7 @@
       "thumbnail": "https://i.ytimg.com/vi/fj3up76lp_s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=fj3up76lp_s",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:01:47Z"
     },
@@ -940,6 +1010,7 @@
       "thumbnail": "https://i.ytimg.com/vi/7FpvbkJVcfw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7FpvbkJVcfw",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:07Z",
       "actualStart": "2026-07-31T13:04:03Z"
     },
@@ -950,9 +1021,10 @@
       "thumbnail": "https://i.ytimg.com/vi/Wdj3i5qIgI4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Wdj3i5qIgI4",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:01:25Z",
-      "viewers": 47
+      "viewers": 41
     },
     {
       "id": "vZhTMFP8gAY",
@@ -961,9 +1033,10 @@
       "thumbnail": "https://i.ytimg.com/vi/vZhTMFP8gAY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=vZhTMFP8gAY",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T09:30:00Z",
       "actualStart": "2026-07-31T09:13:15Z",
-      "viewers": 4
+      "viewers": 6
     },
     {
       "id": "vBfqIbXse08",
@@ -972,9 +1045,10 @@
       "thumbnail": "https://i.ytimg.com/vi/vBfqIbXse08/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=vBfqIbXse08",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:02:04Z",
-      "viewers": 40
+      "viewers": 44
     },
     {
       "id": "iIUEdLTCkCk",
@@ -983,9 +1057,10 @@
       "thumbnail": "https://i.ytimg.com/vi/iIUEdLTCkCk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=iIUEdLTCkCk",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:00:15Z",
-      "viewers": 14
+      "viewers": 15
     },
     {
       "id": "608k_joZQwA",
@@ -994,9 +1069,10 @@
       "thumbnail": "https://i.ytimg.com/vi/608k_joZQwA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=608k_joZQwA",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-29T17:26:03Z",
       "actualStart": "2026-07-29T17:26:40Z",
-      "viewers": 20
+      "viewers": 26
     },
     {
       "id": "Y3OruaxnIxE",
@@ -1005,6 +1081,7 @@
       "thumbnail": "https://i.ytimg.com/vi/Y3OruaxnIxE/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Y3OruaxnIxE",
       "status": "live",
+      "isJapanese": true,
       "actualStart": "2026-07-31T13:30:16Z"
     },
     {
@@ -1014,6 +1091,7 @@
       "thumbnail": "https://i.ytimg.com/vi/reaWp8Vr6ak/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=reaWp8Vr6ak",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:55:02Z",
       "viewers": 9
@@ -1024,10 +1102,11 @@
       "title": "【VRChat】予選Bグループ配信【迷子VR】【Spice Of Tournament】",
       "thumbnail": "https://i.ytimg.com/vi/Hax6gk2MluI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Hax6gk2MluI",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:58:21Z",
-      "viewers": 18
+      "actualEnd": "2026-07-31T15:40:21Z"
     },
     {
       "id": "Wu3akIMIq6A",
@@ -1036,6 +1115,7 @@
       "thumbnail": "https://i.ytimg.com/vi/Wu3akIMIq6A/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
+      "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
       "viewers": 1
     },
@@ -1046,6 +1126,7 @@
       "thumbnail": "https://i.ytimg.com/vi/tuuPCF4karo/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=tuuPCF4karo",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:04:57Z",
       "actualStart": "2026-07-31T12:12:59Z",
       "actualEnd": "2026-07-31T14:09:40Z"
@@ -1058,8 +1139,11 @@
       "title": "[まったり】  ぶらり。ぶいあーるちゃっと旅 [第149回]",
       "thumbnail": "https://i.ytimg.com/vi/xRnSswq861s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=xRnSswq861s",
-      "status": "upcoming",
-      "scheduledStart": "2026-07-31T15:30:00Z"
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-07-31T15:30:00Z",
+      "actualStart": "2026-07-31T15:47:48Z",
+      "viewers": 11
     },
     {
       "id": "pwL7-LQev2I",
@@ -1068,9 +1152,10 @@
       "thumbnail": "https://i.ytimg.com/vi/pwL7-LQev2I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=pwL7-LQev2I",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:30:00Z",
       "actualStart": "2026-07-31T15:31:46Z",
-      "viewers": 5
+      "viewers": 16
     },
     {
       "id": "0GiajeOUGn4",
@@ -1079,6 +1164,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0GiajeOUGn4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0GiajeOUGn4",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T15:00:00Z"
     },
     {
@@ -1088,6 +1174,7 @@
       "thumbnail": "https://i.ytimg.com/vi/a8aFVKbP7Uw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=a8aFVKbP7Uw",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T16:00:00Z"
     },
     {
@@ -1097,6 +1184,7 @@
       "thumbnail": "https://i.ytimg.com/vi/e8HHsU4j66E/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=e8HHsU4j66E",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-06T11:00:00Z"
     },
     {
@@ -1106,6 +1194,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bVhsGAxI0dY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=bVhsGAxI0dY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-06T11:00:00Z"
     },
     {
@@ -1115,6 +1204,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0TkTE0SsfxA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0TkTE0SsfxA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:04Z"
     },
     {
@@ -1124,6 +1214,7 @@
       "thumbnail": "https://i.ytimg.com/vi/qyqvP75QurA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=qyqvP75QurA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T05:00:00Z"
     },
     {
@@ -1133,6 +1224,7 @@
       "thumbnail": "https://i.ytimg.com/vi/-i0xC4peQgs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-i0xC4peQgs",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-01T02:00:00Z"
     },
     {
@@ -1142,6 +1234,7 @@
       "thumbnail": "https://i.ytimg.com/vi/R0ovOaB5CWw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=R0ovOaB5CWw",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:20:00Z"
     },
     {
@@ -1151,6 +1244,7 @@
       "thumbnail": "https://i.ytimg.com/vi/_bzaYXbhAN0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=_bzaYXbhAN0",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:14Z"
     },
     {
@@ -1160,6 +1254,7 @@
       "thumbnail": "https://i.ytimg.com/vi/V-0TBFoydSY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=V-0TBFoydSY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T22:30:00Z"
     },
     {
@@ -1169,6 +1264,7 @@
       "thumbnail": "https://i.ytimg.com/vi/SAAqCs0_9CA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=SAAqCs0_9CA",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -1178,6 +1274,7 @@
       "thumbnail": "https://i.ytimg.com/vi/v8d5veOd7p8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=v8d5veOd7p8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -1187,6 +1284,7 @@
       "thumbnail": "https://i.ytimg.com/vi/hmsyKN4vmdk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=hmsyKN4vmdk",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T12:03:39Z",
       "actualEnd": "2026-07-31T13:41:20Z"
@@ -1198,6 +1296,7 @@
       "thumbnail": "https://i.ytimg.com/vi/PXGagsQtZ2U/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PXGagsQtZ2U",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T11:59:40Z",
       "actualEnd": "2026-07-31T12:39:11Z"
@@ -1209,6 +1308,7 @@
       "thumbnail": "https://i.ytimg.com/vi/2oxFUPxXbyc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2oxFUPxXbyc",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:56:52Z"
     },
     {
@@ -1218,6 +1318,7 @@
       "thumbnail": "https://i.ytimg.com/vi/0Xd6ihOx230/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=0Xd6ihOx230",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T17:40:00Z"
     },
     {
@@ -1227,6 +1328,7 @@
       "thumbnail": "https://i.ytimg.com/vi/U4g9ErgVkzY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=U4g9ErgVkzY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -1235,10 +1337,11 @@
       "title": "【#VRChat】キミの懐かしいって何年前さ？見せてやるよ本当の懐かしいを！【※設定年齢24才】",
       "thumbnail": "https://i.ytimg.com/vi/dL-BRQ9AUbE/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=dL-BRQ9AUbE",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:59:26Z",
-      "viewers": 1
+      "actualEnd": "2026-07-31T15:40:55Z"
     },
     {
       "id": "23_0LdR9508",
@@ -1247,6 +1350,7 @@
       "thumbnail": "https://i.ytimg.com/vi/23_0LdR9508/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=23_0LdR9508",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T11:00:00Z",
       "actualStart": "2026-07-31T11:01:12Z",
       "actualEnd": "2026-07-31T12:32:08Z"
@@ -1258,6 +1362,7 @@
       "thumbnail": "https://i.ytimg.com/vi/uTzYNlEDtf8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=uTzYNlEDtf8",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T07:00:00Z",
       "actualStart": "2026-07-31T07:04:20Z",
       "actualEnd": "2026-07-31T08:39:33Z"
@@ -1269,6 +1374,7 @@
       "thumbnail": "https://i.ytimg.com/vi/B4GqXlA2dkU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=B4GqXlA2dkU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-29T23:17:16Z"
     },
     {
@@ -1278,6 +1384,7 @@
       "thumbnail": "https://i.ytimg.com/vi/unG-TuORAb4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=unG-TuORAb4",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -1287,6 +1394,7 @@
       "thumbnail": "https://i.ytimg.com/vi/9ngkjGUGntk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9ngkjGUGntk",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-13T12:00:00Z"
     },
     {
@@ -1296,6 +1404,7 @@
       "thumbnail": "https://i.ytimg.com/vi/BsdMRjGfKF8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=BsdMRjGfKF8",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:24Z",
       "actualEnd": "2026-07-31T14:30:53Z"
@@ -1307,6 +1416,7 @@
       "thumbnail": "https://i.ytimg.com/vi/CudvhdyO858/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=CudvhdyO858",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:00:00Z",
       "actualStart": "2026-07-31T11:59:11Z",
       "actualEnd": "2026-07-31T13:45:00Z"
@@ -1318,6 +1428,7 @@
       "thumbnail": "https://i.ytimg.com/vi/G-mjGYuw0t0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=G-mjGYuw0t0",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-02T00:30:00Z"
     },
     {
@@ -1327,6 +1438,7 @@
       "thumbnail": "https://i.ytimg.com/vi/fWPhguMNKj8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=fWPhguMNKj8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -1336,6 +1448,7 @@
       "thumbnail": "https://i.ytimg.com/vi/63Pja99Hm1k/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=63Pja99Hm1k",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T13:00:00Z"
     },
     {
@@ -1345,6 +1458,7 @@
       "thumbnail": "https://i.ytimg.com/vi/LkQajNDAyc4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=LkQajNDAyc4",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-02T23:00:00Z"
     },
     {
@@ -1354,6 +1468,7 @@
       "thumbnail": "https://i.ytimg.com/vi/oB2BkYZcESY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oB2BkYZcESY",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T10:00:00Z"
     },
     {
@@ -1363,6 +1478,7 @@
       "thumbnail": "https://i.ytimg.com/vi/9ob-c4YL-QA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9ob-c4YL-QA",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T01:00:00Z"
     },
     {
@@ -1372,6 +1488,7 @@
       "thumbnail": "https://i.ytimg.com/vi/oIivk2SlELg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oIivk2SlELg",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-08-03T00:00:00Z"
     },
     {
@@ -1381,6 +1498,7 @@
       "thumbnail": "https://i.ytimg.com/vi/pzoVHILsyPM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=pzoVHILsyPM",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-28T22:59:34Z"
     },
     {
@@ -1390,6 +1508,7 @@
       "thumbnail": "https://i.ytimg.com/vi/2Np-340lfjI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2Np-340lfjI",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z"
     },
     {
@@ -1399,6 +1518,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YpGJfyEgReM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=YpGJfyEgReM",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T22:35:33Z"
     },
     {
@@ -1408,6 +1528,7 @@
       "thumbnail": "https://i.ytimg.com/vi/3s048Y8Jg9M/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=3s048Y8Jg9M",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T22:32:23Z"
     },
     {
@@ -1417,6 +1538,7 @@
       "thumbnail": "https://i.ytimg.com/vi/G_Gl2N_RHRU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=G_Gl2N_RHRU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-27T21:00:13Z"
     },
     {
@@ -1426,6 +1548,7 @@
       "thumbnail": "https://i.ytimg.com/vi/-EAcOhVnDzg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-EAcOhVnDzg",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-01T12:00:00Z"
     },
     {
@@ -1435,6 +1558,7 @@
       "thumbnail": "https://i.ytimg.com/vi/PkhI-FTuTy8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PkhI-FTuTy8",
       "status": "upcoming",
+      "isJapanese": true,
       "scheduledStart": "2026-08-08T00:30:00Z"
     },
     {
@@ -1444,9 +1568,10 @@
       "thumbnail": "https://i.ytimg.com/vi/jwFLdGEK_Sg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=jwFLdGEK_Sg",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:38Z",
-      "viewers": 32
+      "viewers": 31
     },
     {
       "id": "XpPATYJeu8I",
@@ -1455,6 +1580,7 @@
       "thumbnail": "https://i.ytimg.com/vi/XpPATYJeu8I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=XpPATYJeu8I",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:03:43Z",
       "viewers": 13
@@ -1466,6 +1592,7 @@
       "thumbnail": "https://i.ytimg.com/vi/b8FGJkn-nFU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=b8FGJkn-nFU",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-26T21:30:06Z"
     },
     {
@@ -1475,6 +1602,7 @@
       "thumbnail": "https://i.ytimg.com/vi/W9LETJMeWQg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=W9LETJMeWQg",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-26T05:50:57Z"
     },
     {
@@ -1484,6 +1612,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bXejEkaVSOs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=bXejEkaVSOs",
       "status": "upcoming",
+      "isJapanese": false,
       "scheduledStart": "2026-07-25T22:52:49Z"
     },
     {
@@ -1493,6 +1622,7 @@
       "thumbnail": "https://i.ytimg.com/vi/gUBgcmNgmG8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=gUBgcmNgmG8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T23:32:38Z",
       "actualStart": "2026-07-30T23:32:36Z",
       "actualEnd": "2026-07-31T00:24:09Z"
@@ -1504,6 +1634,7 @@
       "thumbnail": "https://i.ytimg.com/vi/xiHZ5t007SY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xiHZ5t007SY",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T23:30:00Z",
       "actualStart": "2026-07-30T23:30:21Z",
       "actualEnd": "2026-07-31T00:27:13Z"
@@ -1515,6 +1646,7 @@
       "thumbnail": "https://i.ytimg.com/vi/J0i9b0mWfqg/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=J0i9b0mWfqg",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:55:36Z",
       "actualStart": "2026-07-30T21:55:34Z",
       "actualEnd": "2026-07-30T23:54:00Z"
@@ -1526,6 +1658,7 @@
       "thumbnail": "https://i.ytimg.com/vi/RKOtkmXp85A/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=RKOtkmXp85A",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T23:00:00Z",
       "actualStart": "2026-07-30T23:00:08Z",
       "actualEnd": "2026-07-30T23:57:51Z"
@@ -1537,6 +1670,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ypbhhs9r-d4/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ypbhhs9r-d4",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T22:32:41Z",
       "actualStart": "2026-07-30T22:32:38Z",
       "actualEnd": "2026-07-30T23:44:59Z"
@@ -1548,6 +1682,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YA861FK1RCk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=YA861FK1RCk",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T22:15:00Z",
       "actualStart": "2026-07-30T22:24:39Z",
       "actualEnd": "2026-07-30T23:28:50Z"
@@ -1559,6 +1694,7 @@
       "thumbnail": "https://i.ytimg.com/vi/i0Oen7dgl5Y/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=i0Oen7dgl5Y",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T22:17:28Z",
       "actualStart": "2026-07-30T22:17:27Z",
       "actualEnd": "2026-07-30T23:32:06Z"
@@ -1570,6 +1706,7 @@
       "thumbnail": "https://i.ytimg.com/vi/JaK76-a1GF8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=JaK76-a1GF8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:15:51Z",
       "actualStart": "2026-07-30T21:16:23Z",
       "actualEnd": "2026-07-30T22:49:29Z"
@@ -1581,6 +1718,7 @@
       "thumbnail": "https://i.ytimg.com/vi/CI6ghizfh9g/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=CI6ghizfh9g",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:50:59Z",
       "actualStart": "2026-07-30T21:50:55Z",
       "actualEnd": "2026-07-30T22:45:56Z"
@@ -1592,6 +1730,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ZZq3L5hZXC0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ZZq3L5hZXC0",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:34:03Z",
       "actualStart": "2026-07-30T20:34:15Z",
       "actualEnd": "2026-07-30T22:11:59Z"
@@ -1603,6 +1742,7 @@
       "thumbnail": "https://i.ytimg.com/vi/YIcnVhr_pu8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=YIcnVhr_pu8",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:27:24Z",
       "actualStart": "2026-07-30T21:27:23Z",
       "actualEnd": "2026-07-30T21:46:16Z"
@@ -1614,6 +1754,7 @@
       "thumbnail": "https://i.ytimg.com/vi/o47yvOc7yEY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=o47yvOc7yEY",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-31T06:56:40Z",
       "actualEnd": "2026-07-31T09:28:30Z"
     },
@@ -1624,6 +1765,7 @@
       "thumbnail": "https://i.ytimg.com/vi/F7YUTmvxNBY/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=F7YUTmvxNBY",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:46:52Z",
       "actualStart": "2026-07-30T20:47:04Z",
       "actualEnd": "2026-07-30T21:17:47Z"
@@ -1635,6 +1777,7 @@
       "thumbnail": "https://i.ytimg.com/vi/L5_6CONpUXc/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=L5_6CONpUXc",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:50:00Z",
       "actualStart": "2026-07-31T05:53:38Z",
       "actualEnd": "2026-07-31T09:01:57Z"
@@ -1646,6 +1789,7 @@
       "thumbnail": "https://i.ytimg.com/vi/_ISf2fzAg3w/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=_ISf2fzAg3w",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T19:17:53Z",
       "actualStart": "2026-07-30T19:17:51Z",
       "actualEnd": "2026-07-30T20:44:36Z"
@@ -1657,6 +1801,7 @@
       "thumbnail": "https://i.ytimg.com/vi/7KaMqO2JyOk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=7KaMqO2JyOk",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:42:59Z",
       "actualStart": "2026-07-30T20:42:58Z",
       "actualEnd": "2026-07-30T21:03:00Z"
@@ -1668,6 +1813,7 @@
       "thumbnail": "https://i.ytimg.com/vi/lnPSvB6v7IQ/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=lnPSvB6v7IQ",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-31T05:27:51Z",
       "actualEnd": "2026-07-31T07:54:46Z"
     },
@@ -1678,6 +1824,7 @@
       "thumbnail": "https://i.ytimg.com/vi/bMr7IRJVmow/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=bMr7IRJVmow",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T05:45:00Z",
       "actualStart": "2026-07-31T05:53:08Z",
       "actualEnd": "2026-07-31T07:53:33Z"
@@ -1689,6 +1836,7 @@
       "thumbnail": "https://i.ytimg.com/vi/RhRcfHYH-Jc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=RhRcfHYH-Jc",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T05:36:48Z",
       "actualStart": "2026-07-31T05:35:57Z",
       "actualEnd": "2026-07-31T07:30:05Z"
@@ -1700,31 +1848,10 @@
       "thumbnail": "https://i.ytimg.com/vi/OL6FzlKs168/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=OL6FzlKs168",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T14:00:00Z",
       "actualStart": "2026-07-30T14:02:23Z",
       "actualEnd": "2026-07-30T15:58:26Z"
-    },
-    {
-      "id": "iPPlwpDO4EM",
-      "streamerId": "UCoazezn5EyjJfna6R0Mie8Q",
-      "title": "jugando vrchat",
-      "thumbnail": "https://i.ytimg.com/vi/iPPlwpDO4EM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=iPPlwpDO4EM",
-      "status": "ended",
-      "scheduledStart": "2026-07-30T15:30:50Z",
-      "actualStart": "2026-07-30T15:30:50Z",
-      "actualEnd": "2026-07-30T15:47:01Z"
-    },
-    {
-      "id": "Z0S1tpdOsLM",
-      "streamerId": "UCOaWlbiDxgJYPOPqydPDHxA",
-      "title": "Subscribe = Shouout Gorilla Tag and VRChat live stream",
-      "thumbnail": "https://i.ytimg.com/vi/Z0S1tpdOsLM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Z0S1tpdOsLM",
-      "status": "ended",
-      "scheduledStart": "2026-07-30T15:04:41Z",
-      "actualStart": "2026-07-30T15:04:38Z",
-      "actualEnd": "2026-07-30T15:38:48Z"
     },
     {
       "id": "eNmaXclE2rw",
@@ -1733,6 +1860,7 @@
       "thumbnail": "https://i.ytimg.com/vi/eNmaXclE2rw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=eNmaXclE2rw",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-30T20:15:41Z",
       "actualEnd": "2026-07-31T02:32:22Z"
     },
@@ -1743,6 +1871,7 @@
       "thumbnail": "https://i.ytimg.com/vi/M4hu9WuF63g/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=M4hu9WuF63g",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T21:00:00Z",
       "actualStart": "2026-07-30T21:06:59Z",
       "actualEnd": "2026-07-31T01:10:49Z"
@@ -1754,6 +1883,7 @@
       "thumbnail": "https://i.ytimg.com/vi/QLfKDaWKL6Q/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=QLfKDaWKL6Q",
       "status": "ended",
+      "isJapanese": false,
       "actualStart": "2026-07-30T19:21:04Z",
       "actualEnd": "2026-07-31T00:23:04Z"
     },
@@ -1764,6 +1894,7 @@
       "thumbnail": "https://i.ytimg.com/vi/a4Uh7_mouiU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=a4Uh7_mouiU",
       "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-30T20:02:03Z",
       "actualStart": "2026-07-30T20:02:20Z",
       "actualEnd": "2026-07-30T22:16:32Z"
@@ -1775,6 +1906,7 @@
       "thumbnail": "https://i.ytimg.com/vi/LSliDqRdHzQ/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=LSliDqRdHzQ",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T15:30:00Z",
       "actualStart": "2026-07-30T15:30:03Z",
       "actualEnd": "2026-07-30T20:13:24Z"
@@ -1786,6 +1918,7 @@
       "thumbnail": "https://i.ytimg.com/vi/zHbQentUcRs/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=zHbQentUcRs",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-30T09:30:00Z",
       "actualStart": "2026-07-30T09:23:00Z",
       "actualEnd": "2026-07-30T17:51:09Z"
@@ -1797,9 +1930,10 @@
       "thumbnail": "https://i.ytimg.com/vi/gDkkCz2x3vk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=gDkkCz2x3vk",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:11:12Z",
-      "viewers": 24
+      "viewers": 21
     },
     {
       "id": "eHz1rjNXMGM",
@@ -1808,9 +1942,10 @@
       "thumbnail": "https://i.ytimg.com/vi/eHz1rjNXMGM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=eHz1rjNXMGM",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:05:49Z",
-      "viewers": 5
+      "viewers": 3
     },
     {
       "id": "OynyrNVi-Lw",
@@ -1819,6 +1954,7 @@
       "thumbnail": "https://i.ytimg.com/vi/OynyrNVi-Lw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=OynyrNVi-Lw",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:13:43Z",
       "actualStart": "2026-07-31T14:13:43Z",
       "viewers": 2
@@ -1830,9 +1966,9 @@
       "thumbnail": "https://i.ytimg.com/vi/n9_JFRDzE3c/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=n9_JFRDzE3c",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
-      "actualStart": "2026-07-31T15:00:32Z",
-      "viewers": 1
+      "actualStart": "2026-07-31T15:00:32Z"
     },
     {
       "id": "FDNYQP1751I",
@@ -1841,6 +1977,7 @@
       "thumbnail": "https://i.ytimg.com/vi/FDNYQP1751I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=FDNYQP1751I",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:07:13Z",
       "actualStart": "2026-07-31T14:07:38Z",
       "actualEnd": "2026-07-31T15:28:15Z"
@@ -1851,10 +1988,11 @@
       "title": "＃１４：ラジネコフェア　７月が終わったけどこれからが夏本番　夏バテ気味だけど頑張ろう🐈　（ラジオ配信）",
       "thumbnail": "https://i.ytimg.com/vi/BItvib6-eW8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=BItvib6-eW8",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T13:59:04Z",
-      "viewers": 9
+      "actualEnd": "2026-07-31T15:41:22Z"
     },
     {
       "id": "aIwBBo0uRdQ",
@@ -1863,9 +2001,10 @@
       "thumbnail": "https://i.ytimg.com/vi/aIwBBo0uRdQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=aIwBBo0uRdQ",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T15:30:00Z",
       "actualStart": "2026-07-31T14:21:15Z",
-      "viewers": 1
+      "viewers": 4
     },
     {
       "id": "Vy8CgcmdYdc",
@@ -1874,9 +2013,10 @@
       "thumbnail": "https://i.ytimg.com/vi/Vy8CgcmdYdc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Vy8CgcmdYdc",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T14:05:00Z",
-      "viewers": 46
+      "viewers": 58
     },
     {
       "id": "psy75kkfHnA",
@@ -1885,19 +2025,22 @@
       "thumbnail": "https://i.ytimg.com/vi/psy75kkfHnA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=psy75kkfHnA",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T14:00:00Z",
       "actualStart": "2026-07-31T14:00:58Z",
-      "viewers": 20
+      "viewers": 18
     },
     {
       "id": "qDJe1rYfvSw",
       "streamerId": "UCSk1gfkLt64NfsTqIgSTaHw",
       "title": "VRChat Ecliptica 野良猫配信宅",
-      "thumbnail": "https://i.ytimg.com/vi/qDJe1rYfvSw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/qDJe1rYfvSw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=qDJe1rYfvSw",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:46:55Z",
-      "actualStart": "2026-07-31T12:47:12Z"
+      "actualStart": "2026-07-31T12:47:12Z",
+      "actualEnd": "2026-07-31T15:37:51Z"
     },
     {
       "id": "7T0Dk2UsV-s",
@@ -1906,9 +2049,10 @@
       "thumbnail": "https://i.ytimg.com/vi/7T0Dk2UsV-s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7T0Dk2UsV-s",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:06:44Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "5odGxrENJJ4",
@@ -1916,10 +2060,11 @@
       "title": "【💜FREE TALK VRCHAT💜】ชิลๆท้ายอาทิตย์ ไม่สนนอนอยู่ดี",
       "thumbnail": "https://i.ytimg.com/vi/5odGxrENJJ4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=5odGxrENJJ4",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:40:00Z",
       "actualStart": "2026-07-31T13:44:10Z",
-      "viewers": 6
+      "actualEnd": "2026-07-31T15:38:41Z"
     },
     {
       "id": "zOQUPO8tm4E",
@@ -1928,9 +2073,10 @@
       "thumbnail": "https://i.ytimg.com/vi/zOQUPO8tm4E/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=zOQUPO8tm4E",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:00:40Z",
-      "viewers": 5
+      "viewers": 6
     },
     {
       "id": "2FG5_en_U6k",
@@ -1938,10 +2084,11 @@
       "title": "「🔴LIVE」ปายเที่ยวววว【VRChat】",
       "thumbnail": "https://i.ytimg.com/vi/2FG5_en_U6k/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=2FG5_en_U6k",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:51:25Z",
-      "viewers": 5
+      "actualEnd": "2026-07-31T15:45:29Z"
     },
     {
       "id": "1Q7IWd6I9VM",
@@ -1950,9 +2097,10 @@
       "thumbnail": "https://i.ytimg.com/vi/1Q7IWd6I9VM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=1Q7IWd6I9VM",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:09:50Z",
       "actualStart": "2026-07-31T12:10:04Z",
-      "viewers": 15
+      "viewers": 13
     },
     {
       "id": "TmrbFYcSshs",
@@ -1960,10 +2108,11 @@
       "title": "【#VRchat】極限SlashCo部　※誰でも気軽にどうぞ！",
       "thumbnail": "https://i.ytimg.com/vi/TmrbFYcSshs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=TmrbFYcSshs",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:05:03Z",
       "actualStart": "2026-07-31T12:05:19Z",
-      "viewers": 3
+      "actualEnd": "2026-07-31T15:42:04Z"
     },
     {
       "id": "fj3up76lp_s",
@@ -1972,6 +2121,7 @@
       "thumbnail": "https://i.ytimg.com/vi/fj3up76lp_s/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=fj3up76lp_s",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:01:47Z"
     },
@@ -1982,6 +2132,7 @@
       "thumbnail": "https://i.ytimg.com/vi/7FpvbkJVcfw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7FpvbkJVcfw",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:07Z",
       "actualStart": "2026-07-31T13:04:03Z"
     },
@@ -1992,9 +2143,10 @@
       "thumbnail": "https://i.ytimg.com/vi/Wdj3i5qIgI4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Wdj3i5qIgI4",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:01:25Z",
-      "viewers": 47
+      "viewers": 41
     },
     {
       "id": "vZhTMFP8gAY",
@@ -2003,9 +2155,10 @@
       "thumbnail": "https://i.ytimg.com/vi/vZhTMFP8gAY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=vZhTMFP8gAY",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T09:30:00Z",
       "actualStart": "2026-07-31T09:13:15Z",
-      "viewers": 4
+      "viewers": 6
     },
     {
       "id": "vBfqIbXse08",
@@ -2014,9 +2167,10 @@
       "thumbnail": "https://i.ytimg.com/vi/vBfqIbXse08/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=vBfqIbXse08",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T13:02:04Z",
-      "viewers": 40
+      "viewers": 44
     },
     {
       "id": "iIUEdLTCkCk",
@@ -2025,9 +2179,10 @@
       "thumbnail": "https://i.ytimg.com/vi/iIUEdLTCkCk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=iIUEdLTCkCk",
       "status": "live",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T15:00:00Z",
       "actualStart": "2026-07-31T15:00:15Z",
-      "viewers": 14
+      "viewers": 15
     },
     {
       "id": "608k_joZQwA",
@@ -2036,9 +2191,10 @@
       "thumbnail": "https://i.ytimg.com/vi/608k_joZQwA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=608k_joZQwA",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-29T17:26:03Z",
       "actualStart": "2026-07-29T17:26:40Z",
-      "viewers": 20
+      "viewers": 26
     },
     {
       "id": "Y3OruaxnIxE",
@@ -2047,6 +2203,7 @@
       "thumbnail": "https://i.ytimg.com/vi/Y3OruaxnIxE/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Y3OruaxnIxE",
       "status": "live",
+      "isJapanese": true,
       "actualStart": "2026-07-31T13:30:16Z"
     },
     {
@@ -2056,6 +2213,7 @@
       "thumbnail": "https://i.ytimg.com/vi/reaWp8Vr6ak/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=reaWp8Vr6ak",
       "status": "live",
+      "isJapanese": false,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:55:02Z",
       "viewers": 9
@@ -2066,10 +2224,11 @@
       "title": "【VRChat】予選Bグループ配信【迷子VR】【Spice Of Tournament】",
       "thumbnail": "https://i.ytimg.com/vi/Hax6gk2MluI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Hax6gk2MluI",
-      "status": "live",
+      "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T13:00:00Z",
       "actualStart": "2026-07-31T12:58:21Z",
-      "viewers": 18
+      "actualEnd": "2026-07-31T15:40:21Z"
     },
     {
       "id": "Wu3akIMIq6A",
@@ -2078,6 +2237,7 @@
       "thumbnail": "https://i.ytimg.com/vi/Wu3akIMIq6A/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
+      "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
       "viewers": 1
     },
@@ -2088,6 +2248,7 @@
       "thumbnail": "https://i.ytimg.com/vi/tuuPCF4karo/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=tuuPCF4karo",
       "status": "ended",
+      "isJapanese": true,
       "scheduledStart": "2026-07-31T12:04:57Z",
       "actualStart": "2026-07-31T12:12:59Z",
       "actualEnd": "2026-07-31T14:09:40Z"

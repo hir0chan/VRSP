@@ -62,13 +62,17 @@ function createStream(
   phaseCount?: number,
 ): Stream {
   const id = `mock-${status}-${scenarioIndex + 1}`;
+  const isJapanese = scenarioIndex !== 1 && scenarioIndex !== 5;
   const common: Stream = {
     id,
     streamerId: streamer.id,
-    title: `${streamer.name}の${status === "live" ? "ライブ配信" : status === "ended" ? "アーカイブ" : "配信予定"} #${sequence + 1}`,
+    title: isJapanese
+      ? `${streamer.name}の${status === "live" ? "ライブ配信" : status === "ended" ? "アーカイブ" : "配信予定"} #${sequence + 1}`
+      : `VRChat ${status === "live" ? "Live Adventure" : "Upcoming Journey"} #${sequence + 1}`,
     thumbnail: `images/thumbnail-${(scenarioIndex % 3) + 1}.svg`,
     url: `https://www.youtube.com/watch?v=${id}`,
     status,
+    isJapanese,
   };
 
   if (status === "live") {

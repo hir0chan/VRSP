@@ -17,6 +17,9 @@ test("固定 now と内蔵チャンネルから既定件数を決定的に生成
   assert.equal(first.filter((stream) => stream.status === "upcoming").length, 7);
   assert.equal(first.filter((stream) => stream.status === "ended").length, 2);
   assert.equal(new Set(first.map((stream) => stream.streamerId)).size > 1, true);
+  assert.equal(first.every((stream) => typeof stream.isJapanese === "boolean"), true);
+  assert.equal(first.filter((stream) => stream.isJapanese === false).length, 2);
+  assert.equal(first.filter((stream) => stream.isJapanese === false).every((stream) => /^VRChat [A-Za-z ]+ #\d+$/.test(stream.title)), true);
 });
 
 test("live 0件と JST 日付終了直前の upcoming を生成できる", () => {

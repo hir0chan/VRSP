@@ -68,7 +68,7 @@ cp .env.example .env   # YouTube Data API キーを記入(なければモック�
 
 ## 掲載について
 
-本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat 以外のコンテンツが掲載されることがあります。掲載のご希望・削除のご依頼は X [@hir0chan_vrc](https://x.com/hir0chan_vrc) までご連絡ください。
+本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat 以外のコンテンツが掲載されることがあります。掲載の削除をご希望の場合は X [@hir0chan_vrc](https://x.com/hir0chan_vrc) までご連絡ください。
 
 ## 作者
 

@@ -156,6 +156,87 @@ img {
   padding: 0 0 clamp(76px, 10vw, 120px);
 }
 
+.filter-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: clamp(-60px, -5vw, -36px) 0 clamp(40px, 6vw, 64px);
+}
+
+.filter-controls[hidden] {
+  display: none;
+}
+
+.ja-only-toggle {
+  position: relative;
+}
+
+.ja-only-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.ja-only-toggle label {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ja-only-toggle label::before {
+  width: 42px;
+  height: 24px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px rgb(34 50 62 / 2%);
+  content: "";
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.ja-only-toggle label::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ink-soft);
+  content: "";
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.ja-only-toggle input:checked + label::before {
+  border-color: var(--accent-deep);
+  background: var(--accent-deep);
+}
+
+.ja-only-toggle input:checked + label::after {
+  background: var(--surface);
+  transform: translateX(18px);
+}
+
+.ja-only-toggle input:focus-visible + label {
+  border-radius: 4px;
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 4px;
+}
+
+[data-ja-only] .stream-card[data-ja="false"] {
+  display: none;
+}
+
+[data-ja-only] .date-group:not(:has(.stream-card[data-ja="true"])) {
+  display: none;
+}
+
 .section-header {
   display: flex;
   align-items: end;

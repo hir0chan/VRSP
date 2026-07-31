@@ -8,12 +8,14 @@ import {
   limitTracked,
   loadEnvFile,
   runUpdate,
+  isStream,
   shouldDiscover,
   validateBlocklist,
 } from "../scripts/update.js";
 import {
   discoverVideoIds,
   filterStreams,
+  isJapaneseContent,
   isVrchatContent,
   refreshStreams,
 } from "../scripts/youtube.js";
@@ -106,6 +108,23 @@ test("VRChat 判定は title/description を小文字化して包含判定する
   assert.equal(isVrchatContent("VRC", "virtual reality"), false);
 });
 
+test("日本語判定は title/description のかな文字だけを対象にする", () => {
+  assert.equal(isJapaneseContent("ひらがな配信", ""), true);
+  assert.equal(isJapaneseContent("カタカナ配信", ""), true);
+  assert.equal(isJapaneseContent("VRChat stream", "説明にかなを含む"), true);
+  assert.equal(isJapaneseContent("漢字配信", "中国語直播"), false);
+  assert.equal(isJapaneseContent("VRChat stream", "English only"), false);
+  assert.equal(isJapaneseContent("・ー、ｰ", "！？"), false);
+  assert.equal(isJapaneseContent("ﾌﾞｲﾁｬｯﾄ", ""), true);
+  assert.equal(isJapaneseContent("ｶｰ", ""), true);
+});
+
+test("Stream 型ガードは isJapanese の欠落を許容し非 boolean を拒否する", () => {
+  assert.equal(isStream(stream("legacy")), true);
+  assert.equal(isStream(stream("ja", { isJapanese: true })), true);
+  assert.equal(isStream({ ...stream("invalid"), isJapanese: "true" }), false);
+});
+
 test("search.list は指定3クエリを part=id で実行する", async () => {
   const calls: URL[] = [];
   const result = await discoverVideoIds("secret", mockFetch((url) => {
@@ -180,9 +199,21 @@ test("refresh は状態・視聴者・チャンネルを動画ごとに返し不
   const ended = result.get("ended");
   assert.equal(live?.ok, true);
   assert.equal(live?.ok === true ? live.stream?.viewers : undefined, 42);
+  assert.equal(live?.ok === true ? live.stream?.isJapanese : undefined, false);
   assert.equal(ended?.ok === true ? ended.stream?.status : undefined, "ended");
   assert.deepEqual(result.get("ordinary"), { ok: true });
   assert.deepEqual(result.get("wrong"), { ok: true });
+});
+
+test("refresh は変換時に title と description から日本語判定を付与する", async () => {
+  const result = await refreshStreams(["english", "description-ja"], "secret", mockFetch(() => json({ items: [
+    video("english", { title: "VRChat World Tour", description: "English stream" }),
+    video("description-ja", { title: "VRChat World Tour", description: "一緒に遊びます" }),
+  ] })));
+  const english = result.get("english");
+  const descriptionJa = result.get("description-ja");
+  assert.equal(english?.ok === true ? english.stream?.isJapanese : undefined, false);
+  assert.equal(descriptionJa?.ok === true ? descriptionJa.stream?.isJapanese : undefined, true);
 });
 
 test("表示窓は境界を含み、遠い upcoming は tracked 相当には残せる", () => {

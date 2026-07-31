@@ -18,6 +18,7 @@ export interface Stream {
   actualStart?: string;
   actualEnd?: string;
   viewers?: number;
+  isJapanese?: boolean;
 }
 
 export interface GeneratedStreams {
