@@ -1,10 +1,10 @@
-# VRChat Stream Schedule Portal
+# VRChat配信アンテナ
 
 VRChat系配信者のライブ配信と今後の配信予定を、ひとつの場所にまとめたスケジュールポータルです。
 
 **🌐 https://hir0chan.github.io/VRSP/**
 
-![VRChat Stream Schedule Portal](public/images/ogp.png)
+![VRChat配信アンテナ](public/images/ogp.png)
 
 ## 特徴
 

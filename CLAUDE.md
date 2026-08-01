@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## プロジェクト概要
 
-VRChat Stream Schedule Portal — VRChat系 YouTube 配信者のライブ配信・配信予定を一覧するポータル。**公開稼働中**: https://hir0chan.github.io/VRSP/ (リポジトリ: hir0chan/VRSP)
+VRChat配信アンテナ(旧称: VRChat Stream Schedule Portal)— VRChat系 YouTube 配信者のライブ配信・配信予定を一覧するポータル。**公開稼働中**: https://hir0chan.github.io/VRSP/ (リポジトリ: hir0chan/VRSP)
 
 GitHub Actions が15分毎に YouTube Data API v3 からデータを取得し、静的ビルドして GitHub Pages へ自動デプロイする。サーバ常駐・DB なし。
 
