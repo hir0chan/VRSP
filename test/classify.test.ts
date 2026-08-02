@@ -6,6 +6,11 @@ import {
   getJstDateKey,
 } from "../src/lib/classify.js";
 
+const noopConsole = (): void => undefined;
+console.warn = noopConsole;
+console.error = noopConsole;
+console.log = noopConsole;
+
 const streamers: Streamer[] = [
   {
     id: "known",

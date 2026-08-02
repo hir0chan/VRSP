@@ -2,6 +2,11 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { resolveThumbnailUrl } from "../src/lib/thumbnail.js";
 
+const noopConsole = (): void => undefined;
+console.warn = noopConsole;
+console.error = noopConsole;
+console.log = noopConsole;
+
 test("HTTP/HTTPS の絶対サムネイル URL はそのまま返す", () => {
   assert.equal(
     resolveThumbnailUrl("https://i.ytimg.com/vi/example/high.jpg", "/VRSP/"),

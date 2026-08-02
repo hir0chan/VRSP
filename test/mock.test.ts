@@ -8,6 +8,11 @@ import type { GeneratedStreamers, GeneratedStreams } from "../scripts/models.js"
 import { writeGeneratedFiles } from "../scripts/update.js";
 import { classifyStreams } from "../src/lib/classify.js";
 
+const noopConsole = (): void => undefined;
+console.warn = noopConsole;
+console.error = noopConsole;
+console.log = noopConsole;
+
 test("固定 now と内蔵チャンネルから既定件数を決定的に生成する", () => {
   const now = new Date("2026-07-30T03:00:00.000Z");
   const first = generateMockStreams(now);

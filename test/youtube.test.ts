@@ -20,6 +20,11 @@ import {
   refreshStreams,
 } from "../scripts/youtube.js";
 
+const noopConsole = (): void => undefined;
+console.warn = noopConsole;
+console.error = noopConsole;
+console.log = noopConsole;
+
 const NOW = new Date("2026-07-30T12:00:00.000Z");
 
 function json(value: unknown, status = 200): Response {
@@ -146,7 +151,6 @@ test("search.list は指定3クエリを part=id で実行する", async () => {
 
 test("search.list の不正 item は warn してスキップし、有効 ID とクエリ成功を維持する", async () => {
   const warnings: string[] = [];
-  const originalWarn = console.warn;
   console.warn = (message?: unknown) => warnings.push(String(message));
   try {
     const mixed = await discoverVideoIds("secret", mockFetch((url) => json({
@@ -167,7 +171,7 @@ test("search.list の不正 item は warn してスキップし、有効 ID と�
     assert.equal(warnings.length, 6);
     assert.equal(warnings.every((warning) => warning.includes("スキップします")), true);
   } finally {
-    console.warn = originalWarn;
+    console.warn = noopConsole;
   }
 
   const missingItems = await discoverVideoIds("secret", mockFetch(() => json({})));
