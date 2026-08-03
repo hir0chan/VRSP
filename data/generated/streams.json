@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T18:15:30.243Z",
+  "updatedAt": "2026-08-03T18:45:20.813Z",
   "tracked": [
     {
       "id": "e8HHsU4j66E",
@@ -166,7 +166,7 @@
       "status": "live",
       "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "fPD64ZCtiOM",
@@ -326,7 +326,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-02T14:06:06Z",
       "actualStart": "2026-08-02T14:06:54Z",
-      "viewers": 9
+      "viewers": 7
     },
     {
       "id": "vPbmoYmf-_E",
@@ -1023,7 +1023,7 @@
       "id": "Oyj3MZ2AhAg",
       "streamerId": "UCLJnOUpCMmEJo7VuQ8PkdjA",
       "title": "Hello.",
-      "thumbnail": "https://i.ytimg.com/vi/Oyj3MZ2AhAg/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/Oyj3MZ2AhAg/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=Oyj3MZ2AhAg",
       "status": "ended",
       "isJapanese": false,
@@ -1114,7 +1114,7 @@
       "id": "U8cK3ozjrik",
       "streamerId": "UCKrZLHiZk69mhUncZ9QCezg",
       "title": "Microsoft Flight Simulator 2020 & Vrchat | Flight Sim 8/2/26 (YVR-LAX)",
-      "thumbnail": "https://i.ytimg.com/vi/U8cK3ozjrik/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/U8cK3ozjrik/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=U8cK3ozjrik",
       "status": "ended",
       "isJapanese": false,
@@ -1477,10 +1477,10 @@
       "title": "VRChat Stream!",
       "thumbnail": "https://i.ytimg.com/vi/4Qy_vxvtys4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=4Qy_vxvtys4",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-03T13:38:14Z",
-      "viewers": 16
+      "actualEnd": "2026-08-03T18:39:34Z"
     },
     {
       "id": "NbvtwqvOtnk",
@@ -1630,7 +1630,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-03T14:50:56Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "w6ssum6CMI8",
@@ -1656,13 +1656,13 @@
       "id": "rR8qBe-J-7k",
       "streamerId": "UCITOIEfUgcWh1KqAUHJiM7g",
       "title": "Vrchat stream",
-      "thumbnail": "https://i.ytimg.com/vi/rR8qBe-J-7k/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/rR8qBe-J-7k/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=rR8qBe-J-7k",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T16:03:37Z",
       "actualStart": "2026-08-03T16:03:37Z",
-      "viewers": 3
+      "actualEnd": "2026-08-03T18:21:37Z"
     },
     {
       "id": "ltzbaT7VJOk",
@@ -1692,7 +1692,7 @@
       "id": "aoOLevmEiC4",
       "streamerId": "UCUdBRZJpJffQbq0PFcY7-RA",
       "title": "Chilling on VRChat",
-      "thumbnail": "https://i.ytimg.com/vi/aoOLevmEiC4/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/aoOLevmEiC4/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=aoOLevmEiC4",
       "status": "ended",
       "isJapanese": false,
@@ -1720,7 +1720,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-03T15:41:10Z",
-      "viewers": 1
+      "viewers": 3
     },
     {
       "id": "udRJZRZ8KCk",
@@ -1763,7 +1763,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-03T18:00:00Z",
       "actualStart": "2026-08-03T18:00:32Z",
-      "viewers": 4
+      "viewers": 11
     },
     {
       "id": "Xax8dqQAtk8",
@@ -1771,10 +1771,11 @@
       "title": "jogando vrchat ao vivo!",
       "thumbnail": "https://i.ytimg.com/vi/Xax8dqQAtk8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Xax8dqQAtk8",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:40:37Z",
-      "actualStart": "2026-08-03T17:40:59Z"
+      "actualStart": "2026-08-03T17:40:59Z",
+      "actualEnd": "2026-08-03T18:36:04Z"
     },
     {
       "id": "i04iQ7RFwvU",
@@ -1782,11 +1783,11 @@
       "title": "VRChat livestream, Lets reach 1K subs.",
       "thumbnail": "https://i.ytimg.com/vi/i04iQ7RFwvU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=i04iQ7RFwvU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:27:36Z",
       "actualStart": "2026-08-03T17:27:34Z",
-      "viewers": 3
+      "actualEnd": "2026-08-03T18:17:14Z"
     },
     {
       "id": "4dTa-DHOwXQ",
@@ -1794,11 +1795,11 @@
       "title": "VRChat Livestream With Exotic Bonfie! 8/3/26!",
       "thumbnail": "https://i.ytimg.com/vi/4dTa-DHOwXQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=4dTa-DHOwXQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:28:21Z",
       "actualStart": "2026-08-03T17:28:19Z",
-      "viewers": 7
+      "actualEnd": "2026-08-03T18:41:07Z"
     },
     {
       "id": "kiN8BN7jJ8I",
@@ -1806,11 +1807,11 @@
       "title": "[EN] Cap'n Limewire plays VRCHAT! as knuckles",
       "thumbnail": "https://i.ytimg.com/vi/kiN8BN7jJ8I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=kiN8BN7jJ8I",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T16:59:09Z",
       "actualStart": "2026-08-03T16:59:40Z",
-      "viewers": 2
+      "actualEnd": "2026-08-03T18:20:31Z"
     },
     {
       "id": "Fu-xRQkiEEU",
@@ -1821,8 +1822,7 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:00:00Z",
-      "actualStart": "2026-08-03T17:05:58Z",
-      "viewers": 2
+      "actualStart": "2026-08-03T17:05:58Z"
     },
     {
       "id": "UxJDeV_6sV0",
@@ -2013,7 +2013,7 @@
       "status": "live",
       "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "fPD64ZCtiOM",
@@ -2173,7 +2173,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-02T14:06:06Z",
       "actualStart": "2026-08-02T14:06:54Z",
-      "viewers": 9
+      "viewers": 7
     },
     {
       "id": "vPbmoYmf-_E",
@@ -2870,7 +2870,7 @@
       "id": "Oyj3MZ2AhAg",
       "streamerId": "UCLJnOUpCMmEJo7VuQ8PkdjA",
       "title": "Hello.",
-      "thumbnail": "https://i.ytimg.com/vi/Oyj3MZ2AhAg/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/Oyj3MZ2AhAg/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=Oyj3MZ2AhAg",
       "status": "ended",
       "isJapanese": false,
@@ -2961,7 +2961,7 @@
       "id": "U8cK3ozjrik",
       "streamerId": "UCKrZLHiZk69mhUncZ9QCezg",
       "title": "Microsoft Flight Simulator 2020 & Vrchat | Flight Sim 8/2/26 (YVR-LAX)",
-      "thumbnail": "https://i.ytimg.com/vi/U8cK3ozjrik/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/U8cK3ozjrik/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=U8cK3ozjrik",
       "status": "ended",
       "isJapanese": false,
@@ -3324,10 +3324,10 @@
       "title": "VRChat Stream!",
       "thumbnail": "https://i.ytimg.com/vi/4Qy_vxvtys4/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=4Qy_vxvtys4",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-03T13:38:14Z",
-      "viewers": 16
+      "actualEnd": "2026-08-03T18:39:34Z"
     },
     {
       "id": "NbvtwqvOtnk",
@@ -3477,7 +3477,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-03T14:50:56Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "w6ssum6CMI8",
@@ -3503,13 +3503,13 @@
       "id": "rR8qBe-J-7k",
       "streamerId": "UCITOIEfUgcWh1KqAUHJiM7g",
       "title": "Vrchat stream",
-      "thumbnail": "https://i.ytimg.com/vi/rR8qBe-J-7k/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/rR8qBe-J-7k/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=rR8qBe-J-7k",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T16:03:37Z",
       "actualStart": "2026-08-03T16:03:37Z",
-      "viewers": 3
+      "actualEnd": "2026-08-03T18:21:37Z"
     },
     {
       "id": "ltzbaT7VJOk",
@@ -3539,7 +3539,7 @@
       "id": "aoOLevmEiC4",
       "streamerId": "UCUdBRZJpJffQbq0PFcY7-RA",
       "title": "Chilling on VRChat",
-      "thumbnail": "https://i.ytimg.com/vi/aoOLevmEiC4/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/aoOLevmEiC4/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=aoOLevmEiC4",
       "status": "ended",
       "isJapanese": false,
@@ -3567,7 +3567,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-03T15:41:10Z",
-      "viewers": 1
+      "viewers": 3
     },
     {
       "id": "udRJZRZ8KCk",
@@ -3610,7 +3610,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-03T18:00:00Z",
       "actualStart": "2026-08-03T18:00:32Z",
-      "viewers": 4
+      "viewers": 11
     },
     {
       "id": "Xax8dqQAtk8",
@@ -3618,10 +3618,11 @@
       "title": "jogando vrchat ao vivo!",
       "thumbnail": "https://i.ytimg.com/vi/Xax8dqQAtk8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=Xax8dqQAtk8",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:40:37Z",
-      "actualStart": "2026-08-03T17:40:59Z"
+      "actualStart": "2026-08-03T17:40:59Z",
+      "actualEnd": "2026-08-03T18:36:04Z"
     },
     {
       "id": "i04iQ7RFwvU",
@@ -3629,11 +3630,11 @@
       "title": "VRChat livestream, Lets reach 1K subs.",
       "thumbnail": "https://i.ytimg.com/vi/i04iQ7RFwvU/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=i04iQ7RFwvU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:27:36Z",
       "actualStart": "2026-08-03T17:27:34Z",
-      "viewers": 3
+      "actualEnd": "2026-08-03T18:17:14Z"
     },
     {
       "id": "4dTa-DHOwXQ",
@@ -3641,11 +3642,11 @@
       "title": "VRChat Livestream With Exotic Bonfie! 8/3/26!",
       "thumbnail": "https://i.ytimg.com/vi/4dTa-DHOwXQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=4dTa-DHOwXQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:28:21Z",
       "actualStart": "2026-08-03T17:28:19Z",
-      "viewers": 7
+      "actualEnd": "2026-08-03T18:41:07Z"
     },
     {
       "id": "kiN8BN7jJ8I",
@@ -3653,11 +3654,11 @@
       "title": "[EN] Cap'n Limewire plays VRCHAT! as knuckles",
       "thumbnail": "https://i.ytimg.com/vi/kiN8BN7jJ8I/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=kiN8BN7jJ8I",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T16:59:09Z",
       "actualStart": "2026-08-03T16:59:40Z",
-      "viewers": 2
+      "actualEnd": "2026-08-03T18:20:31Z"
     },
     {
       "id": "Fu-xRQkiEEU",
@@ -3668,8 +3669,7 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T17:00:00Z",
-      "actualStart": "2026-08-03T17:05:58Z",
-      "viewers": 2
+      "actualStart": "2026-08-03T17:05:58Z"
     },
     {
       "id": "UxJDeV_6sV0",
