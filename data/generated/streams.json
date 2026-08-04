@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T21:17:08.548Z",
+  "updatedAt": "2026-08-04T21:45:24.736Z",
   "tracked": [
     {
       "id": "e8HHsU4j66E",
@@ -90,7 +90,7 @@
       "status": "live",
       "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
-      "viewers": 3
+      "viewers": 2
     },
     {
       "id": "fPD64ZCtiOM",
@@ -1046,7 +1046,7 @@
       "id": "629nhpS4BnI",
       "streamerId": "UCJUu8Hzys0Ig7ygn3M6sgnw",
       "title": "Chillin in VRChat with saucy",
-      "thumbnail": "https://i.ytimg.com/vi/629nhpS4BnI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/629nhpS4BnI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=629nhpS4BnI",
       "status": "ended",
       "isJapanese": false,
@@ -1163,7 +1163,7 @@
       "id": "35nK3_60g5Y",
       "streamerId": "UC9nD-JApniK5cizx0Ry8y0w",
       "title": "【 #vrchat #歌枠 】VRC疑似ライブ！新しい衣装と新しい髪型見てね♡【#vtuber  #眠雲部屋】",
-      "thumbnail": "https://i.ytimg.com/vi/35nK3_60g5Y/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/35nK3_60g5Y/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=35nK3_60g5Y",
       "status": "ended",
       "isJapanese": true,
@@ -1892,12 +1892,13 @@
       "id": "BdNL-yEiAlU",
       "streamerId": "UCflE4rbWtzVKg310iu49UOw",
       "title": "♦️LOBOTHON 40° Dia: Relax no VRChat♦️",
-      "thumbnail": "https://i.ytimg.com/vi/BdNL-yEiAlU/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/BdNL-yEiAlU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=BdNL-yEiAlU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T19:00:00Z",
-      "actualStart": "2026-08-04T18:58:49Z"
+      "actualStart": "2026-08-04T18:58:49Z",
+      "actualEnd": "2026-08-04T21:18:44Z"
     },
     {
       "id": "RA3QXXGXyRQ",
@@ -1909,7 +1910,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:30:00Z",
       "actualStart": "2026-08-04T18:34:43Z",
-      "viewers": 10
+      "viewers": 9
     },
     {
       "id": "otXcCB4eip4",
@@ -1968,7 +1969,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:55:03Z",
-      "actualStart": "2026-08-04T18:55:19Z"
+      "actualStart": "2026-08-04T18:55:19Z",
+      "viewers": 1
     },
     {
       "id": "28jJ1L5Pjrk",
@@ -1980,7 +1982,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:55:03Z",
       "actualStart": "2026-08-04T18:55:23Z",
-      "viewers": 3
+      "viewers": 2
     },
     {
       "id": "8_dI3QvF_tk",
@@ -1992,7 +1994,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:52:33Z",
       "actualStart": "2026-08-04T18:53:25Z",
-      "viewers": 17
+      "viewers": 24
     },
     {
       "id": "gkm8Fwg3xJk",
@@ -2038,7 +2040,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:31:51Z",
-      "actualStart": "2026-08-04T18:32:01Z"
+      "actualStart": "2026-08-04T18:32:01Z",
+      "viewers": 1
     },
     {
       "id": "QOxnKSE6cV4",
@@ -2062,7 +2065,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T20:01:37Z",
       "actualStart": "2026-08-04T20:01:54Z",
-      "viewers": 202
+      "viewers": 194
     },
     {
       "id": "8aPYM_y_mi4",
@@ -2093,10 +2096,10 @@
       "title": "VRChat RP | Zone 7 | Melina/Lilly/Others",
       "thumbnail": "https://i.ytimg.com/vi/r8N-3ElfwDc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=r8N-3ElfwDc",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-04T19:44:27Z",
-      "viewers": 9
+      "actualEnd": "2026-08-04T21:31:54Z"
     },
     {
       "id": "QcFSn2GZYzk",
@@ -2108,7 +2111,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T20:37:11Z",
       "actualStart": "2026-08-04T20:55:40Z",
-      "viewers": 4
+      "viewers": 5
     },
     {
       "id": "lHQMlUCE-bk",
@@ -2222,7 +2225,7 @@
       "status": "live",
       "isJapanese": true,
       "actualStart": "2026-04-06T03:18:35Z",
-      "viewers": 3
+      "viewers": 2
     },
     {
       "id": "fPD64ZCtiOM",
@@ -3178,7 +3181,7 @@
       "id": "629nhpS4BnI",
       "streamerId": "UCJUu8Hzys0Ig7ygn3M6sgnw",
       "title": "Chillin in VRChat with saucy",
-      "thumbnail": "https://i.ytimg.com/vi/629nhpS4BnI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/629nhpS4BnI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=629nhpS4BnI",
       "status": "ended",
       "isJapanese": false,
@@ -3295,7 +3298,7 @@
       "id": "35nK3_60g5Y",
       "streamerId": "UC9nD-JApniK5cizx0Ry8y0w",
       "title": "【 #vrchat #歌枠 】VRC疑似ライブ！新しい衣装と新しい髪型見てね♡【#vtuber  #眠雲部屋】",
-      "thumbnail": "https://i.ytimg.com/vi/35nK3_60g5Y/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/35nK3_60g5Y/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=35nK3_60g5Y",
       "status": "ended",
       "isJapanese": true,
@@ -4024,12 +4027,13 @@
       "id": "BdNL-yEiAlU",
       "streamerId": "UCflE4rbWtzVKg310iu49UOw",
       "title": "♦️LOBOTHON 40° Dia: Relax no VRChat♦️",
-      "thumbnail": "https://i.ytimg.com/vi/BdNL-yEiAlU/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/BdNL-yEiAlU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=BdNL-yEiAlU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T19:00:00Z",
-      "actualStart": "2026-08-04T18:58:49Z"
+      "actualStart": "2026-08-04T18:58:49Z",
+      "actualEnd": "2026-08-04T21:18:44Z"
     },
     {
       "id": "RA3QXXGXyRQ",
@@ -4041,7 +4045,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:30:00Z",
       "actualStart": "2026-08-04T18:34:43Z",
-      "viewers": 10
+      "viewers": 9
     },
     {
       "id": "otXcCB4eip4",
@@ -4100,7 +4104,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:55:03Z",
-      "actualStart": "2026-08-04T18:55:19Z"
+      "actualStart": "2026-08-04T18:55:19Z",
+      "viewers": 1
     },
     {
       "id": "28jJ1L5Pjrk",
@@ -4112,7 +4117,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:55:03Z",
       "actualStart": "2026-08-04T18:55:23Z",
-      "viewers": 3
+      "viewers": 2
     },
     {
       "id": "8_dI3QvF_tk",
@@ -4124,7 +4129,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:52:33Z",
       "actualStart": "2026-08-04T18:53:25Z",
-      "viewers": 17
+      "viewers": 24
     },
     {
       "id": "gkm8Fwg3xJk",
@@ -4170,7 +4175,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:31:51Z",
-      "actualStart": "2026-08-04T18:32:01Z"
+      "actualStart": "2026-08-04T18:32:01Z",
+      "viewers": 1
     },
     {
       "id": "QOxnKSE6cV4",
@@ -4194,7 +4200,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T20:01:37Z",
       "actualStart": "2026-08-04T20:01:54Z",
-      "viewers": 202
+      "viewers": 194
     },
     {
       "id": "8aPYM_y_mi4",
@@ -4225,10 +4231,10 @@
       "title": "VRChat RP | Zone 7 | Melina/Lilly/Others",
       "thumbnail": "https://i.ytimg.com/vi/r8N-3ElfwDc/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=r8N-3ElfwDc",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-04T19:44:27Z",
-      "viewers": 9
+      "actualEnd": "2026-08-04T21:31:54Z"
     },
     {
       "id": "QcFSn2GZYzk",
@@ -4240,7 +4246,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T20:37:11Z",
       "actualStart": "2026-08-04T20:55:40Z",
-      "viewers": 4
+      "viewers": 5
     },
     {
       "id": "lHQMlUCE-bk",
