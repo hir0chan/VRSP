@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T11:15:27.500Z",
+  "updatedAt": "2026-08-04T11:45:24.314Z",
   "tracked": [
     {
       "id": "e8HHsU4j66E",
@@ -708,9 +708,11 @@
       "title": "【凸待ち】館長誕生日記念配信【誕生日配信】",
       "thumbnail": "https://i.ytimg.com/vi/w6ssum6CMI8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=w6ssum6CMI8",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-04T11:30:00Z"
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:30:58Z",
+      "viewers": 15
     },
     {
       "id": "5XIbkUXvHRM",
@@ -955,7 +957,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T19:00:00Z",
-      "actualStart": "2026-08-03T19:00:40Z"
+      "actualStart": "2026-08-03T19:00:40Z",
+      "viewers": 4
     },
     {
       "id": "G8EoDNOKA6E",
@@ -1007,7 +1010,7 @@
       "id": "TBNE4cJ90eI",
       "streamerId": "UCnzwm6E8tRUQFd954io7p7g",
       "title": "VRChat with Freinds",
-      "thumbnail": "https://i.ytimg.com/vi/TBNE4cJ90eI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/TBNE4cJ90eI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=TBNE4cJ90eI",
       "status": "ended",
       "isJapanese": false,
@@ -1101,7 +1104,7 @@
       "id": "wJ8P9HNekUk",
       "streamerId": "UCURR_8RV-whaFHNqO6Q264A",
       "title": "Runnic the Hybrid in VRCHAT Livestream part 455",
-      "thumbnail": "https://i.ytimg.com/vi/wJ8P9HNekUk/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/wJ8P9HNekUk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=wJ8P9HNekUk",
       "status": "ended",
       "isJapanese": false,
@@ -1593,9 +1596,10 @@
       "title": "VRCHATゲーム部 APEX",
       "thumbnail": "https://i.ytimg.com/vi/JfTnqxQqOaY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=JfTnqxQqOaY",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
-      "actualStart": "2026-08-04T03:49:48Z"
+      "actualStart": "2026-08-04T03:49:48Z",
+      "actualEnd": "2026-08-04T11:40:36Z"
     },
     {
       "id": "dU0zQTaYaKs",
@@ -1708,13 +1712,13 @@
       "id": "xvP6adFQBTU",
       "streamerId": "UCYDhfvxjXNnaGDpZOcwQYQw",
       "title": "【VRChat】作業雑談配信【ToN】8/4",
-      "thumbnail": "https://i.ytimg.com/vi/xvP6adFQBTU/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/xvP6adFQBTU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xvP6adFQBTU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-04T07:30:00Z",
       "actualStart": "2026-08-04T07:27:46Z",
-      "viewers": 2
+      "actualEnd": "2026-08-04T11:16:42Z"
     },
     {
       "id": "VwcHo9xs-wc",
@@ -1779,10 +1783,11 @@
       "title": "Is vrchat healing?",
       "thumbnail": "https://i.ytimg.com/vi/7MpzmPkw6oA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7MpzmPkw6oA",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T08:44:07Z",
-      "actualStart": "2026-08-04T08:43:17Z"
+      "actualStart": "2026-08-04T08:43:17Z",
+      "actualEnd": "2026-08-04T11:19:25Z"
     },
     {
       "id": "y80bZWRC2Gs",
@@ -1822,12 +1827,12 @@
     {
       "id": "SN7fnUlXqhg",
       "streamerId": "UCHvY0tir5VZ57MXUwi1AiFQ",
-      "title": "【NTE】爆釣とパルワールド/VRchatの片隅でサイレント配信🎸【深淵ヨミ】",
+      "title": "VRchatの片隅でサイレント配信🎸【深淵ヨミ】",
       "thumbnail": "https://i.ytimg.com/vi/SN7fnUlXqhg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=SN7fnUlXqhg",
       "status": "upcoming",
       "isJapanese": true,
-      "scheduledStart": "2026-08-04T11:00:00Z"
+      "scheduledStart": "2026-08-04T12:00:00Z"
     },
     {
       "id": "QOpzNhU8AGk",
@@ -1850,8 +1855,7 @@
       "status": "live",
       "isJapanese": true,
       "scheduledStart": "2026-08-04T09:31:13Z",
-      "actualStart": "2026-08-04T09:31:33Z",
-      "viewers": 2
+      "actualStart": "2026-08-04T09:31:33Z"
     },
     {
       "id": "kIfEmVjwu4Y",
@@ -1904,6 +1908,131 @@
       "status": "upcoming",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T00:00:00Z"
+    },
+    {
+      "id": "-gNgHzGHncg",
+      "streamerId": "UCZVwxfN71IJhJIHEvwExjzg",
+      "title": "VRChat~新宿弾き語り~",
+      "thumbnail": "https://i.ytimg.com/vi/-gNgHzGHncg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=-gNgHzGHncg",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:23:59Z",
+      "actualStart": "2026-08-04T11:24:16Z",
+      "viewers": 1
+    },
+    {
+      "id": "FwPaCKIwivA",
+      "streamerId": "UCUFlNY0J_S3oUhCvDBr5hTw",
+      "title": "【VRChat】綺麗なワールド巡り！バーチャルの世界をのんびりお散歩【VRC】",
+      "thumbnail": "https://i.ytimg.com/vi/FwPaCKIwivA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=FwPaCKIwivA",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:29:29Z",
+      "viewers": 3
+    },
+    {
+      "id": "1oDyhlDwG84",
+      "streamerId": "UCWjpvo4HHu1INhfqu73Prbg",
+      "title": "【VR Chat】Lets GO ADVENTURE!",
+      "thumbnail": "https://i.ytimg.com/vi/1oDyhlDwG84/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=1oDyhlDwG84",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:20:00Z",
+      "actualStart": "2026-08-04T11:24:09Z",
+      "viewers": 4
+    },
+    {
+      "id": "JH-QgvFrOkc",
+      "streamerId": "UCDkNF1abJR2HEI4vxDVvrnQ",
+      "title": "Doing Flips EVERY DAY Til Filian Respawns (Day 80) And Games",
+      "thumbnail": "https://i.ytimg.com/vi/JH-QgvFrOkc/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=JH-QgvFrOkc",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:15:00Z",
+      "actualStart": "2026-08-04T11:15:48Z",
+      "viewers": 6
+    },
+    {
+      "id": "U04MOsJw34s",
+      "streamerId": "UCgtWTzUYfrXYjcpLn7VNd6w",
+      "title": "VRChat",
+      "thumbnail": "https://i.ytimg.com/vi/U04MOsJw34s/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=U04MOsJw34s",
+      "status": "live",
+      "isJapanese": false,
+      "actualStart": "2026-08-04T11:07:52Z"
+    },
+    {
+      "id": "SblTQstM4oA",
+      "streamerId": "UCKTo5RB6l2SVOv-MG4kDOkQ",
+      "title": "【雑談配信】VRChatter趣味を聞かれた時に困りがち【VRChat】",
+      "thumbnail": "https://i.ytimg.com/vi/SblTQstM4oA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=SblTQstM4oA",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:00:00Z",
+      "actualStart": "2026-08-04T11:00:23Z",
+      "viewers": 63
+    },
+    {
+      "id": "DkrA-pFm8CY",
+      "streamerId": "UC013wcxeN2VCNtaL6_3q7Rw",
+      "title": "[YOCHITHON]  HALOWW SEMUA #3dvtuber #vrchat #vtuberid",
+      "thumbnail": "https://i.ytimg.com/vi/DkrA-pFm8CY/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=DkrA-pFm8CY",
+      "status": "live",
+      "isJapanese": true,
+      "actualStart": "2026-08-04T10:20:33Z",
+      "viewers": 6
+    },
+    {
+      "id": "LjBNrKyGGBk",
+      "streamerId": "UCYscuD-Mdas_6S37uukmE-w",
+      "title": "【フルトラ】前回教えてもらったオヌヌメワールドに行く【実質３D配信】",
+      "thumbnail": "https://i.ytimg.com/vi/LjBNrKyGGBk/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=LjBNrKyGGBk",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:26:40Z",
+      "viewers": 9
+    },
+    {
+      "id": "rAwuR05SlOI",
+      "streamerId": "UC9LIbUjun3xE1dibdaui8QA",
+      "title": "【週二運動】2026/08/04 - 一起來動一動～【Balion】 #vtuber #初見歡迎",
+      "thumbnail": "https://i.ytimg.com/vi/rAwuR05SlOI/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=rAwuR05SlOI",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:00:00Z",
+      "actualStart": "2026-08-04T11:05:34Z",
+      "viewers": 18
+    },
+    {
+      "id": "kIDos4IWPvI",
+      "streamerId": "UCIb9l095Y-B6MLrSTrkjK3g",
+      "title": "vrchat",
+      "thumbnail": "https://i.ytimg.com/vi/kIDos4IWPvI/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=kIDos4IWPvI",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:18:13Z"
+    },
+    {
+      "id": "tFyCktmHj1A",
+      "streamerId": "UCWkgHmJxeLZISB4t6hUbH1Q",
+      "title": "【 VRChat 】視聴者参加OK！今年の夏にぴったりなWorldに行こう！！ #雑談  #vrchat #がろらいぶ",
+      "thumbnail": "https://i.ytimg.com/vi/tFyCktmHj1A/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=tFyCktmHj1A",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T13:00:00Z"
     }
   ],
   "streams": [
@@ -2614,9 +2743,11 @@
       "title": "【凸待ち】館長誕生日記念配信【誕生日配信】",
       "thumbnail": "https://i.ytimg.com/vi/w6ssum6CMI8/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=w6ssum6CMI8",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-04T11:30:00Z"
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:30:58Z",
+      "viewers": 15
     },
     {
       "id": "5XIbkUXvHRM",
@@ -2861,7 +2992,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-03T19:00:00Z",
-      "actualStart": "2026-08-03T19:00:40Z"
+      "actualStart": "2026-08-03T19:00:40Z",
+      "viewers": 4
     },
     {
       "id": "G8EoDNOKA6E",
@@ -2913,7 +3045,7 @@
       "id": "TBNE4cJ90eI",
       "streamerId": "UCnzwm6E8tRUQFd954io7p7g",
       "title": "VRChat with Freinds",
-      "thumbnail": "https://i.ytimg.com/vi/TBNE4cJ90eI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/TBNE4cJ90eI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=TBNE4cJ90eI",
       "status": "ended",
       "isJapanese": false,
@@ -3007,7 +3139,7 @@
       "id": "wJ8P9HNekUk",
       "streamerId": "UCURR_8RV-whaFHNqO6Q264A",
       "title": "Runnic the Hybrid in VRCHAT Livestream part 455",
-      "thumbnail": "https://i.ytimg.com/vi/wJ8P9HNekUk/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/wJ8P9HNekUk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=wJ8P9HNekUk",
       "status": "ended",
       "isJapanese": false,
@@ -3499,9 +3631,10 @@
       "title": "VRCHATゲーム部 APEX",
       "thumbnail": "https://i.ytimg.com/vi/JfTnqxQqOaY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=JfTnqxQqOaY",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
-      "actualStart": "2026-08-04T03:49:48Z"
+      "actualStart": "2026-08-04T03:49:48Z",
+      "actualEnd": "2026-08-04T11:40:36Z"
     },
     {
       "id": "dU0zQTaYaKs",
@@ -3614,13 +3747,13 @@
       "id": "xvP6adFQBTU",
       "streamerId": "UCYDhfvxjXNnaGDpZOcwQYQw",
       "title": "【VRChat】作業雑談配信【ToN】8/4",
-      "thumbnail": "https://i.ytimg.com/vi/xvP6adFQBTU/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/xvP6adFQBTU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xvP6adFQBTU",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-04T07:30:00Z",
       "actualStart": "2026-08-04T07:27:46Z",
-      "viewers": 2
+      "actualEnd": "2026-08-04T11:16:42Z"
     },
     {
       "id": "VwcHo9xs-wc",
@@ -3685,10 +3818,11 @@
       "title": "Is vrchat healing?",
       "thumbnail": "https://i.ytimg.com/vi/7MpzmPkw6oA/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7MpzmPkw6oA",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-04T08:44:07Z",
-      "actualStart": "2026-08-04T08:43:17Z"
+      "actualStart": "2026-08-04T08:43:17Z",
+      "actualEnd": "2026-08-04T11:19:25Z"
     },
     {
       "id": "y80bZWRC2Gs",
@@ -3728,12 +3862,12 @@
     {
       "id": "SN7fnUlXqhg",
       "streamerId": "UCHvY0tir5VZ57MXUwi1AiFQ",
-      "title": "【NTE】爆釣とパルワールド/VRchatの片隅でサイレント配信🎸【深淵ヨミ】",
+      "title": "VRchatの片隅でサイレント配信🎸【深淵ヨミ】",
       "thumbnail": "https://i.ytimg.com/vi/SN7fnUlXqhg/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=SN7fnUlXqhg",
       "status": "upcoming",
       "isJapanese": true,
-      "scheduledStart": "2026-08-04T11:00:00Z"
+      "scheduledStart": "2026-08-04T12:00:00Z"
     },
     {
       "id": "QOpzNhU8AGk",
@@ -3756,8 +3890,7 @@
       "status": "live",
       "isJapanese": true,
       "scheduledStart": "2026-08-04T09:31:13Z",
-      "actualStart": "2026-08-04T09:31:33Z",
-      "viewers": 2
+      "actualStart": "2026-08-04T09:31:33Z"
     },
     {
       "id": "kIfEmVjwu4Y",
@@ -3810,6 +3943,131 @@
       "status": "upcoming",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T00:00:00Z"
+    },
+    {
+      "id": "-gNgHzGHncg",
+      "streamerId": "UCZVwxfN71IJhJIHEvwExjzg",
+      "title": "VRChat~新宿弾き語り~",
+      "thumbnail": "https://i.ytimg.com/vi/-gNgHzGHncg/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=-gNgHzGHncg",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:23:59Z",
+      "actualStart": "2026-08-04T11:24:16Z",
+      "viewers": 1
+    },
+    {
+      "id": "FwPaCKIwivA",
+      "streamerId": "UCUFlNY0J_S3oUhCvDBr5hTw",
+      "title": "【VRChat】綺麗なワールド巡り！バーチャルの世界をのんびりお散歩【VRC】",
+      "thumbnail": "https://i.ytimg.com/vi/FwPaCKIwivA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=FwPaCKIwivA",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:29:29Z",
+      "viewers": 3
+    },
+    {
+      "id": "1oDyhlDwG84",
+      "streamerId": "UCWjpvo4HHu1INhfqu73Prbg",
+      "title": "【VR Chat】Lets GO ADVENTURE!",
+      "thumbnail": "https://i.ytimg.com/vi/1oDyhlDwG84/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=1oDyhlDwG84",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:20:00Z",
+      "actualStart": "2026-08-04T11:24:09Z",
+      "viewers": 4
+    },
+    {
+      "id": "JH-QgvFrOkc",
+      "streamerId": "UCDkNF1abJR2HEI4vxDVvrnQ",
+      "title": "Doing Flips EVERY DAY Til Filian Respawns (Day 80) And Games",
+      "thumbnail": "https://i.ytimg.com/vi/JH-QgvFrOkc/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=JH-QgvFrOkc",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:15:00Z",
+      "actualStart": "2026-08-04T11:15:48Z",
+      "viewers": 6
+    },
+    {
+      "id": "U04MOsJw34s",
+      "streamerId": "UCgtWTzUYfrXYjcpLn7VNd6w",
+      "title": "VRChat",
+      "thumbnail": "https://i.ytimg.com/vi/U04MOsJw34s/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=U04MOsJw34s",
+      "status": "live",
+      "isJapanese": false,
+      "actualStart": "2026-08-04T11:07:52Z"
+    },
+    {
+      "id": "SblTQstM4oA",
+      "streamerId": "UCKTo5RB6l2SVOv-MG4kDOkQ",
+      "title": "【雑談配信】VRChatter趣味を聞かれた時に困りがち【VRChat】",
+      "thumbnail": "https://i.ytimg.com/vi/SblTQstM4oA/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=SblTQstM4oA",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:00:00Z",
+      "actualStart": "2026-08-04T11:00:23Z",
+      "viewers": 63
+    },
+    {
+      "id": "DkrA-pFm8CY",
+      "streamerId": "UC013wcxeN2VCNtaL6_3q7Rw",
+      "title": "[YOCHITHON]  HALOWW SEMUA #3dvtuber #vrchat #vtuberid",
+      "thumbnail": "https://i.ytimg.com/vi/DkrA-pFm8CY/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=DkrA-pFm8CY",
+      "status": "live",
+      "isJapanese": true,
+      "actualStart": "2026-08-04T10:20:33Z",
+      "viewers": 6
+    },
+    {
+      "id": "LjBNrKyGGBk",
+      "streamerId": "UCYscuD-Mdas_6S37uukmE-w",
+      "title": "【フルトラ】前回教えてもらったオヌヌメワールドに行く【実質３D配信】",
+      "thumbnail": "https://i.ytimg.com/vi/LjBNrKyGGBk/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=LjBNrKyGGBk",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T11:30:00Z",
+      "actualStart": "2026-08-04T11:26:40Z",
+      "viewers": 9
+    },
+    {
+      "id": "rAwuR05SlOI",
+      "streamerId": "UC9LIbUjun3xE1dibdaui8QA",
+      "title": "【週二運動】2026/08/04 - 一起來動一動～【Balion】 #vtuber #初見歡迎",
+      "thumbnail": "https://i.ytimg.com/vi/rAwuR05SlOI/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=rAwuR05SlOI",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:00:00Z",
+      "actualStart": "2026-08-04T11:05:34Z",
+      "viewers": 18
+    },
+    {
+      "id": "kIDos4IWPvI",
+      "streamerId": "UCIb9l095Y-B6MLrSTrkjK3g",
+      "title": "vrchat",
+      "thumbnail": "https://i.ytimg.com/vi/kIDos4IWPvI/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=kIDos4IWPvI",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-04T11:18:13Z"
+    },
+    {
+      "id": "tFyCktmHj1A",
+      "streamerId": "UCWkgHmJxeLZISB4t6hUbH1Q",
+      "title": "【 VRChat 】視聴者参加OK！今年の夏にぴったりなWorldに行こう！！ #雑談  #vrchat #がろらいぶ",
+      "thumbnail": "https://i.ytimg.com/vi/tFyCktmHj1A/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=tFyCktmHj1A",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-04T13:00:00Z"
     }
   ]
 }
