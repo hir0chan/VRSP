@@ -33,3 +33,11 @@
 ## ご確認いただきたい事項
 
 - なし
+
+## Claude 検証結果・本番反映(2026-08-05 追記)
+
+- npm test 44/44 / check 0 errors / build 成功
+- 実データ検証: Twitch 52件(ja 2全件 + 非ja 上位50)を取得・マージ。tracked への混入なし。「日本語のみ」トグル・Twitch チップ・共通 aria-label をブラウザで確認
+- **レビュー追加修正1件**: is_mature=false のまま 🔞/+18 をタイトルに含む配信が2件通過することを実データで発見(自己申告漏れ、計画 §6 想定リスク)→ タイトルの明示的 NSFW マーカーによるフォールバック除外を追加(残存0件を確認)
+- 本番反映済み: push デプロイ + workflow_dispatch で CI 側の Twitch 取得(Secrets 経由)も実証(bot コミットに twitch 52件)
+- 運用メモ: `EXCLUDE_MATURE` / `MAX_TWITCH_LIVE`(50)/ `NSFW_TITLE_PATTERNS` は scripts/twitch.ts の定数で調整可能
