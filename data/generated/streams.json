@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T04:45:30.830Z",
+  "updatedAt": "2026-08-05T05:15:31.719Z",
   "tracked": [
     {
       "id": "e8HHsU4j66E",
@@ -393,18 +393,6 @@
       "actualEnd": "2026-08-04T07:06:28Z"
     },
     {
-      "id": "J4yY26UWjS8",
-      "streamerId": "UCfUsLcNXjrOYYU5vsPodojw",
-      "title": "VRChat Hangout and Chat!",
-      "thumbnail": "https://i.ytimg.com/vi/J4yY26UWjS8/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=J4yY26UWjS8",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-03T23:57:53Z",
-      "actualStart": "2026-08-03T23:58:07Z",
-      "actualEnd": "2026-08-04T04:58:39Z"
-    },
-    {
       "id": "MmnTy283xGE",
       "streamerId": "UCnSxBxzadra5ndD4b54yWqQ",
       "title": "【VRChat】ホラーワールド巡り👻",
@@ -706,12 +694,14 @@
     {
       "id": "kIfEmVjwu4Y",
       "streamerId": "UCpPQMRoPETPlHV5oRbSxsNA",
-      "title": "【VRChat/ARC】工作好累啊！",
+      "title": "【VRChat/APEX】工作好累啊！",
       "thumbnail": "https://i.ytimg.com/vi/kIfEmVjwu4Y/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=kIfEmVjwu4Y",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-05T04:30:00Z"
+      "scheduledStart": "2026-08-05T04:30:00Z",
+      "actualStart": "2026-08-05T04:46:42Z",
+      "viewers": 3
     },
     {
       "id": "5vcJU77HFFs",
@@ -1448,7 +1438,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:52:33Z",
       "actualStart": "2026-08-04T18:53:25Z",
-      "viewers": 6
+      "viewers": 13
     },
     {
       "id": "gkm8Fwg3xJk",
@@ -1542,7 +1532,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-04T20:26:40Z",
-      "viewers": 1
+      "viewers": 5
     },
     {
       "id": "r8N-3ElfwDc",
@@ -1890,7 +1880,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:11:11Z",
-      "actualStart": "2026-08-05T02:43:21Z"
+      "actualStart": "2026-08-05T02:43:21Z",
+      "viewers": 1
     },
     {
       "id": "IR6By85enP0",
@@ -1959,7 +1950,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-05T04:10:00Z",
       "actualStart": "2026-08-05T04:21:26Z",
-      "viewers": 14
+      "viewers": 26
     },
     {
       "id": "0T3DScZOSh0",
@@ -1971,7 +1962,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:34:37Z",
       "actualStart": "2026-08-05T03:42:05Z",
-      "viewers": 1
+      "viewers": 2
     },
     {
       "id": "ZMJXXxEo0v0",
@@ -2408,18 +2399,6 @@
       "actualEnd": "2026-08-04T07:06:28Z"
     },
     {
-      "id": "J4yY26UWjS8",
-      "streamerId": "UCfUsLcNXjrOYYU5vsPodojw",
-      "title": "VRChat Hangout and Chat!",
-      "thumbnail": "https://i.ytimg.com/vi/J4yY26UWjS8/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=J4yY26UWjS8",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-03T23:57:53Z",
-      "actualStart": "2026-08-03T23:58:07Z",
-      "actualEnd": "2026-08-04T04:58:39Z"
-    },
-    {
       "id": "MmnTy283xGE",
       "streamerId": "UCnSxBxzadra5ndD4b54yWqQ",
       "title": "【VRChat】ホラーワールド巡り👻",
@@ -2721,12 +2700,14 @@
     {
       "id": "kIfEmVjwu4Y",
       "streamerId": "UCpPQMRoPETPlHV5oRbSxsNA",
-      "title": "【VRChat/ARC】工作好累啊！",
+      "title": "【VRChat/APEX】工作好累啊！",
       "thumbnail": "https://i.ytimg.com/vi/kIfEmVjwu4Y/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=kIfEmVjwu4Y",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-05T04:30:00Z"
+      "scheduledStart": "2026-08-05T04:30:00Z",
+      "actualStart": "2026-08-05T04:46:42Z",
+      "viewers": 3
     },
     {
       "id": "5vcJU77HFFs",
@@ -3463,7 +3444,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-04T18:52:33Z",
       "actualStart": "2026-08-04T18:53:25Z",
-      "viewers": 6
+      "viewers": 13
     },
     {
       "id": "gkm8Fwg3xJk",
@@ -3557,7 +3538,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-04T20:26:40Z",
-      "viewers": 1
+      "viewers": 5
     },
     {
       "id": "r8N-3ElfwDc",
@@ -3905,7 +3886,8 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:11:11Z",
-      "actualStart": "2026-08-05T02:43:21Z"
+      "actualStart": "2026-08-05T02:43:21Z",
+      "viewers": 1
     },
     {
       "id": "IR6By85enP0",
@@ -3974,7 +3956,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-05T04:10:00Z",
       "actualStart": "2026-08-05T04:21:26Z",
-      "viewers": 14
+      "viewers": 26
     },
     {
       "id": "0T3DScZOSh0",
@@ -3986,7 +3968,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:34:37Z",
       "actualStart": "2026-08-05T03:42:05Z",
-      "viewers": 1
+      "viewers": 2
     },
     {
       "id": "ZMJXXxEo0v0",
