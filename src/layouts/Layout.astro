@@ -25,7 +25,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-ja-only>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -53,9 +53,10 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
     <script is:inline>
+      // デフォルト ON(html に静的付与)。明示的に OFF("0")が保存されている場合のみ外す
       try {
-        if (localStorage.getItem("vrsp-ja-only") === "1") {
-          document.documentElement.setAttribute("data-ja-only", "");
+        if (localStorage.getItem("vrsp-ja-only") === "0") {
+          document.documentElement.removeAttribute("data-ja-only");
         }
       } catch {}
       try {
@@ -135,9 +136,9 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
           document.documentElement.toggleAttribute("data-ja-only", toggle.checked);
           try {
             if (toggle.checked) {
-              localStorage.setItem("vrsp-ja-only", "1");
-            } else {
               localStorage.removeItem("vrsp-ja-only");
+            } else {
+              localStorage.setItem("vrsp-ja-only", "0");
             }
           } catch {}
         });

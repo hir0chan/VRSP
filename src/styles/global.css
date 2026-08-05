@@ -157,6 +157,9 @@ img {
 }
 
 .filter-controls {
+  /* 負マージンでヒーロー(positioned)と重なるため、前面を保証しないとクリックが奪われる */
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 12px 18px;
@@ -190,6 +193,7 @@ img {
 
 .platform-filter label {
   display: inline-flex;
+  gap: 6px;
   align-items: center;
   min-height: 32px;
   margin-left: -1px;
@@ -200,6 +204,25 @@ img {
   font-size: 0.78rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.platform-filter label svg {
+  display: block;
+  height: 12px;
+  width: auto;
+}
+
+/* ブランドガイドライン準拠の指定色。選択中は label の白文字を継承(単色白は両社とも許容) */
+.platform-filter label[for="platform-youtube"] svg {
+  color: #ff0000;
+}
+
+.platform-filter label[for="platform-twitch"] svg {
+  color: #9146ff;
+}
+
+.platform-filter input:checked + label svg {
+  color: inherit;
 }
 
 .platform-filter input:first-of-type + label {
