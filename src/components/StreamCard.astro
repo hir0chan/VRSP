@@ -24,7 +24,25 @@ const startLabel =
     <div class="thumbnail-wrap">
       <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />
       {live && <span class="live-badge"><span aria-hidden="true"></span>LIVE</span>}
-      {stream.platform === "twitch" && <span class="platform-chip">Twitch</span>}
+      <span class="platform-chip">
+        {stream.platform === "twitch" ? (
+          <svg viewBox="0 0 2400 2800" role="img" aria-label="Twitch">
+            <path fill="#ffffff" d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600v1100z" />
+            <g fill="#9146ff">
+              <path d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100z" />
+              <path d="M1700 550h200v600h-200zm-550 0h200v600h-200z" />
+            </g>
+          </svg>
+        ) : (
+          <svg viewBox="0 0 28.57 20" role="img" aria-label="YouTube">
+            <path
+              fill="#ff0000"
+              d="M27.973 3.123A3.578 3.578 0 0 0 25.447.597C23.22 0 14.285 0 14.285 0S5.35 0 3.123.597A3.578 3.578 0 0 0 .597 3.123C0 5.35 0 10 0 10s0 4.65.597 6.877a3.578 3.578 0 0 0 2.526 2.526C5.35 20 14.285 20 14.285 20s8.935 0 11.162-.597a3.578 3.578 0 0 0 2.526-2.526C28.57 14.65 28.57 10 28.57 10s0-4.65-.597-6.877z"
+            />
+            <path fill="#ffffff" d="M11.425 14.285 18.85 10l-7.425-4.285z" />
+          </svg>
+        )}
+      </span>
       {startLabel !== undefined && <time datetime={start}>{startLabel}</time>}
     </div>
     <div class="stream-card-body">
