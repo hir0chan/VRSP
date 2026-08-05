@@ -158,12 +158,70 @@ img {
 
 .filter-controls {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
   justify-content: flex-end;
   margin: clamp(-60px, -5vw, -36px) 0 clamp(40px, 6vw, 64px);
 }
 
 .filter-controls[hidden] {
   display: none;
+}
+
+.platform-filter {
+  display: inline-flex;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.platform-filter legend,
+.platform-filter input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.platform-filter label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  margin-left: -1px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.platform-filter input:first-of-type + label {
+  margin-left: 0;
+  border-radius: 999px 0 0 999px;
+}
+
+.platform-filter label:last-of-type {
+  border-radius: 0 999px 999px 0;
+}
+
+.platform-filter input:checked + label {
+  position: relative;
+  border-color: var(--accent-deep);
+  background: var(--accent-deep);
+  color: var(--surface);
+}
+
+.platform-filter input:focus-visible + label {
+  position: relative;
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
 }
 
 .ja-only-toggle {
@@ -233,7 +291,16 @@ img {
   display: none;
 }
 
-[data-ja-only] .date-group:not(:has(.stream-card[data-ja="true"])) {
+[data-platform-filter="youtube"] .stream-card[data-platform="twitch"],
+[data-platform-filter="twitch"] .stream-card[data-platform="youtube"] {
+  display: none;
+}
+
+[data-ja-only]:not([data-platform-filter]) .date-group:not(:has(.stream-card[data-ja="true"])),
+[data-platform-filter="youtube"]:not([data-ja-only]) .date-group:not(:has(.stream-card[data-platform="youtube"])),
+[data-platform-filter="twitch"]:not([data-ja-only]) .date-group:not(:has(.stream-card[data-platform="twitch"])),
+[data-ja-only][data-platform-filter="youtube"] .date-group:not(:has(.stream-card[data-ja="true"][data-platform="youtube"])),
+[data-ja-only][data-platform-filter="twitch"] .date-group:not(:has(.stream-card[data-ja="true"][data-platform="twitch"])) {
   display: none;
 }
 

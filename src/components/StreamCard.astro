@@ -19,7 +19,7 @@ const startLabel =
       }).format(new Date(start));
 ---
 
-<article class="stream-card" data-ja={stream.isJapanese ?? true}>
+<article class="stream-card" data-ja={stream.isJapanese ?? true} data-platform={stream.platform ?? "youtube"}>
   <a class="card-link" href={stream.url} target="_blank" rel="noreferrer" aria-label={`${stream.title}の配信ページを見る`}>
     <div class="thumbnail-wrap">
       <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />

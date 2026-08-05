@@ -58,6 +58,12 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
           document.documentElement.setAttribute("data-ja-only", "");
         }
       } catch {}
+      try {
+        const platform = localStorage.getItem("vrsp-platform");
+        if (platform === "youtube" || platform === "twitch") {
+          document.documentElement.setAttribute("data-platform-filter", platform);
+        }
+      } catch {}
     </script>
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-B1W4WBHBGE"></script>
@@ -119,10 +125,11 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
       </div>
     </footer>
     <script is:inline>
+      const controls = document.querySelector(".filter-controls");
+      let initialized = false;
       const toggle = document.getElementById("ja-only-toggle");
       if (toggle instanceof HTMLInputElement) {
-        const controls = toggle.closest(".filter-controls");
-        if (controls instanceof HTMLElement) controls.hidden = false;
+        initialized = true;
         toggle.checked = document.documentElement.hasAttribute("data-ja-only");
         toggle.addEventListener("change", () => {
           document.documentElement.toggleAttribute("data-ja-only", toggle.checked);
@@ -135,6 +142,30 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
           } catch {}
         });
       }
+      const platformFilters = document.querySelectorAll('input[name="platform-filter"]');
+      if (platformFilters.length > 0) {
+        initialized = true;
+        const platform = document.documentElement.getAttribute("data-platform-filter") ?? "all";
+        platformFilters.forEach((filter) => {
+          if (!(filter instanceof HTMLInputElement)) return;
+          filter.checked = filter.value === platform;
+          filter.addEventListener("change", () => {
+            if (!filter.checked) return;
+            if (filter.value === "youtube" || filter.value === "twitch") {
+              document.documentElement.setAttribute("data-platform-filter", filter.value);
+              try {
+                localStorage.setItem("vrsp-platform", filter.value);
+              } catch {}
+            } else {
+              document.documentElement.removeAttribute("data-platform-filter");
+              try {
+                localStorage.removeItem("vrsp-platform");
+              } catch {}
+            }
+          });
+        });
+      }
+      if (initialized && controls instanceof HTMLElement) controls.hidden = false;
     </script>
   </body>
 </html>

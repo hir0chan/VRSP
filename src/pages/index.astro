@@ -27,6 +27,15 @@ const thumbnailUrl = (path: string): string =>
   </section>
 
   <div class="filter-controls" hidden>
+    <fieldset class="platform-filter">
+      <legend>プラットフォーム</legend>
+      <input type="radio" id="platform-all" name="platform-filter" value="all" checked />
+      <label for="platform-all">すべて</label>
+      <input type="radio" id="platform-youtube" name="platform-filter" value="youtube" />
+      <label for="platform-youtube">YouTube</label>
+      <input type="radio" id="platform-twitch" name="platform-filter" value="twitch" />
+      <label for="platform-twitch">Twitch</label>
+    </fieldset>
     <div class="ja-only-toggle">
       <input type="checkbox" id="ja-only-toggle" />
       <label for="ja-only-toggle">日本語のみ</label>
