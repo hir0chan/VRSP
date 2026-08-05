@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T04:15:28.597Z",
+  "updatedAt": "2026-08-05T04:45:30.830Z",
   "tracked": [
     {
       "id": "e8HHsU4j66E",
@@ -1032,7 +1032,7 @@
       "id": "OD78gMgKqyw",
       "streamerId": "UCmwfnce5WW5eyS6MyuPJNKw",
       "title": "VRChat Livestream With Exotic Bonfie! 8/4/26!",
-      "thumbnail": "https://i.ytimg.com/vi/OD78gMgKqyw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/OD78gMgKqyw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=OD78gMgKqyw",
       "status": "ended",
       "isJapanese": false,
@@ -1181,7 +1181,7 @@
       "id": "VXR_pn8YJY0",
       "streamerId": "UCITOIEfUgcWh1KqAUHJiM7g",
       "title": "Vrchat stream",
-      "thumbnail": "https://i.ytimg.com/vi/VXR_pn8YJY0/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/VXR_pn8YJY0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=VXR_pn8YJY0",
       "status": "ended",
       "isJapanese": false,
@@ -1542,7 +1542,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-04T20:26:40Z",
-      "viewers": 4
+      "viewers": 1
     },
     {
       "id": "r8N-3ElfwDc",
@@ -1890,8 +1890,7 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:11:11Z",
-      "actualStart": "2026-08-05T02:43:21Z",
-      "viewers": 1
+      "actualStart": "2026-08-05T02:43:21Z"
     },
     {
       "id": "IR6By85enP0",
@@ -1921,7 +1920,7 @@
       "id": "NU5ANV_qWbA",
       "streamerId": "UCbkudQYjnMneR5j-HLcSqVQ",
       "title": "[VRChat] Return to Meme Hell",
-      "thumbnail": "https://i.ytimg.com/vi/NU5ANV_qWbA/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/NU5ANV_qWbA/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=NU5ANV_qWbA",
       "status": "ended",
       "isJapanese": false,
@@ -1932,7 +1931,7 @@
       "id": "60GCS4opMlk",
       "streamerId": "UC0MyD0HJwdwQSXYSxm2PhNg",
       "title": "Tuesday Stream: It's A Chaotic Exploration Night Tonight! [VRChat]",
-      "thumbnail": "https://i.ytimg.com/vi/60GCS4opMlk/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/60GCS4opMlk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=60GCS4opMlk",
       "status": "ended",
       "isJapanese": false,
@@ -1949,6 +1948,71 @@
       "isJapanese": true,
       "actualStart": "2026-08-04T13:01:43Z",
       "actualEnd": "2026-08-04T14:03:17Z"
+    },
+    {
+      "id": "IaamuFu8N88",
+      "streamerId": "UCtuv7vJO0JFLE2YkYPbdTmw",
+      "title": "Walking WITH EVERY VRCHAT TROLL YES EVERY with special guest ReeKid",
+      "thumbnail": "https://i.ytimg.com/vi/IaamuFu8N88/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=IaamuFu8N88",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T04:10:00Z",
+      "actualStart": "2026-08-05T04:21:26Z",
+      "viewers": 14
+    },
+    {
+      "id": "0T3DScZOSh0",
+      "streamerId": "UCzdhhnULGWe2-ZvZpDJfmaA",
+      "title": "Luna Wolves Avatar Production - Iacton Qruze - Day 2 | Hypeman486",
+      "thumbnail": "https://i.ytimg.com/vi/0T3DScZOSh0/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=0T3DScZOSh0",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T03:34:37Z",
+      "actualStart": "2026-08-05T03:42:05Z",
+      "viewers": 1
+    },
+    {
+      "id": "ZMJXXxEo0v0",
+      "streamerId": "UCjrOMchpSrTBiUUnkRNzF1A",
+      "title": "占い in VRChat",
+      "thumbnail": "https://i.ytimg.com/vi/ZMJXXxEo0v0/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=ZMJXXxEo0v0",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-05T03:35:36Z",
+      "actualStart": "2026-08-05T03:35:56Z"
+    },
+    {
+      "id": "iKfhE3HRvOw",
+      "streamerId": "UCAIq-DaevW4ZZDndcs1qjTA",
+      "title": "VRChat ASMR stream: Don't let her escape!",
+      "thumbnail": "https://i.ytimg.com/vi/iKfhE3HRvOw/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=iKfhE3HRvOw",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-09T00:00:00Z"
+    },
+    {
+      "id": "Y-JsdXq3SJs",
+      "streamerId": "UCAIq-DaevW4ZZDndcs1qjTA",
+      "title": "VRChat ASMR stream: Into the woods!",
+      "thumbnail": "https://i.ytimg.com/vi/Y-JsdXq3SJs/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=Y-JsdXq3SJs",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T21:00:00Z"
+    },
+    {
+      "id": "Dn6CcGPV034",
+      "streamerId": "UCL-hDfuB8DOC6sTGTzee9XA",
+      "title": "【朝配信#495】ＮＥＷワールドを巡る【#VRChat /#よきぶいっ！】",
+      "thumbnail": "https://i.ytimg.com/vi/Dn6CcGPV034/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=Dn6CcGPV034",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-05T22:30:00Z"
     }
   ],
   "streams": [
@@ -2983,7 +3047,7 @@
       "id": "OD78gMgKqyw",
       "streamerId": "UCmwfnce5WW5eyS6MyuPJNKw",
       "title": "VRChat Livestream With Exotic Bonfie! 8/4/26!",
-      "thumbnail": "https://i.ytimg.com/vi/OD78gMgKqyw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/OD78gMgKqyw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=OD78gMgKqyw",
       "status": "ended",
       "isJapanese": false,
@@ -3132,7 +3196,7 @@
       "id": "VXR_pn8YJY0",
       "streamerId": "UCITOIEfUgcWh1KqAUHJiM7g",
       "title": "Vrchat stream",
-      "thumbnail": "https://i.ytimg.com/vi/VXR_pn8YJY0/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/VXR_pn8YJY0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=VXR_pn8YJY0",
       "status": "ended",
       "isJapanese": false,
@@ -3493,7 +3557,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-04T20:26:40Z",
-      "viewers": 4
+      "viewers": 1
     },
     {
       "id": "r8N-3ElfwDc",
@@ -3841,8 +3905,7 @@
       "status": "live",
       "isJapanese": false,
       "scheduledStart": "2026-08-05T03:11:11Z",
-      "actualStart": "2026-08-05T02:43:21Z",
-      "viewers": 1
+      "actualStart": "2026-08-05T02:43:21Z"
     },
     {
       "id": "IR6By85enP0",
@@ -3872,7 +3935,7 @@
       "id": "NU5ANV_qWbA",
       "streamerId": "UCbkudQYjnMneR5j-HLcSqVQ",
       "title": "[VRChat] Return to Meme Hell",
-      "thumbnail": "https://i.ytimg.com/vi/NU5ANV_qWbA/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/NU5ANV_qWbA/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=NU5ANV_qWbA",
       "status": "ended",
       "isJapanese": false,
@@ -3883,7 +3946,7 @@
       "id": "60GCS4opMlk",
       "streamerId": "UC0MyD0HJwdwQSXYSxm2PhNg",
       "title": "Tuesday Stream: It's A Chaotic Exploration Night Tonight! [VRChat]",
-      "thumbnail": "https://i.ytimg.com/vi/60GCS4opMlk/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/60GCS4opMlk/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=60GCS4opMlk",
       "status": "ended",
       "isJapanese": false,
@@ -3900,6 +3963,71 @@
       "isJapanese": true,
       "actualStart": "2026-08-04T13:01:43Z",
       "actualEnd": "2026-08-04T14:03:17Z"
+    },
+    {
+      "id": "IaamuFu8N88",
+      "streamerId": "UCtuv7vJO0JFLE2YkYPbdTmw",
+      "title": "Walking WITH EVERY VRCHAT TROLL YES EVERY with special guest ReeKid",
+      "thumbnail": "https://i.ytimg.com/vi/IaamuFu8N88/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=IaamuFu8N88",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T04:10:00Z",
+      "actualStart": "2026-08-05T04:21:26Z",
+      "viewers": 14
+    },
+    {
+      "id": "0T3DScZOSh0",
+      "streamerId": "UCzdhhnULGWe2-ZvZpDJfmaA",
+      "title": "Luna Wolves Avatar Production - Iacton Qruze - Day 2 | Hypeman486",
+      "thumbnail": "https://i.ytimg.com/vi/0T3DScZOSh0/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=0T3DScZOSh0",
+      "status": "live",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T03:34:37Z",
+      "actualStart": "2026-08-05T03:42:05Z",
+      "viewers": 1
+    },
+    {
+      "id": "ZMJXXxEo0v0",
+      "streamerId": "UCjrOMchpSrTBiUUnkRNzF1A",
+      "title": "占い in VRChat",
+      "thumbnail": "https://i.ytimg.com/vi/ZMJXXxEo0v0/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=ZMJXXxEo0v0",
+      "status": "live",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-05T03:35:36Z",
+      "actualStart": "2026-08-05T03:35:56Z"
+    },
+    {
+      "id": "iKfhE3HRvOw",
+      "streamerId": "UCAIq-DaevW4ZZDndcs1qjTA",
+      "title": "VRChat ASMR stream: Don't let her escape!",
+      "thumbnail": "https://i.ytimg.com/vi/iKfhE3HRvOw/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=iKfhE3HRvOw",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-09T00:00:00Z"
+    },
+    {
+      "id": "Y-JsdXq3SJs",
+      "streamerId": "UCAIq-DaevW4ZZDndcs1qjTA",
+      "title": "VRChat ASMR stream: Into the woods!",
+      "thumbnail": "https://i.ytimg.com/vi/Y-JsdXq3SJs/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=Y-JsdXq3SJs",
+      "status": "upcoming",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-05T21:00:00Z"
+    },
+    {
+      "id": "Dn6CcGPV034",
+      "streamerId": "UCL-hDfuB8DOC6sTGTzee9XA",
+      "title": "【朝配信#495】ＮＥＷワールドを巡る【#VRChat /#よきぶいっ！】",
+      "thumbnail": "https://i.ytimg.com/vi/Dn6CcGPV034/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=Dn6CcGPV034",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-05T22:30:00Z"
     }
   ]
 }
