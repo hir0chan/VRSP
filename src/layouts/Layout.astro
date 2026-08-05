@@ -61,7 +61,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
       } catch {}
       try {
         const platform = localStorage.getItem("vrsp-platform");
-        if (platform === "youtube" || platform === "twitch") {
+        if (platform === "youtube" || platform === "twitch" || platform === "niconico") {
           document.documentElement.setAttribute("data-platform-filter", platform);
         }
       } catch {}
@@ -152,7 +152,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
           filter.checked = filter.value === platform;
           filter.addEventListener("change", () => {
             if (!filter.checked) return;
-            if (filter.value === "youtube" || filter.value === "twitch") {
+            if (filter.value === "youtube" || filter.value === "twitch" || filter.value === "niconico") {
               document.documentElement.setAttribute("data-platform-filter", filter.value);
               try {
                 localStorage.setItem("vrsp-platform", filter.value);

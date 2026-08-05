@@ -25,7 +25,9 @@ const startLabel =
       <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />
       {live && <span class="live-badge"><span aria-hidden="true"></span>LIVE</span>}
       <span class="platform-chip">
-        {stream.platform === "twitch" ? (
+        {stream.platform === "niconico" ? (
+          <span class="niconico-chip">ニコ生</span>
+        ) : stream.platform === "twitch" ? (
           <svg viewBox="0 0 2400 2800" role="img" aria-label="Twitch">
             <path fill="#ffffff" d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600v1100z" />
             <g fill="#9146ff">

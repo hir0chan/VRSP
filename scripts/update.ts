@@ -3,7 +3,8 @@ import { mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
-import { generateMockStreams, generateMockTwitchStreams, MOCK_STREAMERS } from "./mock.js";
+import { generateMockNiconicoStreams, generateMockStreams, generateMockTwitchStreams, MOCK_STREAMERS } from "./mock.js";
+import { fetchVrchatNiconicoStreams, type NiconicoLiveData } from "./niconico.js";
 import type {
   DiscoveryState,
   GeneratedStreamers,
@@ -69,7 +70,7 @@ export function isStream(value: unknown): value is Stream {
     typeof value.url !== "string" ||
     (value.status !== "upcoming" && value.status !== "live" && value.status !== "ended")
   ) return false;
-  if (value.platform !== undefined && value.platform !== "youtube" && value.platform !== "twitch") return false;
+  if (value.platform !== undefined && value.platform !== "youtube" && value.platform !== "twitch" && value.platform !== "niconico") return false;
   for (const field of ["scheduledStart", "actualStart", "actualEnd"]) {
     if (value[field] !== undefined && typeof value[field] !== "string") return false;
   }
@@ -368,6 +369,7 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
     discovery: resolve(generatedDir, "discovery.json"),
   };
   const blocklist = await loadBlocklist(resolve(rootDir, "data/blocklist.yaml"));
+  const blocked = new Set(blocklist.map((entry) => entry.channelId));
   const previousData = await loadPreviousData(paths.streams);
   const previousStreamers = await loadPreviousStreamers(paths.streamers);
   const configuredApiKey = options.apiKey === undefined ? process.env.YOUTUBE_API_KEY : options.apiKey;
@@ -377,7 +379,7 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   if (apiKey === "") {
     console.log("YOUTUBE_API_KEY が未設定のためモックデータを使用します");
     const tracked = generateMockStreams(now);
-    const streams = [...filterStreams(tracked, now), ...generateMockTwitchStreams(now)];
+    const streams = [...filterStreams(tracked, now), ...generateMockTwitchStreams(now), ...generateMockNiconicoStreams(now)];
     assertReferences(streams, MOCK_STREAMERS);
     await writeGeneratedFiles(
       paths,
@@ -410,6 +412,21 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
     }
   }
 
+  let niconico: NiconicoLiveData = { streams: [], streamers: [] };
+  let niconicoSucceeded = false;
+  try {
+    niconico = options.fetchFn === undefined
+      ? await fetchVrchatNiconicoStreams(blocked, fetch, now)
+      : await fetchVrchatNiconicoStreams(blocked, options.fetchFn, now);
+    niconicoSucceeded = true;
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.warn(`ニコニコ生放送取得に失敗したためスキップします: ${message}`);
+  }
+  const platformStreams = [...twitch.streams, ...niconico.streams];
+  const platformStreamers = [...twitch.streamers, ...niconico.streamers];
+  const platformSucceeded = twitchSucceeded || niconicoSucceeded;
+
   const discoveryState = await loadDiscoveryState(paths.discovery);
   const discoveryDue = shouldDiscover(discoveryState, now, options.forceDiscovery);
   let discovery: DiscoveryResult | undefined;
@@ -439,21 +456,21 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   for (const id of discovery?.videoIds ?? []) targetIds.add(id);
   if (targetIds.size === 0) {
     if (discovery === undefined) {
-      if (!twitchSucceeded) {
+      if (!platformSucceeded) {
         console.log("追跡対象がなく発見クールダウン中のため generated は更新しません");
         return;
       }
-      const streamers = buildStreamers([], twitch.streamers, previousStreamers, [], twitch.streams, previousData);
-      assertReferences(twitch.streams, streamers);
-      await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: twitch.streams }, { updatedAt, streamers }, options.beforeCommit);
+      const streamers = buildStreamers([], platformStreamers, previousStreamers, [], platformStreams, previousData);
+      assertReferences(platformStreams, streamers);
+      await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: platformStreams }, { updatedAt, streamers }, options.beforeCommit);
       return;
     }
     if (!discovery.allSucceeded) {
       throw new Error("追跡対象がなく発見も完全成功しなかったため generated を更新しません");
     }
-    const streamers = buildStreamers([], twitch.streamers, previousStreamers, [], twitch.streams, previousData);
-    assertReferences(twitch.streams, streamers);
-    await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: twitch.streams }, { updatedAt, streamers }, options.beforeCommit);
+    const streamers = buildStreamers([], platformStreamers, previousStreamers, [], platformStreams, previousData);
+    assertReferences(platformStreams, streamers);
+    await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: platformStreams }, { updatedAt, streamers }, options.beforeCommit);
     return;
   }
 
@@ -467,10 +484,9 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   for (const [id, result] of refreshResults) {
     if (!result.ok) console.warn(`動画 ${id} の refresh に失敗しました: ${result.error.message}`);
   }
-  const blocked = new Set(blocklist.map((entry) => entry.channelId));
   const tracked = limitTracked(retentionFilter(merged.streams, now, blocked));
-  const streams = [...filterStreams(tracked, now), ...twitch.streams];
-  const streamers = buildStreamers(merged.channels, twitch.streamers, previousStreamers, tracked, streams, previousData);
+  const streams = [...filterStreams(tracked, now), ...platformStreams];
+  const streamers = buildStreamers(merged.channels, platformStreamers, previousStreamers, tracked, streams, previousData);
   assertReferences([...tracked, ...streams], streamers);
   await writeGeneratedFiles(paths, { updatedAt, tracked, streams }, { updatedAt, streamers }, options.beforeCommit);
 }

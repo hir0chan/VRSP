@@ -20,7 +20,7 @@ export interface Stream {
   actualEnd?: string;
   viewers?: number;
   isJapanese?: boolean;
-  platform?: "youtube" | "twitch";
+  platform?: "youtube" | "twitch" | "niconico";
 }
 
 export interface GeneratedStreams {

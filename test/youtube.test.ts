@@ -343,7 +343,7 @@ test("追跡0の空書込3分岐を守る", async () => {
   const cooldown = await prepareRoot({ discovery: { discoveryAttemptedAt: NOW.toISOString() } });
   let calls = 0;
   await runUpdate({ rootDir: cooldown, now: NOW, apiKey: "secret", fetchFn: mockFetch(() => { calls += 1; return json({ items: [] }); }) });
-  assert.equal(calls, 0);
+  assert.equal(calls, 2);
   await assert.rejects(readFile(resolve(cooldown, "data/generated/streams.json"), "utf8"), /ENOENT/);
 });
 

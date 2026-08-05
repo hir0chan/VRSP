@@ -352,5 +352,6 @@ test("isStream は platform 欠落を YouTube として許容し、有効値の�
   assert.equal(isStream(legacy), true);
   assert.equal(isStream({ ...legacy, platform: "youtube" }), true);
   assert.equal(isStream({ ...legacy, platform: "twitch" }), true);
+  assert.equal(isStream({ ...legacy, platform: "niconico" }), true);
   assert.equal(isStream({ ...legacy, platform: "other" }), false);
 });

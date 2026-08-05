@@ -20,9 +20,20 @@ export const MOCK_TWITCH_STREAMERS: Streamer[] = Array.from(
   }),
 );
 
+export const MOCK_NICONICO_STREAMERS: Streamer[] = Array.from(
+  { length: 3 },
+  (_, index) => ({
+    id: `nico-mock-user-${index + 1}`,
+    name: `架空ニコ生配信者${index + 1}`,
+    youtubeChannelId: `nico-mock-user-${index + 1}`,
+    enabled: true,
+  }),
+);
+
 export const MOCK_STREAMERS: Streamer[] = [
   ...YOUTUBE_MOCK_STREAMERS,
   ...MOCK_TWITCH_STREAMERS,
+  ...MOCK_NICONICO_STREAMERS,
 ];
 
 export interface MockOptions {
@@ -175,5 +186,22 @@ export function generateMockTwitchStreams(now: Date): Stream[] {
     viewers: 86 + index * 203,
     isJapanese: index === 0,
     platform: "twitch",
+  }));
+}
+
+export function generateMockNiconicoStreams(now: Date): Stream[] {
+  if (Number.isNaN(now.getTime())) throw new Error("now は有効な日時で指定してください");
+  return MOCK_NICONICO_STREAMERS.map((streamer, index) => ({
+    id: `nico-mock-${index < 2 ? "live" : "upcoming"}-${index + 1}`,
+    streamerId: streamer.id,
+    title: `${streamer.name}のVRChat${index < 2 ? "ライブ" : "配信予定"}`,
+    thumbnail: `images/thumbnail-${index + 1}.svg`,
+    url: `https://live.nicovideo.jp/watch/lv90000000${index + 1}`,
+    status: index < 2 ? "live" : "upcoming",
+    ...(index < 2
+      ? { actualStart: addMinutes(now, -(15 + index * 30)) }
+      : { scheduledStart: addMinutes(now, 180) }),
+    isJapanese: true,
+    platform: "niconico",
   }));
 }
