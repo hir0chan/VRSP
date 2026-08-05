@@ -3,7 +3,7 @@ import { mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
-import { generateMockStreams, MOCK_STREAMERS } from "./mock.js";
+import { generateMockStreams, generateMockTwitchStreams, MOCK_STREAMERS } from "./mock.js";
 import type {
   DiscoveryState,
   GeneratedStreamers,
@@ -19,6 +19,7 @@ import {
   type DiscoveryResult,
   type RefreshResult,
 } from "./youtube.js";
+import { fetchVrchatLiveStreams, type TwitchLiveData } from "./twitch.js";
 
 export const MAX_TRACKED = 300;
 const DISCOVERY_COOLDOWN_MS = 60 * 60 * 1_000;
@@ -46,6 +47,8 @@ export interface UpdateOptions {
   apiKey?: string;
   fetchFn?: typeof fetch;
   forceDiscovery?: boolean;
+  twitchClientId?: string;
+  twitchClientSecret?: string;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -66,6 +69,7 @@ export function isStream(value: unknown): value is Stream {
     typeof value.url !== "string" ||
     (value.status !== "upcoming" && value.status !== "live" && value.status !== "ended")
   ) return false;
+  if (value.platform !== undefined && value.platform !== "youtube" && value.platform !== "twitch") return false;
   for (const field of ["scheduledStart", "actualStart", "actualEnd"]) {
     if (value[field] !== undefined && typeof value[field] !== "string") return false;
   }
@@ -314,13 +318,16 @@ export function mergeRefreshResults(
 
 function buildStreamers(
   channels: ChannelInfo[],
+  currentPlatformStreamers: Streamer[],
   previousStreamers: Streamer[],
   currentTracked: Stream[],
+  currentStreams: Stream[],
   previousData: PreviousData,
 ): Streamer[] {
   const entries = new Map<string, Streamer>();
   const references = new Set([
     ...currentTracked.map((stream) => stream.streamerId),
+    ...currentStreams.map((stream) => stream.streamerId),
     ...previousData.tracked.map((stream) => stream.streamerId),
     ...previousData.streams.map((stream) => stream.streamerId),
   ]);
@@ -330,7 +337,15 @@ function buildStreamers(
   for (const channel of channels) {
     entries.set(channel.id, { id: channel.id, name: channel.name, youtubeChannelId: channel.id, enabled: true });
   }
+  for (const streamer of currentPlatformStreamers) entries.set(streamer.id, streamer);
   return [...entries.values()];
+}
+
+function assertReferences(streams: Stream[], streamers: Streamer[]): void {
+  const known = new Set(streamers.map((streamer) => streamer.id));
+  for (const id of new Set(streams.map((stream) => stream.streamerId))) {
+    if (!known.has(id)) throw new Error(`streamers.json に必要な配信者情報がありません: ${id}`);
+  }
 }
 
 function failedDiscoveryResult(error: unknown): DiscoveryResult {
@@ -362,13 +377,37 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   if (apiKey === "") {
     console.log("YOUTUBE_API_KEY が未設定のためモックデータを使用します");
     const tracked = generateMockStreams(now);
+    const streams = [...filterStreams(tracked, now), ...generateMockTwitchStreams(now)];
+    assertReferences(streams, MOCK_STREAMERS);
     await writeGeneratedFiles(
       paths,
-      { updatedAt, tracked, streams: filterStreams(tracked, now) },
+      { updatedAt, tracked, streams },
       { updatedAt, streamers: MOCK_STREAMERS },
       options.beforeCommit,
     );
     return;
+  }
+
+  const twitchClientId = (options.twitchClientId === undefined
+    ? process.env.TWITCH_CLIENT_ID
+    : options.twitchClientId)?.trim() ?? "";
+  const twitchClientSecret = (options.twitchClientSecret === undefined
+    ? process.env.TWITCH_CLIENT_SECRET
+    : options.twitchClientSecret)?.trim() ?? "";
+  let twitch: TwitchLiveData = { streams: [], streamers: [] };
+  let twitchSucceeded = false;
+  if (twitchClientId === "" || twitchClientSecret === "") {
+    console.warn("TWITCH_CLIENT_ID または TWITCH_CLIENT_SECRET が未設定のため Twitch 取得をスキップします");
+  } else {
+    try {
+      twitch = options.fetchFn === undefined
+        ? await fetchVrchatLiveStreams(twitchClientId, twitchClientSecret)
+        : await fetchVrchatLiveStreams(twitchClientId, twitchClientSecret, options.fetchFn);
+      twitchSucceeded = true;
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(`Twitch 取得に失敗したためスキップします: ${message}`);
+    }
   }
 
   const discoveryState = await loadDiscoveryState(paths.discovery);
@@ -400,14 +439,21 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   for (const id of discovery?.videoIds ?? []) targetIds.add(id);
   if (targetIds.size === 0) {
     if (discovery === undefined) {
-      console.log("追跡対象がなく発見クールダウン中のため generated は更新しません");
+      if (!twitchSucceeded) {
+        console.log("追跡対象がなく発見クールダウン中のため generated は更新しません");
+        return;
+      }
+      const streamers = buildStreamers([], twitch.streamers, previousStreamers, [], twitch.streams, previousData);
+      assertReferences(twitch.streams, streamers);
+      await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: twitch.streams }, { updatedAt, streamers }, options.beforeCommit);
       return;
     }
     if (!discovery.allSucceeded) {
       throw new Error("追跡対象がなく発見も完全成功しなかったため generated を更新しません");
     }
-    const streamers = buildStreamers([], previousStreamers, [], previousData);
-    await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: [] }, { updatedAt, streamers }, options.beforeCommit);
+    const streamers = buildStreamers([], twitch.streamers, previousStreamers, [], twitch.streams, previousData);
+    assertReferences(twitch.streams, streamers);
+    await writeGeneratedFiles(paths, { updatedAt, tracked: [], streams: twitch.streams }, { updatedAt, streamers }, options.beforeCommit);
     return;
   }
 
@@ -423,13 +469,9 @@ export async function runUpdate(options: UpdateOptions = {}): Promise<void> {
   }
   const blocked = new Set(blocklist.map((entry) => entry.channelId));
   const tracked = limitTracked(retentionFilter(merged.streams, now, blocked));
-  const streams = filterStreams(tracked, now);
-  const streamers = buildStreamers(merged.channels, previousStreamers, tracked, previousData);
-  const referenced = new Set([...tracked, ...streams].map((stream) => stream.streamerId));
-  const known = new Set(streamers.map((streamer) => streamer.id));
-  for (const id of referenced) {
-    if (!known.has(id)) throw new Error(`streamers.json に必要な配信者情報がありません: ${id}`);
-  }
+  const streams = [...filterStreams(tracked, now), ...twitch.streams];
+  const streamers = buildStreamers(merged.channels, twitch.streamers, previousStreamers, tracked, streams, previousData);
+  assertReferences([...tracked, ...streams], streamers);
   await writeGeneratedFiles(paths, { updatedAt, tracked, streams }, { updatedAt, streamers }, options.beforeCommit);
 }
 

@@ -3,6 +3,7 @@ export type Status = "upcoming" | "live" | "ended";
 export interface Streamer {
   id: string;
   name: string;
+  // Twitch でも既存 JSON 形式を維持するため、プラットフォーム側のユーザー ID を格納する。
   youtubeChannelId: string;
   enabled: boolean;
 }
@@ -19,6 +20,7 @@ export interface Stream {
   actualEnd?: string;
   viewers?: number;
   isJapanese?: boolean;
+  platform?: "youtube" | "twitch";
 }
 
 export interface GeneratedStreams {

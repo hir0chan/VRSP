@@ -373,6 +373,19 @@ img {
   font-variant-numeric: tabular-nums;
 }
 
+.platform-chip {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) / 2);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 .stream-card-body {
   padding: 20px;
 }

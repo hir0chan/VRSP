@@ -1,6 +1,6 @@
 import type { Status, Stream, Streamer } from "./models.js";
 
-export const MOCK_STREAMERS: Streamer[] = Array.from(
+const YOUTUBE_MOCK_STREAMERS: Streamer[] = Array.from(
   { length: 5 },
   (_, index) => ({
     id: `mock-channel-${index + 1}`,
@@ -9,6 +9,21 @@ export const MOCK_STREAMERS: Streamer[] = Array.from(
     enabled: true,
   }),
 );
+
+export const MOCK_TWITCH_STREAMERS: Streamer[] = Array.from(
+  { length: 2 },
+  (_, index) => ({
+    id: `tw-mock-user-${index + 1}`,
+    name: `架空Twitch配信者${index + 1}`,
+    youtubeChannelId: `tw-mock-user-${index + 1}`,
+    enabled: true,
+  }),
+);
+
+export const MOCK_STREAMERS: Streamer[] = [
+  ...YOUTUBE_MOCK_STREAMERS,
+  ...MOCK_TWITCH_STREAMERS,
+];
 
 export interface MockOptions {
   liveCount?: number;
@@ -128,7 +143,7 @@ export function generateMockStreams(
   let globalIndex = 0;
   return scenarios.flatMap((scenario) =>
     Array.from({ length: scenario.count }, (_, sequence) => {
-      const streamer = MOCK_STREAMERS[globalIndex % MOCK_STREAMERS.length];
+      const streamer = YOUTUBE_MOCK_STREAMERS[globalIndex % YOUTUBE_MOCK_STREAMERS.length];
       if (streamer === undefined) {
         throw new Error("配信者の選択に失敗しました");
       }
@@ -145,4 +160,20 @@ export function generateMockStreams(
       return stream;
     }),
   );
+}
+
+export function generateMockTwitchStreams(now: Date): Stream[] {
+  if (Number.isNaN(now.getTime())) throw new Error("now は有効な日時で指定してください");
+  return MOCK_TWITCH_STREAMERS.map((streamer, index) => ({
+    id: `tw-mock-live-${index + 1}`,
+    streamerId: streamer.id,
+    title: index === 0 ? `${streamer.name}のVRChatライブ` : "VRChat world hopping live",
+    thumbnail: `images/thumbnail-${index + 1}.svg`,
+    url: `https://www.twitch.tv/mock_vrsp_${index + 1}`,
+    status: "live",
+    actualStart: addMinutes(now, -(20 + index * 25)),
+    viewers: 86 + index * 203,
+    isJapanese: index === 0,
+    platform: "twitch",
+  }));
 }

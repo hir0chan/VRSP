@@ -35,6 +35,8 @@ jobs:
         continue-on-error: true
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: npm run update
       - name: Commit generated data
         if: github.event_name != 'push'
