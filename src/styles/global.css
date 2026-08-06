@@ -170,6 +170,40 @@ img {
   pointer-events: none;
 }
 
+/* ヒーロー装飾イラスト(本文コントラストを保つため淡色) */
+.hero-mountains,
+.hero-sky {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 情景はランダムに1種のみ表示。JS 無効(属性なし)時は OGP と同じ山を既定に */
+[data-scenery-variant] {
+  display: none;
+}
+
+:root:not([data-scenery]) [data-scenery-variant="mountains"],
+:root[data-scenery="mountains"] [data-scenery-variant="mountains"],
+:root[data-scenery="portal"] [data-scenery-variant="portal"],
+:root[data-scenery="city"] [data-scenery-variant="city"] {
+  display: block;
+}
+
+.hero-mountains {
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: min(72vw, 900px);
+  height: auto;
+}
+
+.hero-sky {
+  top: clamp(24px, 6vw, 72px);
+  right: calc(50% - 50vw + clamp(16px, 4vw, 64px));
+  width: min(32vw, 380px);
+  height: auto;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-deep);
