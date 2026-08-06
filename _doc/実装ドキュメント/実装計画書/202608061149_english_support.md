@@ -1,9 +1,9 @@
 # 英語対応(JA/EN 切替) 実装計画書(提案)
 
 日付: 2026-08-06_11:49
-種別: 提案型
-状態: **合意待ち**(方式・論点の合意後に確定仕様へ育てる。コード改修は指示待ち)
-担当: 提案 Claude / (合意後)コーディング codex
+種別: 提案型 → 計画型(2026-08-06 ユーザー合意「推奨案で進行を」により §3 以降を追記)
+状態: **実装・検証完了**(2026-08-06。文末「実施結果」を参照)
+担当: 提案・検証 Claude / コーディング codex
 
 ## 1. 背景・目的
 
@@ -48,7 +48,7 @@
 | og:locale / alternate | `ja_JP` / alternate `en_US` | `en_US` / alternate `ja_JP` |
 | hreflang | 両ページに `ja` / `en` 相互リンク+`x-default`(JA を指す) |
 | ブランドリンク | 現在言語のホームへ(JA→`/VRSP/`、EN→`/VRSP/en/`) |
-| sitemap | 静的 `public/sitemap.xml` に2 URL を記載(依存追加なし)。robots.txt からの参照も追加 |
+| sitemap | 静的 `public/sitemap.xml` に2 URL を記載(依存追加なし)。robots.txt はプロジェクト Pages ではオリジン直下に置けず機能しないため対象外(サイトマップは Search Console 等へ直接登録する運用) |
 
 (参考: Astro 組み込み i18n ルーティングも検討したが、2言語・各1ページでは設定と抽象化が増えるだけのため手動2 route が最も単純と判断)
 
@@ -73,7 +73,21 @@
 7. **フィルタ相互作用は既存仕様を維持**(過剰設計回避のため次を明記): プラットフォーム選択(`vrsp-platform`)は言語間で共通キーのまま維持/日本語×プラットフォームの AND 合成・空日付グループ非表示 CSS は不変/件数バッジはフィルタ前の全件数のまま/フィルタで live・today が0件になってもセクション・空状態の動的更新はしない
 8. **OGP 画像**: 現行 `ogp.png` は日本語テキストのため EN ページの SNS プレビューも日本語画像になる。初版は共通画像を許容し(推奨)、英語版画像は必要になったら別件で用意
 
-## 4. 実装設計(概要。合意後に確定仕様へ)
+## 3. 確定仕様(2026-08-06 ユーザー合意: §2-3 の全推奨案を採用)
+
+| 項目 | 決定内容 |
+|---|---|
+| 方式 | 案A: 静的2ページ生成(`/VRSP/` = 日本語、`/VRSP/en/` = 英語)。画面本体は `HomePage.astro` に抽出し route は locale を渡すのみ |
+| 切替 UI | ヘッダー右に JA / EN リンク(現在言語を強調表示、既存セグメントと同系の見た目)。ブランドリンクは現在言語のホームへ。自動リダイレクトなし |
+| ja-only 既定値 | localStorage `vrsp-ja-only` を三値化(`"1"` 明示ON / `"0"` 明示OFF / キーなし=ページ既定。JA: ON、EN: OFF)。ON 操作時は `"1"` を保存する形に変更(既存 `"0"` ユーザーは OFF のまま互換) |
+| フィルタ | プラットフォーム選択は言語間共通キー維持。AND 合成・空グループ CSS・件数バッジ(全件数)・空状態は既存仕様のまま |
+| 日時 | JST 固定。EN は `en-US` で日付グループ `Wed, Aug 5`(weekday short / month short / day numeric)、時刻・更新日時は 24時間制(`hourCycle: "h23"`)。期待文字列をテストで固定 |
+| メタ・SEO | §2-2 の URL 完成形表のとおり(canonical / og:url / og:locale+alternate / hreflang ja・en・x-default、すべて BASE_URL 起点)。`public/sitemap.xml` に2 URL(robots.txt は対象外 — §2-2 の表を参照) |
+| サイト名・OGP | EN は「VRChat Stream Antenna」。OGP 画像は初版は共通(日本語版) |
+| 翻訳 | 一次訳を Claude が作成し、実装レポートに全文言の対訳表を載せてユーザーレビューを受ける |
+| 変更しないもの | scripts 層(データ取得)すべて・フィルタ機構の挙動・classify の分類ロジック(ラベル生成の locale 化のみ)・CI 定義 |
+
+## 4. 実装設計
 
 1. `src/lib/i18n.ts` 新規: 型付き辞書(`ja` / `en`)と参照用純関数。補間文言はテンプレート関数として型付け。キーは上記インベントリ全件
 2. `src/lib/classify.ts`: 日付ラベル生成の locale 引数化(既定 ja で後方互換)+期待文字列テスト(ja / en 両方)
@@ -81,8 +95,15 @@
 4. `Layout.astro` / `StreamCard.astro` / `SectionHeader.astro`: `locale` prop 化と辞書参照への置換。`<html lang>`・canonical・og:url・og:locale(+alternate)・hreflang(ja / en / x-default)をページ別に生成(すべて BASE_URL 起点)
 5. ヘッダー右に JA/EN 切替リンク(現在言語を強調。ブランドリンクは現在言語のホームへ)
 6. localStorage `vrsp-ja-only` の三値化(§2-3-3)+ EN ページの既定 OFF(head 内 inline script の既定分岐)
-7. `public/sitemap.xml`(静的2 URL)と robots.txt の参照追記
+7. `public/sitemap.xml`(静的2 URL。robots.txt は対象外)
 8. 検証: 両ページのビルド・表示・メタ(canonical / hreflang / og)確認、フィルタ回帰(JA→EN→JA の状態維持、既存 `"0"` ユーザー互換、EN 既定 OFF で ON にして再読込しても ON が維持されること)、`npm run check` / `npm test`
+
+## 5. 検証計画
+
+1. **正常系**: `npm run check` 0 errors・`npm test` 全パス(classify の en ラベル期待文字列含む)・`npm run build` で2ページ生成。dev サーバーで JA/EN 両ページの全文言・日付/時刻表記・切替リンク動作を確認
+2. **メタ**: 両ページの `<html lang>`・canonical・og:url・og:locale(+alternate)・hreflang(ja/en/x-default)・title・description が §3 の完成形と一致すること。sitemap.xml の2 URL
+3. **フィルタ境界**: EN 初回訪問(キーなし)で日本語のみ OFF/JA 初回で ON。EN で ON→再読込で ON 維持(`"1"` 保存)。既存 `"0"` 保存状態で両ページとも OFF。JA で ON(キーなし旧状態相当)→EN へ遷移で OFF(ページ既定)→明示 ON→JA に戻って ON 維持。プラットフォーム選択が言語間で維持されること
+4. **回帰**: 既存フィルタ(プラットフォーム・AND 合成・空グループ非表示・320px レスポンシブ)が JA/EN 両ページで動作すること
 
 ## 8. 改修規模の見積
 
@@ -94,3 +115,29 @@
 | 翻訳・検証 | 一次訳、両ページ検証、フィルタ回帰 | 0.2日 |
 
 合計 約1日。依存追加なし・scripts 層(データ取得)への変更なし。
+
+## 9. 実施結果(2026-08-06 実装・検証完了)
+
+### 実装
+
+§3・§4 のとおり実装(コーディング codex / レビュー・検証 Claude)。計画との差分は2点: ①レビュー指摘により更新日時の `<time>` 要素は日時のみを含む形に修正(接頭辞は辞書の `updatedPrefix` に分離)②EN の「Niconico」ラベルでセグメント4個が 320px を超えたため、374px 以下でセグメントを縮小するメディアクエリを追加。
+
+- 新規: `src/lib/i18n.ts`(型付き対訳辞書)、`src/components/HomePage.astro`(画面本体の共通化)、`src/pages/en/index.astro`、`public/sitemap.xml`
+- 変更: `Layout.astro`(言語別メタ・canonical・hreflang・JA/EN 切替・ja-only 三値化)、`StreamCard.astro` / `SectionHeader.astro`(locale prop)、`classify.ts`(日付ラベル locale 引数化・後方互換)、`global.css`(切替 UI・狭幅ヘッダー・セグメント縮小)、`test/classify.test.ts`(ja/en 期待文字列)
+
+### 検証結果
+
+| 検証 | 結果 |
+|---|---|
+| `npm run check` / `npm test` / `npm run build` | ✅ 0 errors・54件全パス・2ページ生成 |
+| メタ(両ページの lang / canonical / og:url / og:locale+alternate / hreflang ja・en・x-default / title / description) | ✅ §2-2 完成形どおり |
+| EN 初回=日本語のみ OFF・JA 初回=ON(キーなし) | ✅ |
+| EN で明示 ON → `"1"` 保存 → JA 遷移後も ON 維持 | ✅ |
+| 明示 OFF `"0"` の両ページ互換・プラットフォーム選択の言語間維持 | ✅ |
+| 英語表記(`Wed, Aug 5`・`Last updated: MM/DD/YYYY, HH:mm JST`・24時間制) | ✅ 実ブラウザ・テスト両方 |
+| 320px(JA / EN 両ページ) | ✅ 横はみ出しなし(ヘッダー2段組・セグメント縮小) |
+
+### 残課題・補足
+
+- OGP 画像は日本語版を共用(合意どおり)。英語版が必要になれば別件
+- sitemap.xml は Search Console への登録をユーザー側で実施

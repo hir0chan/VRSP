@@ -1,48 +1,62 @@
 ---
 import "../styles/global.css";
+import type { Locale } from "../lib/i18n.js";
+import { getTranslation } from "../lib/i18n.js";
 
 interface Props {
-  title: string;
+  locale: Locale;
   updatedAt: string;
 }
 
-const { title, updatedAt } = Astro.props;
-const description =
-  "VRChat系配信者のライブ配信と今後の配信予定をひとつにまとめたスケジュールポータルです。";
-const siteUrl = new URL(
+const { locale, updatedAt } = Astro.props;
+const t = getTranslation(locale);
+const baseUrl = new URL(
   import.meta.env.BASE_URL,
   Astro.site ?? "https://hir0chan.github.io",
-).href;
-const ogImageUrl = `${siteUrl}images/ogp.png`;
-const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
+);
+const jaUrl = baseUrl.href;
+const enUrl = new URL("en/", baseUrl).href;
+const pageUrl = locale === "ja" ? jaUrl : enUrl;
+const currentHomePath = locale === "ja"
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}en/`;
+const ogImageUrl = new URL("images/ogp.png", baseUrl).href;
+const intlLocale = locale === "ja" ? "ja-JP" : "en-US";
+const updatedLabel = new Intl.DateTimeFormat(intlLocale, {
   timeZone: "Asia/Tokyo",
   year: "numeric",
   month: "2-digit",
   day: "2-digit",
   hour: "2-digit",
   minute: "2-digit",
+  hourCycle: "h23",
 }).format(new Date(updatedAt));
 ---
 
 <!doctype html>
-<html lang="ja" data-ja-only>
+<html lang={locale} data-ja-only={locale === "ja" ? "" : undefined}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
+    <meta name="description" content={t.description} />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="ja" href={jaUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={jaUrl} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="ぶいちゃ配信アンテナ" />
-    <meta property="og:title" content="ぶいちゃ配信アンテナ" />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:site_name" content={t.siteName} />
+    <meta property="og:title" content={t.siteName} />
+    <meta property="og:description" content={t.description} />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale" content={locale === "ja" ? "ja_JP" : "en_US"} />
+    <meta property="og:locale:alternate" content={locale === "ja" ? "en_US" : "ja_JP"} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hir0chan_vrc" />
-    <meta name="twitter:title" content="ぶいちゃ配信アンテナ" />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={t.siteName} />
+    <meta name="twitter:description" content={t.description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,11 +65,14 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
       rel="stylesheet"
     />
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon.svg`} type="image/svg+xml" />
-    <title>{title}</title>
+    <title>{t.title}</title>
     <script is:inline>
-      // デフォルト ON(html に静的付与)。明示的に OFF("0")が保存されている場合のみ外す
+      // 保存値がない場合だけ、静的に描画したページ既定値を維持する。
       try {
-        if (localStorage.getItem("vrsp-ja-only") === "0") {
+        const jaOnly = localStorage.getItem("vrsp-ja-only");
+        if (jaOnly === "1") {
+          document.documentElement.setAttribute("data-ja-only", "");
+        } else if (jaOnly === "0") {
           document.documentElement.removeAttribute("data-ja-only");
         }
       } catch {}
@@ -80,11 +97,29 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
   <body>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href={import.meta.env.BASE_URL} aria-label="ぶいちゃ配信アンテナ ホーム">
+        <a class="brand" href={currentHomePath} aria-label={t.brandAriaLabel}>
           <span class="brand-mark" aria-hidden="true"></span>
-          <span>ぶいちゃ配信アンテナ</span>
+          <span>{t.siteName}</span>
         </a>
-        <p>最終更新: <time datetime={updatedAt}>{updatedLabel} JST</time></p>
+        <div class="header-meta">
+          <p class="header-updated">{t.updatedPrefix}<time datetime={updatedAt}>{updatedLabel} JST</time></p>
+          <nav class="language-switch" aria-label="Language">
+            {
+              locale === "ja" ? (
+                <span aria-current="page" aria-label="日本語">JA</span>
+              ) : (
+                <a href={import.meta.env.BASE_URL} aria-label="日本語">JA</a>
+              )
+            }
+            {
+              locale === "en" ? (
+                <span aria-current="page" aria-label="English">EN</span>
+              ) : (
+                <a href={`${import.meta.env.BASE_URL}en/`} aria-label="English">EN</a>
+              )
+            }
+          </nav>
+        </div>
       </div>
     </header>
     <main class="shell">
@@ -93,10 +128,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
     <footer class="site-footer">
       <div class="shell footer-note">
         <p>
-          本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat
-          以外のコンテンツが掲載されることがあります。掲載の削除をご希望の場合は
-          X <a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">@hir0chan_vrc</a>
-          までご連絡ください。本サイトはアクセス状況の把握のため Google Analytics を使用しています。
+          {t.footerBeforeHandle}<a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">@hir0chan_vrc</a>{t.footerAfterHandle}
         </p>
       </div>
       <div class="shell footer-inner">
@@ -109,7 +141,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
             height="32"
             loading="lazy"
           />
-          ぶいちゃ配信アンテナ by hir0chan
+          {t.footerAuthor}
           <span class="footer-links">
             <a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer" aria-label="X (hir0chan_vrc)">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
@@ -135,11 +167,7 @@ const updatedLabel = new Intl.DateTimeFormat("ja-JP", {
         toggle.addEventListener("change", () => {
           document.documentElement.toggleAttribute("data-ja-only", toggle.checked);
           try {
-            if (toggle.checked) {
-              localStorage.removeItem("vrsp-ja-only");
-            } else {
-              localStorage.setItem("vrsp-ja-only", "0");
-            }
+            localStorage.setItem("vrsp-ja-only", toggle.checked ? "1" : "0");
           } catch {}
         });
       }

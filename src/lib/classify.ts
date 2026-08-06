@@ -1,4 +1,6 @@
 import type { Stream, Streamer } from "../../scripts/models.js";
+import type { Locale } from "./i18n.js";
+import { getTranslation } from "./i18n.js";
 
 export interface JoinedStream extends Stream {
   streamer: Streamer;
@@ -25,12 +27,14 @@ const JST_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   day: "2-digit",
 });
 
-const JST_LABEL_FORMATTER = new Intl.DateTimeFormat("ja-JP", {
-  timeZone: "Asia/Tokyo",
-  month: "long",
-  day: "numeric",
-  weekday: "short",
-});
+function getJstLabelFormatter(locale: Locale): Intl.DateTimeFormat {
+  return new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
+    timeZone: "Asia/Tokyo",
+    month: locale === "ja" ? "long" : "short",
+    day: "numeric",
+    weekday: "short",
+  });
+}
 
 function toValidDate(value: string | undefined): Date | undefined {
   if (value === undefined) {
@@ -76,7 +80,7 @@ function byStartTime(left: JoinedStream, right: JoinedStream): number {
   return startTime(left) - startTime(right);
 }
 
-function groupUpcoming(streams: JoinedStream[]): UpcomingGroup[] {
+function groupUpcoming(streams: JoinedStream[], locale: Locale): UpcomingGroup[] {
   const dated = new Map<string, JoinedStream[]>();
   const undated: JoinedStream[] = [];
 
@@ -101,7 +105,7 @@ function groupUpcoming(streams: JoinedStream[]): UpcomingGroup[] {
       }
       return {
         key,
-        label: JST_LABEL_FORMATTER.format(firstStart),
+        label: getJstLabelFormatter(locale).format(firstStart),
         streams: group.sort(byStartTime),
       };
     });
@@ -109,7 +113,7 @@ function groupUpcoming(streams: JoinedStream[]): UpcomingGroup[] {
   if (undated.length > 0) {
     groups.push({
       key: "undated",
-      label: "日付未定",
+      label: getTranslation(locale).dateTbd,
       streams: undated.sort(byStartTime),
     });
   }
@@ -120,10 +124,13 @@ export function classifyStreams(
   streams: Stream[],
   streamers: Streamer[],
   now: Date,
+  localeOrWarn: Locale | Warn = "ja",
   warn: Warn = console.warn,
 ): ClassifiedStreams {
+  const locale = typeof localeOrWarn === "function" ? "ja" : localeOrWarn;
+  const resolvedWarn = typeof localeOrWarn === "function" ? localeOrWarn : warn;
   const todayKey = getJstDateKey(now);
-  const joined = joinStreams(streams, streamers, warn);
+  const joined = joinStreams(streams, streamers, resolvedWarn);
   const live = joined
     .filter((stream) => stream.status === "live")
     .sort(byStartTime);
@@ -136,5 +143,5 @@ export function classifyStreams(
     .sort(byStartTime);
   const later = upcoming.filter((stream) => !today.includes(stream));
 
-  return { live, today, upcoming: groupUpcoming(later) };
+  return { live, today, upcoming: groupUpcoming(later, locale) };
 }

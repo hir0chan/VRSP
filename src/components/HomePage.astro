@@ -1,0 +1,126 @@
+---
+import streamsData from "../../data/generated/streams.json";
+import streamersData from "../../data/generated/streamers.json";
+import type { GeneratedStreams } from "../../scripts/models.js";
+import Layout from "../layouts/Layout.astro";
+import { classifyStreams } from "../lib/classify.js";
+import type { Locale } from "../lib/i18n.js";
+import { getTranslation } from "../lib/i18n.js";
+import { resolveThumbnailUrl } from "../lib/thumbnail.js";
+import SectionHeader from "./SectionHeader.astro";
+import StreamCard from "./StreamCard.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+// generated は型付き update スクリプトだけが書き込むため、表示側では再検証しない。
+const generatedStreams = streamsData as unknown as GeneratedStreams;
+const sections = classifyStreams(
+  generatedStreams.streams,
+  streamersData.streamers,
+  new Date(),
+  locale,
+);
+const thumbnailUrl = (path: string): string =>
+  resolveThumbnailUrl(path, import.meta.env.BASE_URL);
+---
+
+<Layout locale={locale} updatedAt={generatedStreams.updatedAt}>
+  <section class="hero" aria-labelledby="page-title">
+    <p class="eyebrow">{t.heroEyebrow}</p>
+    <h1 id="page-title">{t.heroTitleBeforeEmphasis}<br /><em>{t.heroTitleEmphasis}</em></h1>
+    <p class="hero-copy">{t.heroCopy}</p>
+  </section>
+
+  <div class="filter-controls" hidden>
+    <fieldset class="platform-filter">
+      <legend>{t.platformLegend}</legend>
+      <input type="radio" id="platform-all" name="platform-filter" value="all" checked />
+      <label for="platform-all">{t.platformAll}</label>
+      <input type="radio" id="platform-youtube" name="platform-filter" value="youtube" />
+      <label for="platform-youtube">
+        <svg viewBox="0 0 28.57 20" aria-hidden="true">
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M27.973 3.123A3.578 3.578 0 0 0 25.447.597C23.22 0 14.285 0 14.285 0S5.35 0 3.123.597A3.578 3.578 0 0 0 .597 3.123C0 5.35 0 10 0 10s0 4.65.597 6.877a3.578 3.578 0 0 0 2.526 2.526C5.35 20 14.285 20 14.285 20s8.935 0 11.162-.597a3.578 3.578 0 0 0 2.526-2.526C28.57 14.65 28.57 10 28.57 10s0-4.65-.597-6.877zM11.425 14.285 18.85 10l-7.425-4.285z"
+          />
+        </svg>
+        YouTube
+      </label>
+      <input type="radio" id="platform-twitch" name="platform-filter" value="twitch" />
+      <label for="platform-twitch">
+        <svg viewBox="0 0 2400 2800" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100zM1700 550h200v600h-200zm-550 0h200v600h-200z"
+          />
+        </svg>
+        Twitch
+      </label>
+      <input type="radio" id="platform-niconico" name="platform-filter" value="niconico" />
+      <label for="platform-niconico">
+        <img class="nico-symbol" src={`${import.meta.env.BASE_URL}images/niconico-symbol.png`} alt="" width="302" height="300" />
+        <img class="nico-symbol-white" src={`${import.meta.env.BASE_URL}images/niconico-symbol-white.png`} alt="" width="302" height="300" />
+        {t.platformNiconico}
+      </label>
+    </fieldset>
+    <div class="ja-only-toggle">
+      <input type="checkbox" id="ja-only-toggle" />
+      <label for="ja-only-toggle">{t.japaneseOnly}</label>
+    </div>
+  </div>
+
+  {
+    sections.live.length > 0 && (
+      <section class="schedule-section" aria-labelledby="live-heading">
+        <SectionHeader eyebrow="BROADCASTING NOW" title={t.liveSection} count={sections.live.length} locale={locale} />
+        <div class="card-grid" id="live-heading">
+          {sections.live.map((stream) => (
+            <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} locale={locale} live={true} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="schedule-section" aria-labelledby="today-heading">
+    <SectionHeader eyebrow="TODAY IN JST" title={t.todaySection} count={sections.today.length} locale={locale} />
+    {
+      sections.today.length > 0 ? (
+        <div class="card-grid" id="today-heading">
+          {sections.today.map((stream) => (
+            <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} locale={locale} />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state" id="today-heading">{t.todayEmpty}</p>
+      )
+    }
+  </section>
+
+  <section class="schedule-section" aria-labelledby="upcoming-heading">
+    <SectionHeader eyebrow="SAVE THE DATE" title={t.upcomingSection} locale={locale} />
+    <div class="upcoming-list" id="upcoming-heading">
+      {
+        sections.upcoming.length > 0 ? (
+          sections.upcoming.map((group) => (
+            <section class="date-group">
+              <h3>{group.label}</h3>
+              <div class="card-grid">
+                {group.streams.map((stream) => (
+                  <StreamCard stream={stream} thumbnailUrl={thumbnailUrl(stream.thumbnail)} locale={locale} />
+                ))}
+              </div>
+            </section>
+          ))
+        ) : (
+          <p class="empty-state">{t.upcomingEmpty}</p>
+        )
+      }
+    </div>
+  </section>
+</Layout>

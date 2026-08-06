@@ -1,26 +1,31 @@
 ---
 import type { JoinedStream } from "../lib/classify.js";
+import type { Locale } from "../lib/i18n.js";
+import { getTranslation } from "../lib/i18n.js";
 
 interface Props {
   stream: JoinedStream;
   thumbnailUrl: string;
+  locale: Locale;
   live?: boolean;
 }
 
-const { stream, thumbnailUrl, live = false } = Astro.props;
+const { stream, thumbnailUrl, locale, live = false } = Astro.props;
+const t = getTranslation(locale);
 const start = live ? stream.actualStart : stream.scheduledStart;
 const startLabel =
   start === undefined
     ? undefined
-    : new Intl.DateTimeFormat("ja-JP", {
+    : new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
         timeZone: "Asia/Tokyo",
         hour: "2-digit",
         minute: "2-digit",
+        hourCycle: "h23",
       }).format(new Date(start));
 ---
 
 <article class="stream-card" data-ja={stream.isJapanese ?? true} data-platform={stream.platform ?? "youtube"}>
-  <a class="card-link" href={stream.url} target="_blank" rel="noreferrer" aria-label={`${stream.title}の配信ページを見る`}>
+  <a class="card-link" href={stream.url} target="_blank" rel="noreferrer" aria-label={t.openStream(stream.title)}>
     <div class="thumbnail-wrap">
       <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />
       {live && <span class="live-badge"><span aria-hidden="true"></span>LIVE</span>}
@@ -28,7 +33,7 @@ const startLabel =
         {stream.platform === "niconico" ? (
           <img
             src={`${import.meta.env.BASE_URL}images/niconico-symbol.png`}
-            alt="ニコニコ生放送"
+            alt={t.niconicoLiveAlt}
             width="302"
             height="300"
             loading="lazy"
@@ -56,7 +61,7 @@ const startLabel =
     <div class="stream-card-body">
       <p class="streamer-name">{stream.streamer.name}</p>
       <h3>{stream.title}</h3>
-      <span class="card-action">配信ページへ <span aria-hidden="true">↗</span></span>
+      <span class="card-action">{t.watchStream} <span aria-hidden="true">↗</span></span>
     </div>
   </a>
 </article>

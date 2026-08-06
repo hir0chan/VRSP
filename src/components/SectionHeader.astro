@@ -1,11 +1,16 @@
 ---
+import type { Locale } from "../lib/i18n.js";
+import { getTranslation } from "../lib/i18n.js";
+
 interface Props {
   eyebrow: string;
   title: string;
+  locale: Locale;
   count?: number;
 }
 
-const { eyebrow, title, count } = Astro.props;
+const { eyebrow, title, locale, count } = Astro.props;
+const t = getTranslation(locale);
 ---
 
 <header class="section-header">
@@ -13,5 +18,5 @@ const { eyebrow, title, count } = Astro.props;
     <p class="eyebrow">{eyebrow}</p>
     <h2>{title}</h2>
   </div>
-  {count !== undefined && <span class="count" aria-label={`全${count}件`} title={`全${count}件`}>{count}</span>}
+  {count !== undefined && <span class="count" aria-label={t.totalCount(count)} title={t.totalCount(count)}>{count}</span>}
 </header>

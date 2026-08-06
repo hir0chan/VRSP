@@ -97,6 +97,26 @@ test("scheduledStart 欠落は UPCOMING の日付未定末尾へ送る", () => {
   assert.equal(result.upcoming[1]?.streams[0]?.id, "undated");
 });
 
+test("日付グループを ja/en の固定書式で表示する", () => {
+  const streams = [
+    upcoming("dated", "2026-08-04T15:00:00.000Z"),
+    upcoming("undated"),
+  ];
+  const now = new Date("2026-07-30T03:00:00.000Z");
+
+  const ja = classifyStreams(streams, streamers, now, "ja");
+  const en = classifyStreams(streams, streamers, now, "en");
+
+  assert.deepEqual(
+    ja.upcoming.map((group) => group.label),
+    ["8月5日(水)", "日付未定"],
+  );
+  assert.deepEqual(
+    en.upcoming.map((group) => group.label),
+    ["Wed, Aug 5", "Date TBD"],
+  );
+});
+
 test("actualStart 欠落の live もカード対象に残す", () => {
   const live: Stream = {
     ...upcoming("live-without-start"),

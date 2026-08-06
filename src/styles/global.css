@@ -61,15 +61,65 @@ img {
   min-height: 72px;
 }
 
-.header-inner > p,
+.header-updated,
 .footer-inner {
   color: var(--ink-soft);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
 }
 
-.header-inner > p {
+.header-updated {
+  margin: 0;
   color: #ffffff;
+}
+
+.header-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.language-switch {
+  display: inline-flex;
+  flex: none;
+}
+
+.language-switch a,
+.language-switch span {
+  display: grid;
+  min-width: 36px;
+  min-height: 30px;
+  place-items: center;
+  margin-left: -1px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.language-switch :first-child {
+  margin-left: 0;
+  border-radius: 999px 0 0 999px;
+}
+
+.language-switch :last-child {
+  border-radius: 0 999px 999px 0;
+}
+
+.language-switch [aria-current="page"] {
+  position: relative;
+  border-color: var(--accent-deep);
+  background: var(--accent-deep);
+  color: var(--surface);
+}
+
+.language-switch a:focus-visible {
+  position: relative;
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
 }
 
 .brand,
@@ -624,17 +674,36 @@ img {
   }
 
   .header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 5px 10px;
     min-height: 62px;
-  }
-
-  .header-inner {
-    flex-wrap: wrap;
-    row-gap: 2px;
     padding-block: 10px;
   }
 
-  .header-inner > p {
-    margin: 0;
+  .brand {
+    min-width: 0;
+    font-size: clamp(0.78rem, 4vw, 0.9rem);
+  }
+
+  .brand > :last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-meta {
+    display: contents;
+  }
+
+  .header-updated {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+
+  .language-switch {
+    grid-row: 1;
+    grid-column: 2;
   }
 
   .hero {
@@ -650,6 +719,20 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+  }
+}
+
+/* EN の "Niconico" 等でセグメント4個が 320px を超えるため縮小する */
+@media (max-width: 374px) {
+  .platform-filter label {
+    gap: 4px;
+    padding: 5px 8px;
+    font-size: 0.72rem;
+  }
+
+  .platform-filter label svg,
+  .platform-filter label img {
+    height: 10px;
   }
 }
 
