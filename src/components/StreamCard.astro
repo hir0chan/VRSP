@@ -26,7 +26,13 @@ const startLabel =
       {live && <span class="live-badge"><span aria-hidden="true"></span>LIVE</span>}
       <span class="platform-chip">
         {stream.platform === "niconico" ? (
-          <span class="niconico-chip">ニコ生</span>
+          <img
+            src={`${import.meta.env.BASE_URL}images/niconico-symbol.png`}
+            alt="ニコニコ生放送"
+            width="302"
+            height="300"
+            loading="lazy"
+          />
         ) : stream.platform === "twitch" ? (
           <svg viewBox="0 0 2400 2800" role="img" aria-label="Twitch">
             <path fill="#ffffff" d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600v1100z" />

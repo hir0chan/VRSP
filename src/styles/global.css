@@ -206,10 +206,21 @@ img {
   cursor: pointer;
 }
 
-.platform-filter label svg {
+.platform-filter label svg,
+.platform-filter label img {
   display: block;
   height: 12px;
   width: auto;
+}
+
+/* PNG 素材は色変更不可(ブランドガイドライン)のため黒/白の2枚を切替える */
+.platform-filter label .nico-symbol-white,
+.platform-filter input:checked + label .nico-symbol {
+  display: none;
+}
+
+.platform-filter input:checked + label .nico-symbol-white {
+  display: block;
 }
 
 /* ブランドガイドライン準拠の指定色。選択中は label の白文字を継承(単色白は両社とも許容) */
@@ -482,17 +493,11 @@ img {
   background: var(--surface);
 }
 
-.platform-chip svg {
+.platform-chip svg,
+.platform-chip img {
   display: block;
   height: 14px;
   width: auto;
-}
-
-.niconico-chip {
-  color: var(--ink);
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 14px;
 }
 
 .stream-card-body {
