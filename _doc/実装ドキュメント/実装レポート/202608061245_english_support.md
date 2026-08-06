@@ -42,5 +42,10 @@
 ## ユーザーに確認したい事項
 
 - 上の対訳表の文言レビュー(修正があれば辞書 `src/lib/i18n.ts` の該当キーを直すだけです)
+  - OKです
 - Search Console 等への `https://hir0chan.github.io/VRSP/sitemap.xml` の登録(任意)
+  - OK。あなたが進行可能ならやって
 - OGP 画像は日本語版共用(合意どおり)。英語版を作る場合は別件で
+  - それでOK
+
+問題なければpushまで進行
