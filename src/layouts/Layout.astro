@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import type { Locale } from "../lib/i18n.js";
 import { getTranslation } from "../lib/i18n.js";
+import { supportUrl } from "../lib/site.js";
 
 interface Props {
   locale: Locale;
@@ -132,6 +133,11 @@ const updatedLabel = new Intl.DateTimeFormat(intlLocale, {
         <p>
           {t.footerBeforeHandle}<a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">@hir0chan_vrc</a>{t.footerAfterHandle}
         </p>
+        {supportUrl !== "" && (
+          <p class="support-note">
+            <a href={supportUrl} target="_blank" rel="noreferrer">{t.supportLinkLabel} <span aria-hidden="true">↗</span></a>
+          </p>
+        )}
       </div>
       <div class="shell footer-inner">
         <p class="footer-author">

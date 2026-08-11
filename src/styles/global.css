@@ -127,6 +127,7 @@ img {
 .hero h1,
 .section-header h2,
 .stream-card h3,
+.sponsor-card h3,
 .date-group > h3 {
   font-family:
     "Zen Maru Gothic",
@@ -626,6 +627,96 @@ img {
   text-align: center;
 }
 
+.sponsor-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.sponsor-card-link,
+.sponsor-recruit-body {
+  position: relative;
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px;
+}
+
+.sponsor-card-link {
+  text-decoration: none;
+}
+
+.sponsor-card:not(.sponsor-recruit-card):hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.sponsor-card-link:focus-visible,
+.sponsor-recruit-card a:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: -4px;
+}
+
+.sponsor-pr-badge {
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 5px 8px;
+  border: 1px solid var(--accent-deep);
+  border-radius: calc(var(--radius) / 2);
+  background: var(--surface);
+  color: var(--accent-deep);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.sponsor-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.sponsor-card p {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.sponsor-card-action {
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.sponsor-recruit-card {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.sponsor-recruit-card h3 {
+  color: var(--accent-deep);
+}
+
+.sponsor-recruit-card a {
+  display: inline-flex;
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--surface);
@@ -643,6 +734,11 @@ img {
   color: var(--ink-soft);
   font-size: 0.75rem;
   line-height: 1.8;
+}
+
+.footer-note .support-note {
+  padding-top: 8px;
+  border-bottom: 0;
 }
 
 .footer-note a {
@@ -781,7 +877,8 @@ img {
     transition: none !important;
   }
 
-  .stream-card:hover {
+  .stream-card:hover,
+  .sponsor-card:not(.sponsor-recruit-card):hover {
     transform: none;
   }
 }

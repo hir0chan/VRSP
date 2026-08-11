@@ -1,0 +1,28 @@
+---
+import type { Locale } from "../lib/i18n.js";
+import { getTranslation } from "../lib/i18n.js";
+import type { SponsorEntry } from "../lib/sponsors.js";
+
+interface Props {
+  sponsor: SponsorEntry;
+  locale: Locale;
+}
+
+const { sponsor, locale } = Astro.props;
+const t = getTranslation(locale);
+const description = locale === "ja" ? sponsor.descriptionJa : sponsor.descriptionEn;
+---
+
+<article class="sponsor-card">
+  <a
+    class="sponsor-card-link"
+    href={sponsor.url}
+    target="_blank"
+    rel="noreferrer nofollow sponsored"
+  >
+    <span class="sponsor-pr-badge">{t.sponsorPrLabel}</span>
+    <h3>{sponsor.name}</h3>
+    <p>{description}</p>
+    <span class="sponsor-card-action" aria-hidden="true">↗</span>
+  </a>
+</article>

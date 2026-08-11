@@ -1,4 +1,7 @@
 ---
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { parse } from "yaml";
 import streamsData from "../../data/generated/streams.json";
 import streamersData from "../../data/generated/streamers.json";
 import type { GeneratedStreams } from "../../scripts/models.js";
@@ -6,8 +9,10 @@ import Layout from "../layouts/Layout.astro";
 import { classifyStreams } from "../lib/classify.js";
 import type { Locale } from "../lib/i18n.js";
 import { getTranslation } from "../lib/i18n.js";
+import { filterActiveSponsors, parseSponsors } from "../lib/sponsors.js";
 import { resolveThumbnailUrl } from "../lib/thumbnail.js";
 import SectionHeader from "./SectionHeader.astro";
+import SponsorCard from "./SponsorCard.astro";
 import StreamCard from "./StreamCard.astro";
 
 interface Props {
@@ -16,6 +21,10 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslation(locale);
+const raw: unknown = parse(
+  readFileSync(resolve(process.cwd(), "data/sponsors.yaml"), "utf8"),
+);
+const sponsors = filterActiveSponsors(parseSponsors(raw), new Date());
 // generated は型付き update スクリプトだけが書き込むため、表示側では再検証しない。
 const generatedStreams = streamsData as unknown as GeneratedStreams;
 const sections = classifyStreams(
@@ -207,6 +216,22 @@ const thumbnailUrl = (path: string): string =>
           <p class="empty-state">{t.upcomingEmpty}</p>
         )
       }
+    </div>
+  </section>
+
+  <section class="schedule-section community-section" aria-labelledby="community-heading">
+    <SectionHeader eyebrow="COMMUNITY" title={t.sponsorSection} locale={locale} />
+    <div class="card-grid" id="community-heading">
+      {sponsors.map((sponsor) => <SponsorCard sponsor={sponsor} locale={locale} />)}
+      <article class="sponsor-card sponsor-recruit-card">
+        <div class="sponsor-recruit-body">
+          <h3>{t.sponsorRecruitTitle}</h3>
+          <p>{t.sponsorRecruitCopy}</p>
+          <a href="https://x.com/hir0chan_vrc" target="_blank" rel="noreferrer">
+            {t.sponsorRecruitCta} <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
     </div>
   </section>
 </Layout>

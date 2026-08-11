@@ -24,6 +24,12 @@ interface Translation {
   watchStream: string;
   niconicoLiveAlt: string;
   dateTbd: string;
+  sponsorSection: string;
+  sponsorPrLabel: string;
+  sponsorRecruitTitle: string;
+  sponsorRecruitCopy: string;
+  sponsorRecruitCta: string;
+  supportLinkLabel: string;
   footerBeforeHandle: string;
   footerAfterHandle: string;
   footerAuthor: string;
@@ -56,6 +62,13 @@ const translations: Record<Locale, Translation> = {
     watchStream: "配信ページへ",
     niconicoLiveAlt: "ニコニコ生放送",
     dateTbd: "日付未定",
+    sponsorSection: "コミュニティ枠",
+    sponsorPrLabel: "PR",
+    sponsorRecruitTitle: "この枠に掲載しませんか？",
+    sponsorRecruitCopy:
+      "コミュニティ活動やサービスの掲載を募集しています。お気軽にご相談ください。",
+    sponsorRecruitCta: "X の DM で相談",
+    supportLinkLabel: "このサイトを応援する",
     footerBeforeHandle:
       "本サイトはすべての VRChat 配信者・コンテンツを網羅しているわけではありません。また、取得の仕組み上、VRChat 以外のコンテンツが掲載されることがあります。掲載の削除をご希望の場合は X ",
     footerAfterHandle:
@@ -88,6 +101,13 @@ const translations: Record<Locale, Translation> = {
     watchStream: "Watch stream",
     niconicoLiveAlt: "Niconico Live",
     dateTbd: "Date TBD",
+    sponsorSection: "Community",
+    sponsorPrLabel: "PR",
+    sponsorRecruitTitle: "Want to be featured here?",
+    sponsorRecruitCopy:
+      "We welcome community activities and services. Get in touch to learn more.",
+    sponsorRecruitCta: "DM us on X",
+    supportLinkLabel: "Support this site",
     footerBeforeHandle:
       "This site does not cover every VRChat streamer or every piece of content, and non-VRChat content may occasionally appear due to how data is collected. To request removal of a listing, please contact ",
     footerAfterHandle:
