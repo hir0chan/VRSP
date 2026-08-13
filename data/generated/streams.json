@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T09:43:45.676Z",
+  "updatedAt": "2026-08-13T09:45:28.317Z",
   "tracked": [
     {
       "id": "UoKj_GgYiaA",
@@ -1400,7 +1400,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-12T20:05:00Z",
       "actualStart": "2026-08-12T20:05:35Z",
-      "viewers": 1
+      "viewers": 3
     },
     {
       "id": "WdF52TWL38A",
@@ -2105,7 +2105,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-13T04:55:00Z",
       "actualStart": "2026-08-13T05:02:46Z",
-      "viewers": 15
+      "viewers": 8
     },
     {
       "id": "2GjqJ6VqDWA",
@@ -2217,11 +2217,11 @@
       "title": "Chill VRChat stream cause i cant sleep =(",
       "thumbnail": "https://i.ytimg.com/vi/_L_aj2mIXNQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=_L_aj2mIXNQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-13T08:21:37Z",
       "actualStart": "2026-08-13T08:21:36Z",
-      "viewers": 4
+      "actualEnd": "2026-08-13T09:43:38Z"
     },
     {
       "id": "KHfPh-_eQxk",
@@ -2233,7 +2233,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-13T07:30:00Z",
       "actualStart": "2026-08-13T07:36:04Z",
-      "viewers": 9
+      "viewers": 12
     },
     {
       "id": "EBn-hYcxY58",
@@ -2256,7 +2256,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-13T08:39:19Z",
-      "viewers": 19
+      "viewers": 13
     },
     {
       "id": "OK4spVvgAtw",
@@ -2309,6 +2309,29 @@
       "scheduledStart": "2026-08-12T20:09:32Z",
       "actualStart": "2026-08-12T20:09:43Z",
       "actualEnd": "2026-08-12T20:11:33Z"
+    },
+    {
+      "id": "2r_PwPLjaYs",
+      "streamerId": "UCz9jnXVCfqxsTDoapGIM_bg",
+      "title": "Доброе утро! с VRchat",
+      "thumbnail": "https://i.ytimg.com/vi/2r_PwPLjaYs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2r_PwPLjaYs",
+      "status": "ended",
+      "isJapanese": false,
+      "actualStart": "2026-08-13T07:45:12Z",
+      "actualEnd": "2026-08-13T08:39:01Z"
+    },
+    {
+      "id": "AhI6sQEbZ5g",
+      "streamerId": "UC6Evt-S4Yc8Cuyz53-bX3XA",
+      "title": "VRChat— Horror Map with Popm Pom (AU)",
+      "thumbnail": "https://i.ytimg.com/vi/AhI6sQEbZ5g/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AhI6sQEbZ5g",
+      "status": "ended",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-12T19:43:46Z",
+      "actualStart": "2026-08-12T19:43:43Z",
+      "actualEnd": "2026-08-12T20:32:18Z"
     }
   ],
   "streams": [
@@ -3701,7 +3724,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-12T20:05:00Z",
       "actualStart": "2026-08-12T20:05:35Z",
-      "viewers": 1
+      "viewers": 3
     },
     {
       "id": "WdF52TWL38A",
@@ -4406,7 +4429,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-13T04:55:00Z",
       "actualStart": "2026-08-13T05:02:46Z",
-      "viewers": 15
+      "viewers": 8
     },
     {
       "id": "2GjqJ6VqDWA",
@@ -4518,11 +4541,11 @@
       "title": "Chill VRChat stream cause i cant sleep =(",
       "thumbnail": "https://i.ytimg.com/vi/_L_aj2mIXNQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=_L_aj2mIXNQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-13T08:21:37Z",
       "actualStart": "2026-08-13T08:21:36Z",
-      "viewers": 4
+      "actualEnd": "2026-08-13T09:43:38Z"
     },
     {
       "id": "KHfPh-_eQxk",
@@ -4534,7 +4557,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-13T07:30:00Z",
       "actualStart": "2026-08-13T07:36:04Z",
-      "viewers": 9
+      "viewers": 12
     },
     {
       "id": "EBn-hYcxY58",
@@ -4557,7 +4580,7 @@
       "status": "live",
       "isJapanese": false,
       "actualStart": "2026-08-13T08:39:19Z",
-      "viewers": 19
+      "viewers": 13
     },
     {
       "id": "OK4spVvgAtw",
@@ -4612,16 +4635,27 @@
       "actualEnd": "2026-08-12T20:11:33Z"
     },
     {
-      "id": "tw-316300813297",
-      "streamerId": "tw-1458853056",
-      "title": "帰省するまでレッツVRC",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tanaka0284-640x360.jpg",
-      "url": "https://www.twitch.tv/tanaka0284",
-      "status": "live",
-      "actualStart": "2026-08-13T03:48:46Z",
-      "viewers": 33,
-      "isJapanese": true,
-      "platform": "twitch"
+      "id": "2r_PwPLjaYs",
+      "streamerId": "UCz9jnXVCfqxsTDoapGIM_bg",
+      "title": "Доброе утро! с VRchat",
+      "thumbnail": "https://i.ytimg.com/vi/2r_PwPLjaYs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2r_PwPLjaYs",
+      "status": "ended",
+      "isJapanese": false,
+      "actualStart": "2026-08-13T07:45:12Z",
+      "actualEnd": "2026-08-13T08:39:01Z"
+    },
+    {
+      "id": "AhI6sQEbZ5g",
+      "streamerId": "UC6Evt-S4Yc8Cuyz53-bX3XA",
+      "title": "VRChat— Horror Map with Popm Pom (AU)",
+      "thumbnail": "https://i.ytimg.com/vi/AhI6sQEbZ5g/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AhI6sQEbZ5g",
+      "status": "ended",
+      "isJapanese": false,
+      "scheduledStart": "2026-08-12T19:43:46Z",
+      "actualStart": "2026-08-12T19:43:43Z",
+      "actualEnd": "2026-08-12T20:32:18Z"
     },
     {
       "id": "tw-316367342707",
@@ -4631,7 +4665,7 @@
       "url": "https://www.twitch.tv/hiryuzarame",
       "status": "live",
       "actualStart": "2026-08-13T09:24:43Z",
-      "viewers": 13,
+      "viewers": 12,
       "isJapanese": true,
       "platform": "twitch"
     },
@@ -4691,7 +4725,7 @@
       "url": "https://www.twitch.tv/favorite",
       "status": "live",
       "actualStart": "2026-08-13T05:23:47Z",
-      "viewers": 296,
+      "viewers": 289,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4727,7 +4761,7 @@
       "url": "https://www.twitch.tv/nemurin",
       "status": "live",
       "actualStart": "2026-08-13T07:26:46Z",
-      "viewers": 135,
+      "viewers": 145,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4787,7 +4821,7 @@
       "url": "https://www.twitch.tv/henrythenova",
       "status": "live",
       "actualStart": "2026-08-13T07:06:37Z",
-      "viewers": 43,
+      "viewers": 42,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4823,7 +4857,7 @@
       "url": "https://www.twitch.tv/njna_grimsdottir",
       "status": "live",
       "actualStart": "2026-08-13T05:16:36Z",
-      "viewers": 28,
+      "viewers": 29,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4835,7 +4869,7 @@
       "url": "https://www.twitch.tv/nightmareerror666",
       "status": "live",
       "actualStart": "2026-08-13T06:43:54Z",
-      "viewers": 17,
+      "viewers": 16,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4847,7 +4881,7 @@
       "url": "https://www.twitch.tv/ratatoskr_squrrabbit",
       "status": "live",
       "actualStart": "2026-08-13T05:02:00Z",
-      "viewers": 9,
+      "viewers": 10,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4871,18 +4905,6 @@
       "url": "https://www.twitch.tv/ramgladore",
       "status": "live",
       "actualStart": "2026-08-13T05:19:31Z",
-      "viewers": 8,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-317220374135",
-      "streamerId": "tw-1152731124",
-      "title": "your favorite Hispanic Femboy Husky :3 <3",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_acey_da_ruler-640x360.jpg",
-      "url": "https://www.twitch.tv/acey_da_ruler",
-      "status": "live",
-      "actualStart": "2026-08-13T06:57:07Z",
       "viewers": 6,
       "isJapanese": false,
       "platform": "twitch"
@@ -4900,6 +4922,18 @@
       "platform": "twitch"
     },
     {
+      "id": "tw-317220374135",
+      "streamerId": "tw-1152731124",
+      "title": "your favorite Hispanic Femboy Husky :3 <3",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_acey_da_ruler-640x360.jpg",
+      "url": "https://www.twitch.tv/acey_da_ruler",
+      "status": "live",
+      "actualStart": "2026-08-13T06:57:07Z",
+      "viewers": 5,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
       "id": "tw-315948717417",
       "streamerId": "tw-924866406",
       "title": "Jakethebordercollie the goober silly puppy join  vr chat for pup fun",
@@ -4907,7 +4941,7 @@
       "url": "https://www.twitch.tv/jakethebordercolliesinger",
       "status": "live",
       "actualStart": "2026-08-13T08:33:05Z",
-      "viewers": 5,
+      "viewers": 4,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4919,7 +4953,7 @@
       "url": "https://www.twitch.tv/kittydaemons",
       "status": "live",
       "actualStart": "2026-08-12T03:17:17Z",
-      "viewers": 5,
+      "viewers": 4,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4955,6 +4989,18 @@
       "url": "https://www.twitch.tv/baja_blast_ash",
       "status": "live",
       "actualStart": "2026-08-13T08:48:05Z",
+      "viewers": 3,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-321009656155",
+      "streamerId": "tw-1528281931",
+      "title": "Neon Nights in VRChat 🌌 | Music, Worlds & Chaos | HALO // 7",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_halo7contact-640x360.jpg",
+      "url": "https://www.twitch.tv/halo7contact",
+      "status": "live",
+      "actualStart": "2026-08-13T08:14:42Z",
       "viewers": 3,
       "isJapanese": false,
       "platform": "twitch"
@@ -4996,18 +5042,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-321009656155",
-      "streamerId": "tw-1528281931",
-      "title": "Neon Nights in VRChat 🌌 | Music, Worlds & Chaos | HALO // 7",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_halo7contact-640x360.jpg",
-      "url": "https://www.twitch.tv/halo7contact",
-      "status": "live",
-      "actualStart": "2026-08-13T08:14:42Z",
-      "viewers": 2,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-315970551658",
       "streamerId": "tw-194829690",
       "title": "🎮 \"Press Start to Chill | Old School Vibes, New School Games\" 🕹️",
@@ -5015,18 +5049,6 @@
       "url": "https://www.twitch.tv/zman4112",
       "status": "live",
       "actualStart": "2026-08-13T06:08:44Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318223818213",
-      "streamerId": "tw-658600181",
-      "title": "a little break",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sweetvr-640x360.jpg",
-      "url": "https://www.twitch.tv/sweetvr",
-      "status": "live",
-      "actualStart": "2026-08-13T09:42:05Z",
       "viewers": 1,
       "isJapanese": false,
       "platform": "twitch"
@@ -5112,18 +5134,6 @@
       "status": "live",
       "actualStart": "2026-08-13T08:12:54Z",
       "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318826335319",
-      "streamerId": "tw-1513596949",
-      "title": "vr chat",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nightgamerbro-640x360.jpg",
-      "url": "https://www.twitch.tv/nightgamerbro",
-      "status": "live",
-      "actualStart": "2026-08-13T09:40:43Z",
-      "viewers": 0,
       "isJapanese": false,
       "platform": "twitch"
     },
