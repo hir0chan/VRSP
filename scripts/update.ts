@@ -78,7 +78,7 @@ export function isStream(value: unknown): value is Stream {
     (value.isJapanese === undefined || typeof value.isJapanese === "boolean");
 }
 
-function isStreamer(value: unknown): value is Streamer {
+export function isStreamer(value: unknown): value is Streamer {
   return isRecord(value) &&
     typeof value.id === "string" &&
     typeof value.name === "string" &&

@@ -38,15 +38,22 @@ jobs:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: npm run update
+      - name: Post digest to X
+        if: github.event_name != 'push' && steps.update.outcome == 'success'
+        continue-on-error: true
+        env:
+          IFTTT_WEBHOOK_KEY: ${{ secrets.IFTTT_WEBHOOK_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run digest
       - name: Commit generated data
         if: github.event_name != 'push'
         run: |
-          if git diff --quiet -- data/generated; then
+          git add data/generated
+          if git diff --cached --quiet -- data/generated; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/generated
           git commit -m "chore: update generated data [skip ci]"
           git push
       - name: Fail if data update failed
