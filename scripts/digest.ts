@@ -11,7 +11,7 @@ const MAX_FUTURE_SKEW_MS = 24 * 60 * 60 * 1_000;
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_POST_LENGTH = 280;
 const MAX_NAME_LENGTH = 40;
-const SITE_URL = "https://hir0chan.github.io/VRSP/";
+const SITE_URL = "https://vcha-antenna.com/";
 const SITE_URL_WEIGHT = 23;
 const IFTTT_EVENT = "vrsp_digest";
 

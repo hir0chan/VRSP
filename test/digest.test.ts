@@ -20,7 +20,7 @@ import type { AnnouncedEntry, DigestState, Stream, Streamer } from "../scripts/m
 
 const NOW = new Date("2026-08-16T12:00:00.000Z");
 const HOUR_MS = 60 * 60 * 1_000;
-const SITE_URL = "https://hir0chan.github.io/VRSP/";
+const SITE_URL = "https://vcha-antenna.com/";
 
 function postWeightedLength(text: string): number {
   assert.equal(text.endsWith(SITE_URL), true);
@@ -139,7 +139,7 @@ test("本文は解決不能・空名を残件数に含め、多数名でも重�
   assert.match(text, /^🔴 VRChat配信が新たにスタート!/);
   assert.match(text, /ほか\d+件/);
   assert.match(text, /現在25件がライブ配信中👀/);
-  assert.match(text, /https:\/\/hir0chan\.github\.io\/VRSP\/$/);
+  assert.match(text, /https:\/\/vcha-antenna\.com\/$/);
   assert.equal(postWeightedLength(text) <= 280, true);
 
   const fallback = composeDigest([stream("missing")], 1, []);

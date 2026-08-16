@@ -2,7 +2,7 @@
 
 VRChat系配信者のライブ配信と今後の配信予定を、ひとつの場所にまとめたスケジュールポータルです。
 
-**🌐 https://hir0chan.github.io/VRSP/**
+**🌐 https://vcha-antenna.com/**
 
 ![ぶいちゃ配信アンテナ](public/images/ogp.png)
 
@@ -51,7 +51,7 @@ cp .env.example .env   # API 認証情報を記入(YOUTUBE_API_KEY がなけれ�
 
 | コマンド | 内容 |
 |---|---|
-| `npm run dev` | 開発サーバー起動(http://localhost:4321/VRSP/) |
+| `npm run dev` | 開発サーバー起動(http://localhost:4321/) |
 | `npm run update` | 配信データ取得・`data/generated/` 更新 |
 | `npm run build` | 本番ビルド |
 | `npm test` | テスト実行 |

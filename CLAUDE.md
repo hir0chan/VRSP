@@ -4,15 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## プロジェクト概要
 
-ぶいちゃ配信アンテナ(英名: VRChat Stream Antenna。UI の日英混在は意図的な設計判断)— VRChat系 YouTube / Twitch / ニコニコ生放送 配信者のライブ配信・配信予定を一覧するポータル。**公開稼働中**: https://hir0chan.github.io/VRSP/ (リポジトリ: hir0chan/VRSP)
+ぶいちゃ配信アンテナ(英名: VRChat Stream Antenna。UI の日英混在は意図的な設計判断)— VRChat系 YouTube / Twitch / ニコニコ生放送 配信者のライブ配信・配信予定を一覧するポータル。**公開稼働中**: https://vcha-antenna.com/ (リポジトリ: hir0chan/VRSP。旧 URL https://hir0chan.github.io/VRSP/ は自動リダイレクト)
 
-GitHub Actions が15分毎に YouTube Data API v3 / Twitch API / ニコニコ生放送検索からデータを取得し、静的ビルドして GitHub Pages へ自動デプロイする。サーバ常駐・DB なし。日本語ページ(`/VRSP/`)と英語ページ(`/VRSP/en/`)の2ロケール構成。
+GitHub Actions が15分毎に YouTube Data API v3 / Twitch API / ニコニコ生放送検索からデータを取得し、静的ビルドして GitHub Pages へ自動デプロイする。サーバ常駐・DB なし。日本語ページ(`/`)と英語ページ(`/en/`)の2ロケール構成。
 
 当初の開発指示書(旧 README)は `_doc/実装ドキュメント/開発指示書_旧README.md` にアーカイブされている。各実装計画書が参照する「README §n」はこのアーカイブを指す。
 
 ## コマンド
 
-- `npm run dev` — 開発サーバー(http://localhost:4321/VRSP/)
+- `npm run dev` — 開発サーバー(http://localhost:4321/)
 - `npm run update` — 配信データ取得(`.env` の `YOUTUBE_API_KEY` があれば実 API、なければモック)
 - `npm test` — node:test を tsx --test で実行。単一ファイルは `npx tsx --test test/youtube.test.ts`
 - `npm run check` — astro check + tsc --noEmit(strict、`any` 禁止)

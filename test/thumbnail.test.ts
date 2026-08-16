@@ -25,6 +25,13 @@ test("相対サムネイルパスには BASE_URL を前置する", () => {
   );
 });
 
+test("ルート base でも相対パスを正しく解決する", () => {
+  assert.equal(
+    resolveThumbnailUrl("images/thumbnail-1.svg", "/"),
+    "/images/thumbnail-1.svg",
+  );
+});
+
 test("空文字には BASE_URL のみを返す", () => {
   assert.equal(resolveThumbnailUrl("", "/VRSP/"), "/VRSP/");
 });

@@ -13,7 +13,7 @@ const { locale, updatedAt } = Astro.props;
 const t = getTranslation(locale);
 const baseUrl = new URL(
   import.meta.env.BASE_URL,
-  Astro.site ?? "https://hir0chan.github.io",
+  Astro.site ?? "https://vcha-antenna.com",
 );
 const jaUrl = baseUrl.href;
 const enUrl = new URL("en/", baseUrl).href;
