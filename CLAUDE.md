@@ -36,7 +36,8 @@ GitHub Actions が15分毎に YouTube Data API v3 / Twitch API / ニコニコ生
 ```
 GitHub Actions (15分毎 cron / workflow_dispatch)
   → scripts/update.ts が YouTube の候補動画・既知動画、Twitch の VRChat カテゴリのライブ、ニコニコ生放送の VRChat 検索結果を更新
-  → data/generated/{discovery,streams,streamers}.json を更新(差分があれば bot がコミット [skip ci])
+  → scripts/digest.ts が新規の日本語 live を2時間毎に IFTTT Webhooks 経由で X にダイジェスト投稿
+  → data/generated/{discovery,streams,streamers,digest}.json を更新(差分があれば bot がコミット [skip ci])
   → Astro build(generated JSON をビルド時 import)
   → GitHub Pages へデプロイ(push 時は update をスキップしコミット済みデータでビルドのみ)
 ```
@@ -44,6 +45,7 @@ GitHub Actions (15分毎 cron / workflow_dispatch)
 - **データ取得**(`scripts/youtube.ts`): `search.list(part=id)` の live / upcoming / completed 3クエリで候補を発見し、追跡集合を `videos.list`(50件バッチ)で毎回更新する。タイトルまたは説明文に `vrchat` を含む動画のみ採用。部分バッチ失敗は動画単位で前回値を引き継ぎ、全滅時は本体を書き込まず非0終了
 - **Twitch データ取得**(`scripts/twitch.ts`): 実行毎に App Access Token を取得し、VRChat カテゴリの通常最大3ページと日本語1ページを取得する。成人向けを除外し、日本語全件と非日本語の視聴者数上位50件を表示用 `streams` のみに追加する。Twitch 失敗時はその回の Twitch 分を省略する
 - **ニコニコ生放送データ取得**(`scripts/niconico.ts`): live.nicovideo.jp の検索ページ(キーワード VRChat、onair / reserved)の embedded-data JSON を解析する。有料・フォロワー限定・NSFW タイトル(判定パターンは Twitch と共有)を除外し、放送予定は30日先まで採用する。配信者 ID は `nico-<programProviderId>`(blocklist もこの ID で指定)。失敗時はその回のニコニコ分を省略する
+- **X ダイジェスト投稿**(`scripts/digest.ts`): update 成功後の独立ステップで、前回投稿から120分以上経過かつ新規の日本語 live が1件以上あれば IFTTT Webhooks 経由で X に投稿。投稿済み管理は `data/generated/digest.json`(初回はベースライン記録のみ)。`IFTTT_WEBHOOK_KEY` と `YOUTUBE_API_KEY` の両方が揃わないとスキップ(モックデータ誤投稿防止)。配信者名はサニタイズして使用し、失敗時は次回リトライ(まれな二重投稿は許容)
 - **発見状態**: `data/generated/discovery.json` に試行時刻を原子的に保存し、60分クールダウンを CI 間で維持する。`--discover` はローカル手動実行専用
 - **追跡と表示**: `streams.json` の `tracked` は表示窓外も含む追跡集合、`streams` は UI 用表示窓。非 live の追跡上限は300件。チャンネル情報は動画 snippet から動的生成し、除外は `data/blocklist.yaml` で管理する
 - **モード切替**: `YOUTUBE_API_KEY` 未設定なら YouTube / Twitch / ニコニコの内蔵架空データを自動生成(`scripts/mock.ts`、純関数)。実データモードで Twitch 認証情報が未設定なら YouTube のみ取得する。CI では Secrets から注入(`update.yml` の env — **YOUTUBE_API_KEY を外すと本番がモックデータになる**)
