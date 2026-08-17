@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T10:15:24.192Z",
+  "updatedAt": "2026-08-17T10:45:23.661Z",
   "tracked": [
     {
       "id": "Wu3akIMIq6A",
@@ -9,7 +9,8 @@
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
       "isJapanese": true,
-      "actualStart": "2026-04-06T03:18:35Z"
+      "actualStart": "2026-04-06T03:18:35Z",
+      "viewers": 2
     },
     {
       "id": "8dR_4IEJU0M",
@@ -693,17 +694,6 @@
       "status": "upcoming",
       "isJapanese": true,
       "scheduledStart": "2026-08-22T11:30:00Z"
-    },
-    {
-      "id": "g503AeN6ve8",
-      "streamerId": "UCtt4eYA2ZAoXzJNACRb7XTg",
-      "title": "🔴 LIVE Among Us (AFTER VRCHAT)!!!!",
-      "thumbnail": "https://i.ytimg.com/vi/g503AeN6ve8/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=g503AeN6ve8",
-      "status": "ended",
-      "isJapanese": false,
-      "actualStart": "2026-08-16T09:48:44Z",
-      "actualEnd": "2026-08-16T10:19:10Z"
     },
     {
       "id": "dxDJOGoeeuc",
@@ -1405,7 +1395,7 @@
       "id": "hxJLEUaJqeI",
       "streamerId": "UCZDIPIc8JsFCVlB7zhpUF0A",
       "title": "Vrchat with friends(@Left4cake)",
-      "thumbnail": "https://i.ytimg.com/vi/hxJLEUaJqeI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/hxJLEUaJqeI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=hxJLEUaJqeI",
       "status": "ended",
       "isJapanese": false,
@@ -2232,11 +2222,11 @@
       "title": "Life In VRChat",
       "thumbnail": "https://i.ytimg.com/vi/DtQXoyi1QPM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=DtQXoyi1QPM",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-17T07:55:15Z",
       "actualStart": "2026-08-17T07:55:29Z",
-      "viewers": 1
+      "actualEnd": "2026-08-17T10:40:22Z"
     },
     {
       "id": "ZG5Tcj_j4iE",
@@ -2282,7 +2272,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-17T08:46:39Z",
       "actualStart": "2026-08-17T08:47:01Z",
-      "viewers": 15
+      "viewers": 17
     },
     {
       "id": "9xa3DZcFQjQ",
@@ -2290,10 +2280,10 @@
       "title": "【ASMR】Femboy TEST Stream | Esp/Eng | VRCHAT⭐",
       "thumbnail": "https://i.ytimg.com/vi/9xa3DZcFQjQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9xa3DZcFQjQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-17T08:48:39Z",
-      "viewers": 6
+      "actualEnd": "2026-08-17T10:37:53Z"
     },
     {
       "id": "NTOzOomOzoo",
@@ -2336,6 +2326,26 @@
       "status": "upcoming",
       "isJapanese": true,
       "scheduledStart": "2026-08-17T13:30:00Z"
+    },
+    {
+      "id": "1nQEDplHr5s",
+      "streamerId": "UCr9u_rIynWSvAg8epORO9gg",
+      "title": "VRCHATゲーム部 APEX 大会練習",
+      "thumbnail": "https://i.ytimg.com/vi/1nQEDplHr5s/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=1nQEDplHr5s",
+      "status": "live",
+      "isJapanese": true,
+      "actualStart": "2026-08-17T10:44:01Z"
+    },
+    {
+      "id": "hLa7UpYHRFU",
+      "streamerId": "UCMJnZdErQDKwuxk7BEhJuCg",
+      "title": "【#VRChat 3D配信】アメミナティとお庭で夏気分＆雑談配信【#アメミヤチカ生放送】",
+      "thumbnail": "https://i.ytimg.com/vi/hLa7UpYHRFU/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=hLa7UpYHRFU",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-17T11:10:00Z"
     }
   ],
   "streams": [
@@ -2347,7 +2357,8 @@
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
       "isJapanese": true,
-      "actualStart": "2026-04-06T03:18:35Z"
+      "actualStart": "2026-04-06T03:18:35Z",
+      "viewers": 2
     },
     {
       "id": "8dR_4IEJU0M",
@@ -3031,17 +3042,6 @@
       "status": "upcoming",
       "isJapanese": true,
       "scheduledStart": "2026-08-22T11:30:00Z"
-    },
-    {
-      "id": "g503AeN6ve8",
-      "streamerId": "UCtt4eYA2ZAoXzJNACRb7XTg",
-      "title": "🔴 LIVE Among Us (AFTER VRCHAT)!!!!",
-      "thumbnail": "https://i.ytimg.com/vi/g503AeN6ve8/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=g503AeN6ve8",
-      "status": "ended",
-      "isJapanese": false,
-      "actualStart": "2026-08-16T09:48:44Z",
-      "actualEnd": "2026-08-16T10:19:10Z"
     },
     {
       "id": "dxDJOGoeeuc",
@@ -3743,7 +3743,7 @@
       "id": "hxJLEUaJqeI",
       "streamerId": "UCZDIPIc8JsFCVlB7zhpUF0A",
       "title": "Vrchat with friends(@Left4cake)",
-      "thumbnail": "https://i.ytimg.com/vi/hxJLEUaJqeI/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/hxJLEUaJqeI/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=hxJLEUaJqeI",
       "status": "ended",
       "isJapanese": false,
@@ -4570,11 +4570,11 @@
       "title": "Life In VRChat",
       "thumbnail": "https://i.ytimg.com/vi/DtQXoyi1QPM/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=DtQXoyi1QPM",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-17T07:55:15Z",
       "actualStart": "2026-08-17T07:55:29Z",
-      "viewers": 1
+      "actualEnd": "2026-08-17T10:40:22Z"
     },
     {
       "id": "ZG5Tcj_j4iE",
@@ -4620,7 +4620,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-17T08:46:39Z",
       "actualStart": "2026-08-17T08:47:01Z",
-      "viewers": 15
+      "viewers": 17
     },
     {
       "id": "9xa3DZcFQjQ",
@@ -4628,10 +4628,10 @@
       "title": "【ASMR】Femboy TEST Stream | Esp/Eng | VRCHAT⭐",
       "thumbnail": "https://i.ytimg.com/vi/9xa3DZcFQjQ/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=9xa3DZcFQjQ",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "actualStart": "2026-08-17T08:48:39Z",
-      "viewers": 6
+      "actualEnd": "2026-08-17T10:37:53Z"
     },
     {
       "id": "NTOzOomOzoo",
@@ -4676,6 +4676,26 @@
       "scheduledStart": "2026-08-17T13:30:00Z"
     },
     {
+      "id": "1nQEDplHr5s",
+      "streamerId": "UCr9u_rIynWSvAg8epORO9gg",
+      "title": "VRCHATゲーム部 APEX 大会練習",
+      "thumbnail": "https://i.ytimg.com/vi/1nQEDplHr5s/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=1nQEDplHr5s",
+      "status": "live",
+      "isJapanese": true,
+      "actualStart": "2026-08-17T10:44:01Z"
+    },
+    {
+      "id": "hLa7UpYHRFU",
+      "streamerId": "UCMJnZdErQDKwuxk7BEhJuCg",
+      "title": "【#VRChat 3D配信】アメミナティとお庭で夏気分＆雑談配信【#アメミヤチカ生放送】",
+      "thumbnail": "https://i.ytimg.com/vi/hLa7UpYHRFU/hqdefault_live.jpg",
+      "url": "https://www.youtube.com/watch?v=hLa7UpYHRFU",
+      "status": "upcoming",
+      "isJapanese": true,
+      "scheduledStart": "2026-08-17T11:10:00Z"
+    },
+    {
       "id": "tw-319941275100",
       "streamerId": "tw-1089213104",
       "title": "💚MUTE/FT💚 Genre Wheel is BACK! 8 HOURS WIGGLES! NEW AVIS💚Consistency: 55 [!confessions !discord !socials !kitt !haida !callie]",
@@ -4683,7 +4703,7 @@
       "url": "https://www.twitch.tv/asphodelvr",
       "status": "live",
       "actualStart": "2026-08-17T06:34:02Z",
-      "viewers": 332,
+      "viewers": 320,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4695,7 +4715,7 @@
       "url": "https://www.twitch.tv/moxley",
       "status": "live",
       "actualStart": "2026-08-17T05:00:35Z",
-      "viewers": 255,
+      "viewers": 249,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4707,7 +4727,7 @@
       "url": "https://www.twitch.tv/im_lum",
       "status": "live",
       "actualStart": "2026-08-17T08:22:52Z",
-      "viewers": 170,
+      "viewers": 150,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4719,19 +4739,7 @@
       "url": "https://www.twitch.tv/kyokeru",
       "status": "live",
       "actualStart": "2026-08-17T09:08:05Z",
-      "viewers": 169,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-320907168473",
-      "streamerId": "tw-147443046",
-      "title": "Late night yap session",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_khazhollows-640x360.jpg",
-      "url": "https://www.twitch.tv/khazhollows",
-      "status": "live",
-      "actualStart": "2026-08-17T04:23:13Z",
-      "viewers": 151,
+      "viewers": 145,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4743,7 +4751,7 @@
       "url": "https://www.twitch.tv/djchrysaora",
       "status": "live",
       "actualStart": "2026-08-17T08:20:48Z",
-      "viewers": 111,
+      "viewers": 110,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4755,19 +4763,31 @@
       "url": "https://www.twitch.tv/likesakiii",
       "status": "live",
       "actualStart": "2026-08-17T06:42:52Z",
-      "viewers": 37,
+      "viewers": 34,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-321074801371",
-      "streamerId": "tw-405021448",
-      "title": "Hiya CUTIES! Squirrely chaos time, come say hi! this squirrel/avali won't bite. !discord | !followage | !lurk | !hug",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ratatoskr_squrrabbit-640x360.jpg",
-      "url": "https://www.twitch.tv/ratatoskr_squrrabbit",
+      "id": "tw-321062369755",
+      "streamerId": "tw-616883280",
+      "title": "GOOBER cuddles",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_arcticfluffywuffy-640x360.jpg",
+      "url": "https://www.twitch.tv/arcticfluffywuffy",
       "status": "live",
-      "actualStart": "2026-08-17T04:49:27Z",
-      "viewers": 16,
+      "actualStart": "2026-08-16T15:21:24Z",
+      "viewers": 33,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-315449207408",
+      "streamerId": "tw-661521528",
+      "title": "Main stream Chzzk!",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cookipiece-640x360.jpg",
+      "url": "https://www.twitch.tv/cookipiece",
+      "status": "live",
+      "actualStart": "2026-08-17T10:07:32Z",
+      "viewers": 11,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4779,7 +4799,7 @@
       "url": "https://www.twitch.tv/alfiehusky",
       "status": "live",
       "actualStart": "2026-08-17T06:38:13Z",
-      "viewers": 14,
+      "viewers": 10,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4791,55 +4811,19 @@
       "url": "https://www.twitch.tv/acey_da_ruler",
       "status": "live",
       "actualStart": "2026-08-17T08:36:58Z",
-      "viewers": 11,
+      "viewers": 7,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-319942164956",
-      "streamerId": "tw-1473711307",
-      "title": "DJ WOOFERS VRCHAT LIVESTREAM (LIVE AUDIO ONLY)",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_wooferradiodog-640x360.jpg",
-      "url": "https://www.twitch.tv/wooferradiodog",
+      "id": "tw-318129343719",
+      "streamerId": "tw-153345102",
+      "title": "☾ ♡ FISHIIIING w/ @panicchromatic q(≧▽≦q) ♡ ☽",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_snugvt-640x360.jpg",
+      "url": "https://www.twitch.tv/snugvt",
       "status": "live",
-      "actualStart": "2026-08-17T09:34:58Z",
-      "viewers": 9,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-320975290970",
-      "streamerId": "tw-1028034194",
-      "title": "🫧⋆｡˚ I need u ˚ʚ♡ɞ˚ Viewers join or else precious!",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mimiyume-640x360.jpg",
-      "url": "https://www.twitch.tv/mimiyume",
-      "status": "live",
-      "actualStart": "2026-08-17T06:35:53Z",
-      "viewers": 6,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318661926774",
-      "streamerId": "tw-529337537",
-      "title": "Karaoke en vr!",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kyuzk_-640x360.jpg",
-      "url": "https://www.twitch.tv/kyuzk_",
-      "status": "live",
-      "actualStart": "2026-08-17T04:02:06Z",
+      "actualStart": "2026-08-17T09:57:36Z",
       "viewers": 5,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-315985993322",
-      "streamerId": "tw-947222291",
-      "title": "Fishy Fishy",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fe4t-640x360.jpg",
-      "url": "https://www.twitch.tv/fe4t",
-      "status": "live",
-      "actualStart": "2026-08-17T08:51:24Z",
-      "viewers": 4,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4856,30 +4840,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-318129343719",
-      "streamerId": "tw-153345102",
-      "title": "☾ ♡ FISHIIIING w/ @panicchromatic q(≧▽≦q) ♡ ☽",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_snugvt-640x360.jpg",
-      "url": "https://www.twitch.tv/snugvt",
-      "status": "live",
-      "actualStart": "2026-08-17T09:57:36Z",
-      "viewers": 4,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-321062369755",
-      "streamerId": "tw-616883280",
-      "title": "GOOBER cuddles",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_arcticfluffywuffy-640x360.jpg",
-      "url": "https://www.twitch.tv/arcticfluffywuffy",
-      "status": "live",
-      "actualStart": "2026-08-16T15:21:24Z",
-      "viewers": 4,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-317481223010",
       "streamerId": "tw-216277869",
       "title": "🤍 Short stream todayyyyyy 🤍 Going Fishing until my headset dies (it dies FAST) 🤍",
@@ -4887,67 +4847,31 @@
       "url": "https://www.twitch.tv/panicchromatic",
       "status": "live",
       "actualStart": "2026-08-17T09:57:11Z",
+      "viewers": 4,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-319977213024",
+      "streamerId": "tw-170413839",
+      "title": "Streaming music",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tastyfairhaven-640x360.jpg",
+      "url": "https://www.twitch.tv/tastyfairhaven",
+      "status": "live",
+      "actualStart": "2026-08-17T01:15:18Z",
       "viewers": 3,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-317504700516",
-      "streamerId": "tw-1367463842",
-      "title": "bienvenue et amuse toi!!",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_haru_yuna0-640x360.jpg",
-      "url": "https://www.twitch.tv/haru_yuna0",
+      "id": "tw-320970887386",
+      "streamerId": "tw-1517394834",
+      "title": "vr stream",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yes_2010-640x360.jpg",
+      "url": "https://www.twitch.tv/yes_2010",
       "status": "live",
-      "actualStart": "2026-08-17T08:33:39Z",
-      "viewers": 3,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-319849434974",
-      "streamerId": "tw-1525923033",
-      "title": "....",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tapdabuttonn-640x360.jpg",
-      "url": "https://www.twitch.tv/tapdabuttonn",
-      "status": "live",
-      "actualStart": "2026-08-17T09:33:33Z",
-      "viewers": 3,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-320973836378",
-      "streamerId": "tw-498538487",
-      "title": "Vente aqui un rato",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_edson_844-640x360.jpg",
-      "url": "https://www.twitch.tv/edson_844",
-      "status": "live",
-      "actualStart": "2026-08-17T04:02:07Z",
-      "viewers": 3,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-315449207408",
-      "streamerId": "tw-661521528",
-      "title": "Main stream Chzzk!",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cookipiece-640x360.jpg",
-      "url": "https://www.twitch.tv/cookipiece",
-      "status": "live",
-      "actualStart": "2026-08-17T10:07:32Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-315933556435",
-      "streamerId": "tw-679596900",
-      "title": "CHILLING",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ytttvanonice-640x360.jpg",
-      "url": "https://www.twitch.tv/ytttvanonice",
-      "status": "live",
-      "actualStart": "2026-08-16T22:20:53Z",
-      "viewers": 1,
+      "actualStart": "2026-08-17T01:16:54Z",
+      "viewers": 2,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -4971,18 +4895,6 @@
       "url": "https://www.twitch.tv/i__kenji",
       "status": "live",
       "actualStart": "2026-08-17T08:48:22Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-316730314708",
-      "streamerId": "tw-1422339410",
-      "title": "please join",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_scalp99_-640x360.jpg",
-      "url": "https://www.twitch.tv/scalp99_",
-      "status": "live",
-      "actualStart": "2026-08-17T09:55:18Z",
       "viewers": 1,
       "isJapanese": false,
       "platform": "twitch"
@@ -5036,18 +4948,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-318874678871",
-      "streamerId": "tw-143277772",
-      "title": "Fishing, Messages and Backrooms? | Road to 300 followers",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_toxemicfox30790-640x360.jpg",
-      "url": "https://www.twitch.tv/toxemicfox30790",
-      "status": "live",
-      "actualStart": "2026-08-17T08:18:21Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-319849005534",
       "streamerId": "tw-787366288",
       "title": "Vrchat stream",
@@ -5084,18 +4984,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-319977213024",
-      "streamerId": "tw-170413839",
-      "title": "Streaming music",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tastyfairhaven-640x360.jpg",
-      "url": "https://www.twitch.tv/tastyfairhaven",
-      "status": "live",
-      "actualStart": "2026-08-17T01:15:18Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-320908250457",
       "streamerId": "tw-51686170",
       "title": "bladeandsoul",
@@ -5108,28 +4996,27 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-320909353945",
+      "id": "tw-320909540825",
       "streamerId": "tw-1435578010",
       "title": "exploring/birthdayqthon🌸day 5🌸",
       "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_aichi_sendouvr-640x360.jpg",
       "url": "https://www.twitch.tv/aichi_sendouvr",
       "status": "live",
-      "actualStart": "2026-08-17T09:35:27Z",
+      "actualStart": "2026-08-17T10:26:31Z",
       "viewers": 1,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-320970887386",
-      "streamerId": "tw-1517394834",
-      "title": "vr stream",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yes_2010-640x360.jpg",
-      "url": "https://www.twitch.tv/yes_2010",
+      "id": "nico-lv351198063",
+      "streamerId": "nico-428931",
+      "title": "[だが男だ] 476　釣りty",
+      "thumbnail": "https://asset2.dlive.nicovideo.jp/c0f2/6a82e4a1cf71fa6a10d6f1cd/screenshot/123/thumbnail-352x198/screenshot.jpg",
+      "url": "https://live.nicovideo.jp/watch/lv351198063",
       "status": "live",
-      "actualStart": "2026-08-17T01:16:54Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
+      "actualStart": "2026-08-17T10:41:08.000Z",
+      "isJapanese": true,
+      "platform": "niconico"
     },
     {
       "id": "nico-lv351197464",
