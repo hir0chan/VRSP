@@ -114,8 +114,10 @@ export function sanitizeName(name: string): string {
   return truncateWeighted(normalized, MAX_NAME_LENGTH);
 }
 
+const HASHTAGS = "#VRChat #ぶいちゃ配信アンテナ";
+
 function digestBody(secondLine: string, liveTotal: number): string {
-  return `🔴 VRChat配信が新たにスタート!\n${secondLine}\n現在${liveTotal}件がライブ配信中👀`;
+  return `🔴 VRChat配信が新たにスタート!\n${secondLine}\n現在${liveTotal}件がライブ配信中👀\n${HASHTAGS}`;
 }
 
 function digestText(secondLine: string, liveTotal: number): string {

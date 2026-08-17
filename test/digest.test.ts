@@ -139,6 +139,7 @@ test("本文は解決不能・空名を残件数に含め、多数名でも重�
   assert.match(text, /^🔴 VRChat配信が新たにスタート!/);
   assert.match(text, /ほか\d+件/);
   assert.match(text, /現在25件がライブ配信中👀/);
+  assert.match(text, /#VRChat #ぶいちゃ配信アンテナ\n/);
   assert.match(text, /https:\/\/vcha-antenna\.com\/$/);
   assert.equal(postWeightedLength(text) <= 280, true);
 
