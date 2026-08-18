@@ -24,7 +24,12 @@ const startLabel =
       }).format(new Date(start));
 ---
 
-<article class="stream-card" data-ja={stream.isJapanese ?? true} data-platform={stream.platform ?? "youtube"}>
+<article
+  class="stream-card"
+  data-ja={stream.isJapanese ?? true}
+  data-platform={stream.platform ?? "youtube"}
+  data-search={`${stream.title} ${stream.streamer.name}`.toLowerCase()}
+>
   <a class="card-link" href={stream.url} target="_blank" rel="noreferrer" aria-label={t.openStream(stream.title)}>
     <div class="thumbnail-wrap">
       <img src={thumbnailUrl} alt="" width="1280" height="720" loading="lazy" />

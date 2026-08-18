@@ -131,6 +131,13 @@ const thumbnailUrl = (path: string): string =>
   </section>
 
   <div class="filter-controls" hidden>
+    <input
+      class="stream-search"
+      id="stream-search"
+      type="search"
+      placeholder={t.searchPlaceholder}
+      aria-label={t.searchPlaceholder}
+    />
     <fieldset class="platform-filter">
       <legend>{t.platformLegend}</legend>
       <input type="radio" id="platform-all" name="platform-filter" value="all" checked />
@@ -169,9 +176,11 @@ const thumbnailUrl = (path: string): string =>
     </div>
   </div>
 
+  <p class="search-no-results" id="search-no-results" aria-live="polite" hidden>{t.searchNoResults}</p>
+
   {
     sections.live.length > 0 && (
-      <section class="schedule-section" aria-labelledby="live-heading">
+      <section class="schedule-section" aria-labelledby="live-heading" data-stream-section>
         <SectionHeader eyebrow="BROADCASTING NOW" title={t.liveSection} count={sections.live.length} locale={locale} />
         <div class="card-grid" id="live-heading">
           {sections.live.map((stream) => (
@@ -182,7 +191,11 @@ const thumbnailUrl = (path: string): string =>
     )
   }
 
-  <section class="schedule-section" aria-labelledby="today-heading">
+  <section
+    class="schedule-section"
+    aria-labelledby="today-heading"
+    data-stream-section={sections.today.length > 0 ? "" : undefined}
+  >
     <SectionHeader eyebrow="TODAY IN JST" title={t.todaySection} count={sections.today.length} locale={locale} />
     {
       sections.today.length > 0 ? (
@@ -197,7 +210,11 @@ const thumbnailUrl = (path: string): string =>
     }
   </section>
 
-  <section class="schedule-section" aria-labelledby="upcoming-heading">
+  <section
+    class="schedule-section"
+    aria-labelledby="upcoming-heading"
+    data-stream-section={sections.upcoming.length > 0 ? "" : undefined}
+  >
     <SectionHeader eyebrow="SAVE THE DATE" title={t.upcomingSection} locale={locale} />
     <div class="upcoming-list" id="upcoming-heading">
       {

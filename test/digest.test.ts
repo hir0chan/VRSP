@@ -5,27 +5,23 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { test } from "node:test";
 import {
-  announcedKey,
   composeDigest,
   countLiveJapanese,
   postToIfttt,
-  pruneAnnounced,
   runDigest,
-  sanitizeName,
-  selectNewLives,
+  sanitizePostText,
+  selectFeatured,
   shouldPost,
+  streamKey,
+  truncateWeighted,
   weightedLength,
+  weightedPostLength,
 } from "../scripts/digest.js";
-import type { AnnouncedEntry, DigestState, Stream, Streamer } from "../scripts/models.js";
+import type { DigestState, Stream, Streamer } from "../scripts/models.js";
 
-const NOW = new Date("2026-08-16T12:00:00.000Z");
+const NOW = new Date("2026-08-19T12:00:00.000Z");
 const HOUR_MS = 60 * 60 * 1_000;
 const SITE_URL = "https://vcha-antenna.com/";
-
-function postWeightedLength(text: string): number {
-  assert.equal(text.endsWith(SITE_URL), true);
-  return weightedLength(text.slice(0, -SITE_URL.length)) + 23;
-}
 
 function stream(id: string, overrides: Partial<Stream> = {}): Stream {
   return {
@@ -76,7 +72,10 @@ async function prepareRoot(options: {
     streamers: options.streamers ?? [],
   }));
   if (options.state !== undefined) {
-    await writeFile(resolve(generated, "digest.json"), typeof options.state === "string" ? options.state : JSON.stringify(options.state));
+    await writeFile(
+      resolve(generated, "digest.json"),
+      typeof options.state === "string" ? options.state : JSON.stringify(options.state),
+    );
   }
   return root;
 }
@@ -85,94 +84,100 @@ async function readState(root: string): Promise<DigestState> {
   return JSON.parse(await readFile(resolve(root, "data/generated/digest.json"), "utf8")) as DigestState;
 }
 
-test("複合キーで既知を除外し、JP live を開始時刻・キー順で決定的に選ぶ", () => {
-  const missingStart = stream("same", { platform: "niconico" });
-  delete missingStart.actualStart;
-  const unknownLanguage = stream("unknown-language");
-  delete unknownLanguage.isJapanese;
+test("JP liveだけを選び、複合キーで直前の配信を避け、乱数を注入できる", () => {
+  const youtube = stream("same");
+  const twitch = stream("same", { platform: "twitch" });
   const values = [
-    stream("same", { platform: "twitch", actualStart: "invalid" }),
-    stream("later", { actualStart: new Date(NOW.getTime() - HOUR_MS).toISOString() }),
-    missingStart,
-    stream("earlier", { actualStart: new Date(NOW.getTime() - 2 * HOUR_MS).toISOString() }),
-    stream("known"),
+    youtube,
+    twitch,
     stream("non-ja", { isJapanese: false }),
-    unknownLanguage,
-    stream("ended", { status: "ended" }),
+    stream("upcoming", { status: "upcoming" }),
   ];
-  assert.equal(announcedKey(stream("known")), "youtube:known");
-  assert.equal(announcedKey(stream("same", { platform: "twitch" })), "twitch:same");
-  assert.deepEqual(
-    selectNewLives(values, [{ id: "youtube:known", at: NOW.toISOString() }]).map(announcedKey),
-    ["youtube:earlier", "youtube:later", "niconico:same", "twitch:same"],
-  );
-  assert.equal(countLiveJapanese(values), 5);
+  assert.equal(streamKey(youtube), "youtube:same");
+  assert.equal(streamKey(twitch), "twitch:same");
+  assert.equal(streamKey(selectFeatured(values, "youtube:same", () => 0)!), "twitch:same");
+  assert.equal(streamKey(selectFeatured(values, "twitch:same", () => 0)!), "youtube:same");
+  assert.equal(countLiveJapanese(values), 2);
 });
 
-test("名前の制御文字と投稿誘導記号を除去し、重み付き40以内で安全に切り詰める", () => {
-  const value = sanitizeName("  A\n\u0000 @user ＠user #tag ＃tag t.co．jp。x｡y 😀e\u0301 とても長い配信者名です  ");
-  assert.doesNotMatch(value, /[\p{Cc}@＠#＃.．。｡]/u);
+test("候補1件は直前と同じでも選び、0件はundefinedを返す", () => {
+  const only = stream("only");
+  assert.equal(selectFeatured([only], "youtube:only", () => 0), only);
+  assert.equal(selectFeatured([stream("ended", { status: "ended" })], undefined, () => 0), undefined);
+  assert.throws(() => selectFeatured([only], undefined, () => 1), /0以上1未満/);
+});
+
+test("空にサニタイズされるタイトルを除外し、全滅時だけ名前用の候補へ退避する", () => {
+  const empty = stream("empty", { title: "\n\u0000\u202E" });
+  const valid = stream("valid", { title: "配信タイトル" });
+  assert.equal(selectFeatured([empty, valid], undefined, () => 0), valid);
+  assert.equal(selectFeatured([empty], undefined, () => 0), empty);
+});
+
+test("サニタイズは長さを変えずに制御文字・書式制御・誘導記号・URL風トークンを無害化する", () => {
+  const long = "長".repeat(100);
+  assert.equal(sanitizePostText(long), long);
+  const value = sanitizePostText(
+    "  A\n\u0000\u202E @user ＠user #tag ＃tag https://evil.example/a ftp：／／evil．example quote\"  ",
+  );
+  assert.doesNotMatch(value, /[\p{Cc}\p{Cf}@＠#＃.．。｡]/u);
   assert.doesNotMatch(value, /\s{2,}/u);
-  assert.match(value, /・user/);
-  assert.equal(weightedLength(value) <= 40, true);
+  assert.doesNotMatch(value, /https?:\/\//u);
+  assert.match(value, /https・\/\/evil・example/);
+  assert.match(value, /quote"/);
+});
+
+test("重み付き切り詰めは絵文字の書記素を壊さず末尾に省略記号を付ける", () => {
+  const value = truncateWeighted(`日本語😀e\u0301${"長".repeat(100)}`, 20);
+  assert.equal(weightedLength(value) <= 20, true);
   assert.equal(value.endsWith("…"), true);
   assert.equal(weightedLength("abcé"), 4);
   assert.equal(weightedLength("日本😀"), 6);
-  assert.equal(weightedLength("https://example.invalid/a"), "https://example.invalid/a".length);
 });
 
-test("ドットなしの長いURL風配信者名も40で切り詰め、本文を280以内に収める", () => {
-  const maliciousName = `https://${"a".repeat(200)}`;
-  const sanitized = sanitizeName(maliciousName);
-  assert.equal(weightedLength(sanitized), 40);
-  assert.equal(sanitized.endsWith("…"), true);
-
-  const text = composeDigest([stream("malicious")], 1, [streamer("malicious", maliciousName)]);
-  assert.equal(postWeightedLength(text) <= 280, true);
-  assert.doesNotMatch(text, new RegExp(`a{${200}}`));
+test("新テンプレートは生の配信者名を?q=へエンコードし、タイトルを残余予算で280以内にする", () => {
+  const featured = stream("featured", { title: `引用符\" @告知 #tag https://evil.example/${"長😀".repeat(200)}` });
+  const rawName = `配信者 #A ${"名".repeat(100)}`;
+  const text = composeDigest(featured, 12, [streamer("featured", rawName)]);
+  assert.match(text, /^👉️ 今おすすめのVRChat配信は\?\n/);
+  assert.equal(text.split("\n")[2], `${SITE_URL}?q=${encodeURIComponent(rawName)}`);
+  assert.match(text, /現在12件がライブ配信中👀\n#VRChat #ぶいちゃ配信アンテナ$/);
+  assert.doesNotMatch(text.split("\n")[1] ?? "", /[@#]|https?:\/\//u);
+  assert.equal(weightedPostLength(text) <= 280, true);
+  assert.match(text.split("\n")[1] ?? "", /…\(.*…\)$/u);
 });
 
-test("本文は解決不能・空名を残件数に含め、多数名でも重み付き280以内に収める", () => {
-  const lives = Array.from({ length: 20 }, (_, index) => stream(String(index)));
-  const people = lives.slice(0, 18).map((value, index) => streamer(value.id, index === 0 ? "\n\u0000" : `とても長い配信者名${index}`));
-  const text = composeDigest(lives, 25, people);
-  assert.match(text, /^🔴 VRChat配信が新たにスタート!/);
-  assert.match(text, /ほか\d+件/);
-  assert.match(text, /現在25件がライブ配信中👀/);
-  assert.match(text, /#VRChat #ぶいちゃ配信アンテナ\n/);
-  assert.match(text, /https:\/\/vcha-antenna\.com\/$/);
-  assert.equal(postWeightedLength(text) <= 280, true);
+test("本文途中の長いURLを実長でなく23として数える", () => {
+  const url = `${SITE_URL}?q=${"a".repeat(500)}`;
+  const text = `前\n${url}\n後`;
+  assert.equal(weightedPostLength(text), weightedLength("前\n") + 23 + weightedLength("\n後"));
+  assert.equal(weightedLength(text) > weightedPostLength(text), true);
+});
 
-  const fallback = composeDigest([stream("missing")], 1, []);
-  assert.match(fallback, /1件の配信がスタート!/);
+test("名前が空ならタイトルだけとトップリンク、タイトルが空なら配信者名だけを使う", () => {
+  const noName = composeDigest(stream("no-name"), 1, [streamer("no-name", "\n\u202E")]);
+  assert.equal(noName.split("\n")[1], "VRChat no-name");
+  assert.equal(noName.split("\n")[2], SITE_URL);
+
+  const noTitle = composeDigest(stream("no-title", { title: "\n\u0000" }), 1, [streamer("no-title", "配信者")]);
+  assert.equal(noTitle.split("\n")[1], "配信者");
+  assert.match(noTitle.split("\n")[2] ?? "", /\?q=%E9%85%8D%E4%BF%A1%E8%80%85$/);
 });
 
 test("投稿間隔は120分ちょうどを許可し、未来24時間以内はスキップ、超過は拒否する", () => {
   const state = (offsetMs: number): DigestState => ({
     lastPostedAt: new Date(NOW.getTime() + offsetMs).toISOString(),
-    announced: [],
   });
+  assert.equal(shouldPost({}, NOW), true);
   assert.equal(shouldPost(state(-120 * 60 * 1_000 + 1_000), NOW), false);
   assert.equal(shouldPost(state(-120 * 60 * 1_000), NOW), true);
   assert.equal(shouldPost(state(HOUR_MS), NOW), false);
   assert.equal(shouldPost(state(24 * HOUR_MS), NOW), false);
   assert.throws(() => shouldPost(state(25 * HOUR_MS), NOW), /24時間を超えて未来/);
-  assert.throws(() => shouldPost({ lastPostedAt: "invalid", announced: [] }, NOW), /不正な日時/);
+  assert.throws(() => shouldPost({ lastPostedAt: "invalid" }, NOW), /不正な日時/);
 });
 
-test("announced は非liveかつ24時間超過だけを剪定する", () => {
-  const entries: AnnouncedEntry[] = [
-    { id: "youtube:live-old", at: new Date(NOW.getTime() - 100 * HOUR_MS).toISOString() },
-    { id: "youtube:ended-old", at: new Date(NOW.getTime() - 24 * HOUR_MS - 1).toISOString() },
-    { id: "youtube:ended-boundary", at: new Date(NOW.getTime() - 24 * HOUR_MS).toISOString() },
-  ];
-  assert.deepEqual(
-    pruneAnnounced(entries, new Set(["youtube:live-old"]), NOW).map((entry) => entry.id),
-    ["youtube:live-old", "youtube:ended-boundary"],
-  );
-});
-
-test("IFTTT POST はJSON・redirect error・15秒タイムアウトを使い、失敗情報を秘匿する", async () => {
+test("IFTTT POSTはJSON・redirect error・15秒タイムアウトを使い、失敗情報を秘匿する", async () => {
   let requestSignal: AbortSignal | null | undefined;
   const timeoutValues: number[] = [];
   const originalTimeout = AbortSignal.timeout;
@@ -208,136 +213,141 @@ test("IFTTT POST はJSON・redirect error・15秒タイムアウトを使い、�
   assert.doesNotMatch(String(fetchError), /secret|private|maker\.ifttt/);
 });
 
-test("初回は全platformの現在liveをベースライン記録し、投稿しない", async () => {
-  const values = [
-    stream("jp"),
-    stream("non-ja", { platform: "twitch", isJapanese: false }),
-    stream("upcoming", { platform: "niconico", status: "upcoming" }),
-  ];
-  const root = await prepareRoot({ streams: values, streamers: values.map((value) => streamer(value.id)) });
-  let fetched = false;
-  const result = await runDigest({
-    rootDir: root,
-    now: NOW,
-    iftttWebhookKey: "ifttt-key",
-    youtubeApiKey: "youtube-key",
-    fetchFn: mockFetch(() => {
-      fetched = true;
-      return new Response(null, { status: 200 });
-    }),
-  });
-  assert.equal(result, "initialized");
-  assert.equal(fetched, false);
-  assert.deepEqual((await readState(root)).announced.map((entry) => entry.id), ["youtube:jp", "twitch:non-ja"]);
-});
-
-test("新規2件と既知1件から本文を投稿し、複合キー・lastPostedAtを原子的に更新する", async () => {
-  const known = stream("known");
-  const youtube = stream("same");
-  const twitch = stream("same", { platform: "twitch" });
-  const oldAt = new Date(NOW.getTime() - 3 * HOUR_MS).toISOString();
-  const root = await prepareRoot({
-    streams: [known, youtube, twitch],
-    streamers: [streamer("known", "既知さん"), streamer("same", "新規さん")],
-    state: { lastPostedAt: oldAt, announced: [{ id: "youtube:known", at: oldAt }] },
-  });
+test("stateなしの初回でもliveがあれば即投稿して新形式stateを作る", async () => {
+  const featured = stream("first");
+  const root = await prepareRoot({ streams: [featured], streamers: [streamer("first")] });
   let postedText = "";
   const result = await runDigest({
     rootDir: root,
     now: NOW,
     iftttWebhookKey: "ifttt-key",
     youtubeApiKey: "youtube-key",
+    randomFn: () => 0,
     fetchFn: mockFetch((_url, init) => {
       postedText = (JSON.parse(String(init?.body)) as { value1: string }).value1;
       return new Response(null, { status: 204 });
     }),
   });
   assert.equal(result, "posted");
-  assert.doesNotMatch(postedText, /既知さん/);
-  assert.match(postedText, /新規さん \/ 新規さん/);
-  const state = await readState(root);
-  assert.equal(state.lastPostedAt, NOW.toISOString());
-  assert.deepEqual(state.announced.map((entry) => entry.id), ["youtube:known", "twitch:same", "youtube:same"]);
+  assert.match(postedText, /VRChat first\(配信者 first\)/);
+  assert.deepEqual(await readState(root), {
+    lastPostedAt: NOW.toISOString(),
+    lastFeaturedId: "youtube:first",
+  });
 });
 
-test("新規0件・119分59秒では投稿せずstateを変更しない", async () => {
+test("stateなしでliveがなければstateを作らずスキップする", async () => {
+  const root = await prepareRoot();
+  assert.equal(await runDigest({
+    rootDir: root,
+    now: NOW,
+    iftttWebhookKey: "key",
+    youtubeApiKey: "key",
+  }), "skipped");
+  await assert.rejects(readFile(resolve(root, "data/generated/digest.json"), "utf8"), /ENOENT/);
+});
+
+test("旧announcedは型を問わず無視し、投稿後に新形式だけを書き戻す", async () => {
+  const oldAt = new Date(NOW.getTime() - 3 * HOUR_MS).toISOString();
+  const root = await prepareRoot({
+    streams: [stream("old-state")],
+    streamers: [streamer("old-state")],
+    state: { lastPostedAt: oldAt, announced: { broken: true } },
+  });
+  assert.equal(await runDigest({
+    rootDir: root,
+    now: NOW,
+    iftttWebhookKey: "key",
+    youtubeApiKey: "key",
+    fetchFn: mockFetch(() => new Response(null, { status: 200 })),
+  }), "posted");
+  assert.deepEqual(await readState(root), {
+    lastPostedAt: NOW.toISOString(),
+    lastFeaturedId: "youtube:old-state",
+  });
+});
+
+test("2時間経過後は新規判定なしで同じ1件を再投稿する", async () => {
+  const oldAt = new Date(NOW.getTime() - 2 * HOUR_MS).toISOString();
+  const root = await prepareRoot({
+    streams: [stream("repeat")],
+    streamers: [streamer("repeat")],
+    state: { lastPostedAt: oldAt, lastFeaturedId: "youtube:repeat" },
+  });
+  let calls = 0;
+  assert.equal(await runDigest({
+    rootDir: root,
+    now: NOW,
+    iftttWebhookKey: "key",
+    youtubeApiKey: "key",
+    fetchFn: mockFetch(() => {
+      calls += 1;
+      return new Response(null, { status: 200 });
+    }),
+  }), "posted");
+  assert.equal(calls, 1);
+});
+
+test("live 0件または投稿間隔前はstateを変更せずスキップする", async () => {
   for (const options of [
-    { streams: [stream("known")], announced: [{ id: "youtube:known", at: NOW.toISOString() }], offset: -3 * HOUR_MS },
-    { streams: [stream("new")], announced: [], offset: -120 * 60 * 1_000 + 1_000 },
+    { streams: [] as Stream[], streamers: [] as Streamer[], offset: -3 * HOUR_MS },
+    { streams: [stream("early")], streamers: [streamer("early")], offset: -119 * 60 * 1_000 },
   ]) {
-    const state = { lastPostedAt: new Date(NOW.getTime() + options.offset).toISOString(), announced: options.announced };
-    const root = await prepareRoot({ streams: options.streams, streamers: options.streams.map((value) => streamer(value.id)), state });
-    const before = await readFile(resolve(root, "data/generated/digest.json"), "utf8");
-    const result = await runDigest({ rootDir: root, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key", fetchFn: mockFetch(() => {
-      throw new Error("投稿されるべきではありません");
-    }) });
-    assert.equal(result, "skipped");
-    assert.equal(await readFile(resolve(root, "data/generated/digest.json"), "utf8"), before);
-  }
-});
-
-test("各キーの片方だけが欠けても入力読込・投稿・state更新なしで正常スキップする", async () => {
-  for (const keys of [
-    { iftttWebhookKey: "", youtubeApiKey: "youtube" },
-    { iftttWebhookKey: "ifttt", youtubeApiKey: "" },
-  ]) {
-    const root = await mkdtemp(resolve(tmpdir(), "vrsp-digest-no-input-"));
-    const result = await runDigest({
+    const state = { lastPostedAt: new Date(NOW.getTime() + options.offset).toISOString() };
+    const root = await prepareRoot({ streams: options.streams, streamers: options.streamers, state });
+    const path = resolve(root, "data/generated/digest.json");
+    const before = await readFile(path, "utf8");
+    assert.equal(await runDigest({
       rootDir: root,
       now: NOW,
-      iftttWebhookKey: keys.iftttWebhookKey,
-      youtubeApiKey: keys.youtubeApiKey,
-      fetchFn: mockFetch(() => {
-        throw new Error("投稿されるべきではありません");
-      }),
-    });
-    assert.equal(result, "skipped-keys");
-    await assert.rejects(readFile(resolve(root, "data/generated/digest.json"), "utf8"), /ENOENT/);
+      iftttWebhookKey: "key",
+      youtubeApiKey: "key",
+      fetchFn: mockFetch(() => { throw new Error("投稿されるべきではありません"); }),
+    }), "skipped");
+    assert.equal(await readFile(path, "utf8"), before);
   }
 });
 
-test("stateのJSON破損・型不正・重複キー・不正日時と入力破損を拒否しstateを保つ", async () => {
+test("旧stateはlastFeaturedIdの非文字列とlastPostedAtの不正値だけを拒否して保つ", async () => {
   const invalidStates: unknown[] = [
     "{",
-    { announced: "invalid" },
-    { announced: [{ id: "youtube:a", at: NOW.toISOString() }, { id: "youtube:a", at: NOW.toISOString() }] },
-    { announced: [{ id: "youtube:a", at: "invalid" }] },
+    null,
+    { lastFeaturedId: 1, announced: [] },
     { lastPostedAt: "invalid", announced: [] },
   ];
   for (const invalid of invalidStates) {
-    const root = await prepareRoot({ streams: [stream("new")], streamers: [streamer("new")], state: invalid });
+    const root = await prepareRoot({ streams: [stream("invalid")], streamers: [streamer("invalid")], state: invalid });
     const path = resolve(root, "data/generated/digest.json");
     const before = await readFile(path, "utf8");
     await assert.rejects(runDigest({ rootDir: root, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key" }));
     assert.equal(await readFile(path, "utf8"), before);
   }
 
-  const state = { announced: [] };
-  const root = await prepareRoot({ streams: [{ id: 1 }], state });
-  const path = resolve(root, "data/generated/digest.json");
-  const before = await readFile(path, "utf8");
-  await assert.rejects(runDigest({ rootDir: root, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key" }), /streams\.json/);
-  assert.equal(await readFile(path, "utf8"), before);
-
-  await writeFile(resolve(root, "data/generated/streams.json"), "{");
-  await assert.rejects(runDigest({ rootDir: root, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key" }), /JSON/);
-  assert.equal(await readFile(path, "utf8"), before);
-
   const futureRoot = await prepareRoot({
-    streams: [],
-    state: { lastPostedAt: new Date(NOW.getTime() + 25 * HOUR_MS).toISOString(), announced: [] },
+    state: { lastPostedAt: new Date(NOW.getTime() + 25 * HOUR_MS).toISOString(), announced: "ignored" },
   });
   const futurePath = resolve(futureRoot, "data/generated/digest.json");
-  const futureBefore = await readFile(futurePath, "utf8");
+  const before = await readFile(futurePath, "utf8");
   await assert.rejects(
     runDigest({ rootDir: futureRoot, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key" }),
     /24時間を超えて未来/,
   );
-  assert.equal(await readFile(futurePath, "utf8"), futureBefore);
+  assert.equal(await readFile(futurePath, "utf8"), before);
 });
 
-test("Webhook失敗とPOST後のstate書込失敗では旧stateを維持して次回再投稿可能にする", async () => {
-  const oldState = { lastPostedAt: new Date(NOW.getTime() - 3 * HOUR_MS).toISOString(), announced: [] };
+test("各キーの片方が欠ければ入力もstateも読まず正常スキップする", async () => {
+  for (const keys of [
+    { iftttWebhookKey: "", youtubeApiKey: "youtube" },
+    { iftttWebhookKey: "ifttt", youtubeApiKey: "" },
+  ]) {
+    const root = await mkdtemp(resolve(tmpdir(), "vrsp-digest-no-input-"));
+    assert.equal(await runDigest({ rootDir: root, now: NOW, ...keys }), "skipped-keys");
+    await assert.rejects(readFile(resolve(root, "data/generated/digest.json"), "utf8"), /ENOENT/);
+  }
+});
+
+test("Webhook失敗とPOST後のstate書込失敗では旧stateを維持する", async () => {
+  const oldState = { lastPostedAt: new Date(NOW.getTime() - 3 * HOUR_MS).toISOString() };
   for (const failure of ["post", "write"] as const) {
     const root = await prepareRoot({ streams: [stream("new")], streamers: [streamer("new")], state: oldState });
     const path = resolve(root, "data/generated/digest.json");
@@ -359,22 +369,38 @@ test("Webhook失敗とPOST後のstate書込失敗では旧stateを維持して�
   }
 });
 
-test("dry-runはキーなしで本文を表示するだけで、未知引数はCLIで非0終了する", async () => {
-  const root = await prepareRoot({ streams: [stream("new")], streamers: [streamer("new")] });
+test("入力JSON破損を拒否してstateを保つ", async () => {
+  const state = { lastPostedAt: new Date(NOW.getTime() - 3 * HOUR_MS).toISOString() };
+  const root = await prepareRoot({ streams: [{ id: 1 }], state });
+  const path = resolve(root, "data/generated/digest.json");
+  const before = await readFile(path, "utf8");
+  await assert.rejects(
+    runDigest({ rootDir: root, now: NOW, iftttWebhookKey: "key", youtubeApiKey: "key" }),
+    /streams\.json/,
+  );
+  assert.equal(await readFile(path, "utf8"), before);
+});
+
+test("dry-runはキーなしで新本文を表示するだけで、未知引数はCLIで非0終了する", async () => {
+  const root = await prepareRoot({ streams: [stream("dry")], streamers: [streamer("dry")] });
   const messages: string[] = [];
   const originalLog = console.log;
   console.log = (message?: unknown) => messages.push(String(message));
   try {
-    assert.equal(await runDigest({ rootDir: root, now: NOW, dryRun: true, iftttWebhookKey: "", youtubeApiKey: "" }), "dry-run");
+    assert.equal(await runDigest({ rootDir: root, now: NOW, dryRun: true, randomFn: () => 0 }), "dry-run");
   } finally {
     console.log = originalLog;
   }
-  assert.match(messages.join("\n"), /配信者 new/);
+  assert.match(messages.join("\n"), /今おすすめのVRChat配信/);
+  assert.match(messages.join("\n"), /\?q=/);
+  assert.equal(weightedPostLength(messages.join("\n")) <= 280, true);
   await assert.rejects(readFile(resolve(root, "data/generated/digest.json"), "utf8"), /ENOENT/);
 
   const script = resolve(import.meta.dirname, "../scripts/digest.ts");
   const result = await new Promise<{ code: number | null; stderr: string }>((resolveResult) => {
-    const child = spawn(process.execPath, ["--import", "tsx", script, "--unknown"], { cwd: resolve(import.meta.dirname, "..") });
+    const child = spawn(process.execPath, ["--import", "tsx", script, "--unknown"], {
+      cwd: resolve(import.meta.dirname, ".."),
+    });
     let stderr = "";
     child.stderr.setEncoding("utf8");
     child.stderr.on("data", (chunk: string) => { stderr += chunk; });

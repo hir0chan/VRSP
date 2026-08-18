@@ -19,6 +19,8 @@ interface Translation {
   platformAll: string;
   platformNiconico: string;
   japaneseOnly: string;
+  searchPlaceholder: string;
+  searchNoResults: string;
   totalCount: (count: number) => string;
   openStream: (title: string) => string;
   watchStream: string;
@@ -57,6 +59,8 @@ const translations: Record<Locale, Translation> = {
     platformAll: "すべて",
     platformNiconico: "ニコ生",
     japaneseOnly: "日本語のみ",
+    searchPlaceholder: "配信者・タイトルで絞り込み",
+    searchNoResults: "条件に一致する配信はありません。",
     totalCount: (count) => `全${count}件`,
     openStream: (title) => `${title}の配信ページを見る`,
     watchStream: "配信ページへ",
@@ -96,6 +100,8 @@ const translations: Record<Locale, Translation> = {
     platformAll: "All",
     platformNiconico: "Niconico",
     japaneseOnly: "Japanese only",
+    searchPlaceholder: "Filter by streamer or title",
+    searchNoResults: "No streams match your filters.",
     totalCount: (count) => `${count} total`,
     openStream: (title) => `Open the stream page for ${title}`,
     watchStream: "Watch stream",

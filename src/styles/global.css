@@ -257,6 +257,42 @@ img {
   display: none;
 }
 
+.stream-search {
+  width: min(100%, 300px);
+  min-height: 36px;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.stream-search:focus-visible {
+  border-color: var(--accent-deep);
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
+}
+
+.stream-search::placeholder {
+  color: var(--ink-soft);
+}
+
+.search-no-results {
+  margin: 0 0 clamp(40px, 6vw, 64px);
+  padding: 30px 20px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.search-no-results[hidden] {
+  display: none;
+}
+
 .platform-filter {
   display: inline-flex;
   min-width: 0;
@@ -416,6 +452,11 @@ img {
 [data-platform-filter="twitch"] .stream-card[data-platform="niconico"],
 [data-platform-filter="niconico"] .stream-card[data-platform="youtube"],
 [data-platform-filter="niconico"] .stream-card[data-platform="twitch"] {
+  display: none;
+}
+
+[data-search-miss],
+[data-search-empty] {
   display: none;
 }
 

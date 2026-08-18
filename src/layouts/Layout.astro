@@ -165,9 +165,77 @@ const updatedLabel = new Intl.DateTimeFormat(intlLocale, {
         </p>
       </div>
     </footer>
-    <script is:inline>
+    <script>
+      import {
+        hasVisibleCard,
+        isCardVisible,
+        type SearchCard,
+        type SearchFilters,
+        type StreamPlatform,
+      } from "../lib/search.js";
+
       const controls = document.querySelector(".filter-controls");
       let initialized = false;
+      const searchInput = document.getElementById("stream-search");
+      const noResults = document.getElementById("search-no-results");
+
+      const readPlatform = (value: string | null): StreamPlatform => {
+        if (value === "twitch" || value === "niconico") return value;
+        return "youtube";
+      };
+      const readCard = (card: HTMLElement): SearchCard => ({
+        isJapanese: card.dataset.ja !== "false",
+        platform: readPlatform(card.dataset.platform ?? null),
+        searchText: card.dataset.search ?? "",
+      });
+      const readFilters = (query: string): SearchFilters => {
+        const platform = document.documentElement.getAttribute("data-platform-filter");
+        return {
+          japaneseOnly: document.documentElement.hasAttribute("data-ja-only"),
+          ...(platform === "youtube" || platform === "twitch" || platform === "niconico"
+            ? { platform }
+            : {}),
+          query,
+        };
+      };
+      const applySearch = (): void => {
+        if (!(searchInput instanceof HTMLInputElement)) return;
+        const cards = Array.from(document.querySelectorAll<HTMLElement>(".stream-card[data-search]"));
+        const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-stream-section]"));
+        document.querySelectorAll<HTMLElement>("[data-search-empty]").forEach((element) => {
+          element.removeAttribute("data-search-empty");
+        });
+        const query = searchInput.value.toLowerCase();
+        if (query === "") {
+          cards.forEach((card) => card.removeAttribute("data-search-miss"));
+          if (noResults instanceof HTMLElement) noResults.hidden = true;
+          return;
+        }
+
+        const filters = readFilters(query);
+        cards.forEach((card) => {
+          card.toggleAttribute("data-search-miss", !isCardVisible(readCard(card), filters));
+        });
+        document.querySelectorAll<HTMLElement>(".date-group").forEach((group) => {
+          const groupCards = Array.from(group.querySelectorAll<HTMLElement>(".stream-card[data-search]"), readCard);
+          group.toggleAttribute("data-search-empty", !hasVisibleCard(groupCards, filters));
+        });
+        sections.forEach((section) => {
+          const sectionCards = Array.from(section.querySelectorAll<HTMLElement>(".stream-card[data-search]"), readCard);
+          section.toggleAttribute("data-search-empty", !hasVisibleCard(sectionCards, filters));
+        });
+        if (noResults instanceof HTMLElement) {
+          noResults.hidden = sections.some((section) => !section.hasAttribute("data-search-empty"));
+        }
+      };
+
+      if (searchInput instanceof HTMLInputElement) {
+        initialized = true;
+        try {
+          searchInput.value = new URLSearchParams(location.search).get("q") ?? "";
+        } catch {}
+        searchInput.addEventListener("input", applySearch);
+      }
       const toggle = document.getElementById("ja-only-toggle");
       if (toggle instanceof HTMLInputElement) {
         initialized = true;
@@ -177,6 +245,7 @@ const updatedLabel = new Intl.DateTimeFormat(intlLocale, {
           try {
             localStorage.setItem("vrsp-ja-only", toggle.checked ? "1" : "0");
           } catch {}
+          applySearch();
         });
       }
       const platformFilters = document.querySelectorAll('input[name="platform-filter"]');
@@ -199,9 +268,11 @@ const updatedLabel = new Intl.DateTimeFormat(intlLocale, {
                 localStorage.removeItem("vrsp-platform");
               } catch {}
             }
+            applySearch();
           });
         });
       }
+      applySearch();
       if (initialized && controls instanceof HTMLElement) controls.hidden = false;
     </script>
   </body>

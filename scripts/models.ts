@@ -39,12 +39,7 @@ export interface DiscoveryState {
   discoveredAt?: string;
 }
 
-export interface AnnouncedEntry {
-  id: string;
-  at: string;
-}
-
 export interface DigestState {
   lastPostedAt?: string;
-  announced: AnnouncedEntry[];
+  lastFeaturedId?: string;
 }

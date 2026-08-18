@@ -2,11 +2,10 @@ import { randomUUID } from "node:crypto";
 import { mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import type { AnnouncedEntry, DigestState, Stream, Streamer } from "./models.js";
+import type { DigestState, Stream, Streamer } from "./models.js";
 import { isStream, isStreamer } from "./update.js";
 
 const POST_INTERVAL_MS = 120 * 60 * 1_000;
-const ANNOUNCED_RETENTION_MS = 24 * 60 * 60 * 1_000;
 const MAX_FUTURE_SKEW_MS = 24 * 60 * 60 * 1_000;
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_POST_LENGTH = 280;
@@ -14,6 +13,8 @@ const MAX_NAME_LENGTH = 40;
 const SITE_URL = "https://vcha-antenna.com/";
 const SITE_URL_WEIGHT = 23;
 const IFTTT_EVENT = "vrsp_digest";
+const HASHTAGS = "#VRChat #ぶいちゃ配信アンテナ";
+const HEADING = "👉️ 今おすすめのVRChat配信は?";
 
 interface DigestInputs {
   streams: Stream[];
@@ -27,10 +28,11 @@ export interface RunDigestOptions {
   iftttWebhookKey?: string;
   youtubeApiKey?: string;
   fetchFn?: typeof fetch;
+  randomFn?: () => number;
   beforeStateCommit?: () => void | Promise<void>;
 }
 
-export type DigestResult = "dry-run" | "skipped-keys" | "initialized" | "skipped" | "posted";
+export type DigestResult = "dry-run" | "skipped-keys" | "skipped" | "posted";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -44,27 +46,8 @@ function validDate(value: string): boolean {
   return !Number.isNaN(new Date(value).getTime());
 }
 
-export function announcedKey(stream: Stream): string {
+export function streamKey(stream: Stream): string {
   return `${stream.platform ?? "youtube"}:${stream.id}`;
-}
-
-function actualStartTime(stream: Stream): number {
-  if (stream.actualStart === undefined) return Number.POSITIVE_INFINITY;
-  const time = new Date(stream.actualStart).getTime();
-  return Number.isNaN(time) ? Number.POSITIVE_INFINITY : time;
-}
-
-function compareKeys(left: Stream, right: Stream): number {
-  const leftKey = announcedKey(left);
-  const rightKey = announcedKey(right);
-  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
-}
-
-export function selectNewLives(streams: Stream[], announced: AnnouncedEntry[]): Stream[] {
-  const known = new Set(announced.map((entry) => entry.id));
-  return streams
-    .filter((stream) => stream.status === "live" && stream.isJapanese === true && !known.has(announcedKey(stream)))
-    .sort((left, right) => actualStartTime(left) - actualStartTime(right) || compareKeys(left, right));
 }
 
 export function countLiveJapanese(streams: Stream[]): number {
@@ -93,10 +76,24 @@ export function weightedLength(text: string): number {
   return weight;
 }
 
-function truncateWeighted(text: string, maximum: number): string {
+export function weightedPostLength(text: string): number {
+  const urlPattern = /https?:\/\/[^\s]+/gu;
+  let weight = 0;
+  let start = 0;
+  for (const match of text.matchAll(urlPattern)) {
+    const index = match.index;
+    weight += weightedLength(text.slice(start, index)) + SITE_URL_WEIGHT;
+    start = index + match[0].length;
+  }
+  return weight + weightedLength(text.slice(start));
+}
+
+export function truncateWeighted(text: string, maximum: number): string {
+  if (maximum <= 0) return "";
   if (weightedLength(text) <= maximum) return text;
   const suffix = "…";
   const budget = maximum - weightedLength(suffix);
+  if (budget < 0) return "";
   let result = "";
   for (const { segment } of new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(text)) {
     if (weightedLength(result + segment) > budget) break;
@@ -105,49 +102,53 @@ function truncateWeighted(text: string, maximum: number): string {
   return result + suffix;
 }
 
-export function sanitizeName(name: string): string {
-  const normalized = name
-    .replace(/\p{Cc}/gu, " ")
+export function sanitizePostText(text: string): string {
+  return text
+    .replace(/[\p{Cc}\p{Cf}]/gu, " ")
+    .replace(/\b([a-z][a-z0-9+.-]*)[：:][／/]{2}/giu, "$1・//")
+    .replace(/[@＠#＃.．。｡]/gu, "・")
     .replace(/\s+/gu, " ")
-    .trim()
-    .replace(/[@＠#＃.．。｡]/gu, "・");
-  return truncateWeighted(normalized, MAX_NAME_LENGTH);
+    .trim();
 }
 
-const HASHTAGS = "#VRChat #ぶいちゃ配信アンテナ";
-
-function digestBody(secondLine: string, liveTotal: number): string {
-  return `🔴 VRChat配信が新たにスタート!\n${secondLine}\n現在${liveTotal}件がライブ配信中👀\n${HASHTAGS}`;
-}
-
-function digestText(secondLine: string, liveTotal: number): string {
-  return `${digestBody(secondLine, liveTotal)}\n${SITE_URL}`;
-}
-
-function digestLength(secondLine: string, liveTotal: number): number {
-  return weightedLength(`${digestBody(secondLine, liveTotal)}\n`) + SITE_URL_WEIGHT;
-}
-
-export function composeDigest(newLives: Stream[], liveTotal: number, streamers: Streamer[]): string {
-  const streamerNames = new Map(streamers.map((streamer) => [streamer.id, sanitizeName(streamer.name)]));
-  const names = newLives.flatMap((stream) => {
-    const name = streamerNames.get(stream.streamerId);
-    return name === undefined || name === "" ? [] : [name];
-  });
-  const included: string[] = [];
-  for (const name of names) {
-    const candidate = [...included, name];
-    const remaining = newLives.length - candidate.length;
-    const line = `${candidate.join(" / ")}${remaining > 0 ? ` ほか${remaining}件` : ""}`;
-    if (digestLength(line, liveTotal) > MAX_POST_LENGTH) break;
-    included.push(name);
+export function selectFeatured(
+  streams: Stream[],
+  lastFeaturedId?: string,
+  randomFn: () => number = Math.random,
+): Stream | undefined {
+  const liveJapanese = streams.filter((stream) => stream.status === "live" && stream.isJapanese === true);
+  const titled = liveJapanese.filter((stream) => sanitizePostText(stream.title) !== "");
+  const eligible = titled.length > 0 ? titled : liveJapanese;
+  const candidates = eligible.length >= 2
+    ? eligible.filter((stream) => streamKey(stream) !== lastFeaturedId)
+    : eligible;
+  if (candidates.length === 0) return undefined;
+  const random = randomFn();
+  if (!Number.isFinite(random) || random < 0 || random >= 1) {
+    throw new Error("randomFn は0以上1未満を返してください");
   }
-  const remaining = newLives.length - included.length;
-  const secondLine = included.length === 0
-    ? `${newLives.length}件の配信がスタート!`
-    : `${included.join(" / ")}${remaining > 0 ? ` ほか${remaining}件` : ""}`;
-  const text = digestText(secondLine, liveTotal);
-  if (digestLength(secondLine, liveTotal) > MAX_POST_LENGTH) {
+  return candidates[Math.floor(random * candidates.length)];
+}
+
+function digestText(detail: string, link: string, liveTotal: number): string {
+  return `${HEADING}\n${detail}\n${link}\n現在${liveTotal}件がライブ配信中👀\n${HASHTAGS}`;
+}
+
+export function composeDigest(featured: Stream, liveTotal: number, streamers: Streamer[]): string {
+  const rawName = streamers.find((streamer) => streamer.id === featured.streamerId)?.name ?? "";
+  const name = truncateWeighted(sanitizePostText(rawName), MAX_NAME_LENGTH);
+  const sanitizedTitle = sanitizePostText(featured.title);
+  const link = name === "" ? SITE_URL : `${SITE_URL}?q=${encodeURIComponent(rawName)}`;
+  let detail: string;
+  if (sanitizedTitle === "") {
+    detail = name === "" ? "おすすめの配信" : name;
+  } else {
+    const nameSuffix = name === "" ? "" : `(${name})`;
+    const titleBudget = MAX_POST_LENGTH - weightedPostLength(digestText(nameSuffix, link, liveTotal));
+    detail = `${truncateWeighted(sanitizedTitle, titleBudget)}${nameSuffix}`;
+  }
+  const text = digestText(detail, link, liveTotal);
+  if (weightedPostLength(text) > MAX_POST_LENGTH) {
     throw new Error("ダイジェスト本文が重み付き280文字を超えています");
   }
   return text;
@@ -164,15 +165,6 @@ export function shouldPost(state: DigestState, now: Date): boolean {
   }
   if (postedTime > nowTime) return false;
   return nowTime - postedTime >= POST_INTERVAL_MS;
-}
-
-export function pruneAnnounced(
-  announced: AnnouncedEntry[],
-  liveKeys: Set<string>,
-  now: Date,
-): AnnouncedEntry[] {
-  const boundary = now.getTime() - ANNOUNCED_RETENTION_MS;
-  return announced.filter((entry) => liveKeys.has(entry.id) || new Date(entry.at).getTime() >= boundary);
 }
 
 export async function postToIfttt(text: string, key: string, fetchFn: typeof fetch = fetch): Promise<void> {
@@ -195,28 +187,16 @@ export async function postToIfttt(text: string, key: string, fetchFn: typeof fet
 }
 
 function validateDigestState(value: unknown): DigestState {
-  if (!isRecord(value) || !Array.isArray(value.announced)) {
-    throw new Error("digest.json の構造が不正です");
-  }
+  if (!isRecord(value)) throw new Error("digest.json の構造が不正です");
   if (value.lastPostedAt !== undefined && (typeof value.lastPostedAt !== "string" || !validDate(value.lastPostedAt))) {
     throw new Error("digest.json の lastPostedAt が不正な日時です");
   }
-  const announced: AnnouncedEntry[] = [];
-  const ids = new Set<string>();
-  for (const [index, entry] of value.announced.entries()) {
-    if (!isRecord(entry) || typeof entry.id !== "string" || entry.id.trim() === "") {
-      throw new Error(`digest.json の announced[${index}].id が不正です`);
-    }
-    if (typeof entry.at !== "string" || !validDate(entry.at)) {
-      throw new Error(`digest.json の announced[${index}].at が不正な日時です`);
-    }
-    if (ids.has(entry.id)) throw new Error(`digest.json の announced に重複キーがあります: ${entry.id}`);
-    ids.add(entry.id);
-    announced.push({ id: entry.id, at: entry.at });
+  if (value.lastFeaturedId !== undefined && typeof value.lastFeaturedId !== "string") {
+    throw new Error("digest.json の lastFeaturedId が不正です");
   }
   return {
-    announced,
     ...(value.lastPostedAt === undefined ? {} : { lastPostedAt: value.lastPostedAt }),
+    ...(value.lastFeaturedId === undefined ? {} : { lastFeaturedId: value.lastFeaturedId }),
   };
 }
 
@@ -286,8 +266,12 @@ export async function runDigest(options: RunDigestOptions = {}): Promise<DigestR
 
   if (options.dryRun === true) {
     const [inputs, state] = await Promise.all([loadInputs(paths.streams, paths.streamers), loadState(paths.state)]);
-    const newLives = selectNewLives(inputs.streams, state?.announced ?? []);
-    console.log(composeDigest(newLives, countLiveJapanese(inputs.streams), inputs.streamers));
+    const featured = selectFeatured(inputs.streams, state?.lastFeaturedId, options.randomFn);
+    if (featured === undefined) {
+      console.log("紹介できる日本語のライブ配信がありません");
+    } else {
+      console.log(composeDigest(featured, countLiveJapanese(inputs.streams), inputs.streamers));
+    }
     return "dry-run";
   }
 
@@ -303,27 +287,19 @@ export async function runDigest(options: RunDigestOptions = {}): Promise<DigestR
   }
 
   const [inputs, state] = await Promise.all([loadInputs(paths.streams, paths.streamers), loadState(paths.state)]);
-  const liveStreams = inputs.streams.filter((stream) => stream.status === "live");
-  const liveKeys = new Set(liveStreams.map(announcedKey));
-  if (state === undefined) {
-    const announced = [...liveKeys].map((id) => ({ id, at: now.toISOString() }));
-    await writeStateAtomic(paths.state, { announced }, options.beforeStateCommit);
-    console.log("digest.json が未作成のため現在の live をベースラインとして記録します");
-    return "initialized";
-  }
-
-  const newLives = selectNewLives(inputs.streams, state.announced);
-  const postingDue = shouldPost(state, now);
-  if (!postingDue || newLives.length === 0) {
+  const postingDue = shouldPost(state ?? {}, now);
+  const featured = selectFeatured(inputs.streams, state?.lastFeaturedId, options.randomFn);
+  if (!postingDue || featured === undefined) {
     console.log("投稿条件を満たさないためダイジェスト投稿をスキップします");
     return "skipped";
   }
 
-  const text = composeDigest(newLives, countLiveJapanese(inputs.streams), inputs.streamers);
+  const text = composeDigest(featured, countLiveJapanese(inputs.streams), inputs.streamers);
   await postToIfttt(text, iftttWebhookKey, options.fetchFn);
-  const added = newLives.map((stream) => ({ id: announcedKey(stream), at: now.toISOString() }));
-  const announced = pruneAnnounced([...state.announced, ...added], liveKeys, now);
-  await writeStateAtomic(paths.state, { lastPostedAt: now.toISOString(), announced }, options.beforeStateCommit);
+  await writeStateAtomic(paths.state, {
+    lastPostedAt: now.toISOString(),
+    lastFeaturedId: streamKey(featured),
+  }, options.beforeStateCommit);
   console.log("IFTTT Webhook がダイジェストを受け付けました");
   return "posted";
 }
