@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T05:17:14.285Z",
+  "updatedAt": "2026-08-21T05:45:24.009Z",
   "streamers": [
     {
       "id": "UC68JmBa_dZZo7kBr-ptpg9A",
@@ -237,7 +237,7 @@
     },
     {
       "id": "UCWaKmPxpcTekEvwpA0K7EzA",
-      "name": "mijo",
+      "name": "Rengoku rants?",
       "youtubeChannelId": "UCWaKmPxpcTekEvwpA0K7EzA",
       "enabled": true
     },
@@ -545,12 +545,6 @@
       "id": "UCebsN8y7-5iVfCnRyv4Gx2w",
       "name": "噛み猫丸ch",
       "youtubeChannelId": "UCebsN8y7-5iVfCnRyv4Gx2w",
-      "enabled": true
-    },
-    {
-      "id": "UClkuGJRqAPl8dJjxDaHfCYA",
-      "name": "KnightParade",
-      "youtubeChannelId": "UClkuGJRqAPl8dJjxDaHfCYA",
       "enabled": true
     },
     {
@@ -1214,12 +1208,6 @@
       "enabled": true
     },
     {
-      "id": "tw-50599394",
-      "name": "Salvesti",
-      "youtubeChannelId": "tw-50599394",
-      "enabled": true
-    },
-    {
       "id": "tw-457054182",
       "name": "KalisVTuber",
       "youtubeChannelId": "tw-457054182",
@@ -1298,57 +1286,87 @@
       "enabled": true
     },
     {
-      "id": "UCplwlqDdvUREhAok0T3KRDQ",
-      "name": "VRC Blue Angels",
-      "youtubeChannelId": "UCplwlqDdvUREhAok0T3KRDQ",
-      "enabled": true
-    },
-    {
       "id": "UCqTrNRZfZZnICArGOIAqPFA",
       "name": "ฅᴿ RUN (走る人)",
       "youtubeChannelId": "UCqTrNRZfZZnICArGOIAqPFA",
       "enabled": true
     },
     {
-      "id": "UCJUTA6Nf8Hvq-wb-VVpyr4w",
-      "name": "Anger-Is-Flawed",
-      "youtubeChannelId": "UCJUTA6Nf8Hvq-wb-VVpyr4w",
-      "enabled": true
-    },
-    {
-      "id": "UC5qGHK5lFDK6mga09NkMkhQ",
-      "name": "青井冷水",
-      "youtubeChannelId": "UC5qGHK5lFDK6mga09NkMkhQ",
-      "enabled": true
-    },
-    {
-      "id": "UC5fMj2j39msE_-UeOYuWYWA",
-      "name": "⚡️Geno Sonic⚡️",
-      "youtubeChannelId": "UC5fMj2j39msE_-UeOYuWYWA",
-      "enabled": true
-    },
-    {
-      "id": "UC6SZdY9e5bhWvYMdrU3HLXQ",
-      "name": "AshLiebe",
-      "youtubeChannelId": "UC6SZdY9e5bhWvYMdrU3HLXQ",
-      "enabled": true
-    },
-    {
-      "id": "UCCLsXIenipYxNrTSRbtGnPw",
-      "name": " -ˏˋ⋆valeriestarri⋆ˊˎ-",
-      "youtubeChannelId": "UCCLsXIenipYxNrTSRbtGnPw",
-      "enabled": true
-    },
-    {
-      "id": "UChE6Psl_5Qq0LrgeXHxfnyg",
-      "name": "CelesteVR",
-      "youtubeChannelId": "UChE6Psl_5Qq0LrgeXHxfnyg",
-      "enabled": true
-    },
-    {
       "id": "tw-192685442",
       "name": "ToninhoPlayVR",
       "youtubeChannelId": "tw-192685442",
+      "enabled": true
+    },
+    {
+      "id": "tw-584338234",
+      "name": "CynicalNyx",
+      "youtubeChannelId": "tw-584338234",
+      "enabled": true
+    },
+    {
+      "id": "tw-163818091",
+      "name": "SpiritFox0077",
+      "youtubeChannelId": "tw-163818091",
+      "enabled": true
+    },
+    {
+      "id": "tw-866128510",
+      "name": "HeyImVam",
+      "youtubeChannelId": "tw-866128510",
+      "enabled": true
+    },
+    {
+      "id": "tw-655665306",
+      "name": "little_goji",
+      "youtubeChannelId": "tw-655665306",
+      "enabled": true
+    },
+    {
+      "id": "tw-410860301",
+      "name": "iamthe_rye",
+      "youtubeChannelId": "tw-410860301",
+      "enabled": true
+    },
+    {
+      "id": "tw-135040218",
+      "name": "OffensiveVin",
+      "youtubeChannelId": "tw-135040218",
+      "enabled": true
+    },
+    {
+      "id": "tw-1391811374",
+      "name": "petrova_x",
+      "youtubeChannelId": "tw-1391811374",
+      "enabled": true
+    },
+    {
+      "id": "tw-1429530862",
+      "name": "x3rawrx32005",
+      "youtubeChannelId": "tw-1429530862",
+      "enabled": true
+    },
+    {
+      "id": "tw-679596900",
+      "name": "ytttvanonice",
+      "youtubeChannelId": "tw-679596900",
+      "enabled": true
+    },
+    {
+      "id": "tw-817980923",
+      "name": "ned_45",
+      "youtubeChannelId": "tw-817980923",
+      "enabled": true
+    },
+    {
+      "id": "tw-1248999941",
+      "name": "ptitelune_e",
+      "youtubeChannelId": "tw-1248999941",
+      "enabled": true
+    },
+    {
+      "id": "tw-252632257",
+      "name": "jamantass",
+      "youtubeChannelId": "tw-252632257",
       "enabled": true
     }
   ]
