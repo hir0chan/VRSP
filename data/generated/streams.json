@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T12:15:19.761Z",
+  "updatedAt": "2026-08-23T12:45:28.651Z",
   "tracked": [
     {
       "id": "Wu3akIMIq6A",
@@ -9,7 +9,8 @@
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
       "isJapanese": true,
-      "actualStart": "2026-04-06T03:18:35Z"
+      "actualStart": "2026-04-06T03:18:35Z",
+      "viewers": 1
     },
     {
       "id": "8dR_4IEJU0M",
@@ -165,7 +166,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:02:47Z",
-      "viewers": 3
+      "viewers": 4
     },
     {
       "id": "FvRy9P3hfJU",
@@ -267,11 +268,11 @@
       "title": "【 #誕生日  8/23(日) 20:00～】【#vrchat 】はっぴーばーすでー！　なのじゃ🎉【水無瀬紅葉 / Vtuber】",
       "thumbnail": "https://i.ytimg.com/vi/oXow-8ZDJO0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oXow-8ZDJO0",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:00:00Z",
       "actualStart": "2026-08-23T11:00:23Z",
-      "viewers": 8
+      "actualEnd": "2026-08-23T12:41:39Z"
     },
     {
       "id": "SbwCWxHh40o",
@@ -295,7 +296,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-18T19:27:09Z",
       "actualStart": "2026-08-18T19:27:56Z",
-      "viewers": 3
+      "viewers": 1
     },
     {
       "id": "M39AQqc8p00",
@@ -438,18 +439,6 @@
       "scheduledStart": "2026-08-28T13:00:00Z"
     },
     {
-      "id": "XrQn7_K6ehc",
-      "streamerId": "UCLM14JGg5fHLHSNwhRpAVnQ",
-      "title": "【VRChatニュース】VRChat発「New Meta」がLJL進出！改変記録「きせログ」・シスプリ25周年ワールド再公開ほか｜2026年8月22日",
-      "thumbnail": "https://i.ytimg.com/vi/XrQn7_K6ehc/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=XrQn7_K6ehc",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-22T12:00:49Z",
-      "actualStart": "2026-08-22T12:00:01Z",
-      "actualEnd": "2026-08-22T12:37:48Z"
-    },
-    {
       "id": "agvf_tkdufc",
       "streamerId": "UCoX5KFqr-15Qcd-ogdGu4bg",
       "title": "【VRChat雑談】お誕生日会場inスナックリリィ2026【Vtuber】",
@@ -540,18 +529,6 @@
       "scheduledStart": "2026-08-23T10:00:00Z",
       "actualStart": "2026-08-23T09:55:31Z",
       "viewers": 3
-    },
-    {
-      "id": "Rtbm4nb9jjk",
-      "streamerId": "UCRq-_Q4hk1oK0_HpLfUVA8Q",
-      "title": "【雑談】ぶいちゃふっとーく　#VRchat",
-      "thumbnail": "https://i.ytimg.com/vi/Rtbm4nb9jjk/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Rtbm4nb9jjk",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-22T10:30:00Z",
-      "actualStart": "2026-08-22T10:29:59Z",
-      "actualEnd": "2026-08-22T12:34:14Z"
     },
     {
       "id": "sXFO-OAv6kw",
@@ -767,18 +744,6 @@
       "isJapanese": true,
       "actualStart": "2026-08-22T10:59:34Z",
       "actualEnd": "2026-08-22T13:06:02Z"
-    },
-    {
-      "id": "tSywEzcoDME",
-      "streamerId": "UC-q3wU4ji6KZQH7ispJLTyA",
-      "title": "\"I am vengeance... I am the night! I AM BATMAN!\" (VRChat)",
-      "thumbnail": "https://i.ytimg.com/vi/tSywEzcoDME/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=tSywEzcoDME",
-      "status": "ended",
-      "isJapanese": false,
-      "scheduledStart": "2026-08-22T12:30:24Z",
-      "actualStart": "2026-08-22T12:30:31Z",
-      "actualEnd": "2026-08-22T12:40:44Z"
     },
     {
       "id": "Sh6bl_OPf_s",
@@ -1637,7 +1602,7 @@
       "id": "f2UOw1WYfOw",
       "streamerId": "UCnzwm6E8tRUQFd954io7p7g",
       "title": "VRChat - Hanging with Freinds",
-      "thumbnail": "https://i.ytimg.com/vi/f2UOw1WYfOw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/f2UOw1WYfOw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=f2UOw1WYfOw",
       "status": "ended",
       "isJapanese": false,
@@ -1966,7 +1931,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:10:03Z",
-      "viewers": 5
+      "viewers": 6
     },
     {
       "id": "VOqKoEbDmXY",
@@ -1974,9 +1939,11 @@
       "title": "【視聴者参加型VRChat #41 】ママと一緒にレトロな喫茶店でコーヒーを飲もう！【 #ニューハーフ 】",
       "thumbnail": "https://i.ytimg.com/vi/VOqKoEbDmXY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=VOqKoEbDmXY",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-23T12:30:00Z"
+      "scheduledStart": "2026-08-23T12:30:00Z",
+      "actualStart": "2026-08-23T12:28:07Z",
+      "viewers": 1
     },
     {
       "id": "F0-zFC7UDq0",
@@ -2148,7 +2115,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T04:10:00Z",
       "actualStart": "2026-08-23T09:28:36Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "AkNnNNt8BOo",
@@ -2337,7 +2304,7 @@
     {
       "id": "sreE3VDFSLs",
       "streamerId": "UCIDV9zoK6fhWi6HzPCPrR9g",
-      "title": "VRChat - Ecliptica ガンマンサーソロ",
+      "title": "VRChat - Ecliptica ガンマンサーソロ [クリア]",
       "thumbnail": "https://i.ytimg.com/vi/sreE3VDFSLs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=sreE3VDFSLs",
       "status": "ended",
@@ -2390,7 +2357,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T10:45:00Z",
       "actualStart": "2026-08-23T10:49:30Z",
-      "viewers": 6
+      "viewers": 5
     },
     {
       "id": "5NNzFf6_s90",
@@ -2412,7 +2379,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:01:26Z",
-      "viewers": 5
+      "viewers": 4
     },
     {
       "id": "c3EsLxgNZ4E",
@@ -2477,11 +2444,11 @@
       "title": "[参加条件あり][VRChat]💀日曜日は皆で脱出だ！！[フレ申は概要欄][SlashCo VR][ホラワ１人旅297回目][ネタバレ注意]",
       "thumbnail": "https://i.ytimg.com/vi/__BtmiPfsPI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=__BtmiPfsPI",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T10:00:00Z",
       "actualStart": "2026-08-23T10:00:32Z",
-      "viewers": 7
+      "actualEnd": "2026-08-23T12:15:44Z"
     },
     {
       "id": "VZgP6RT-_O8",
@@ -2503,7 +2470,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T11:58:30Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "6pMbLaKlw6I",
@@ -2563,7 +2530,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:00:16Z",
-      "viewers": 21
+      "viewers": 25
     },
     {
       "id": "ChkQdvJnxFs",
@@ -2617,11 +2584,11 @@
       "title": "Doing Flips EVERY DAY Til Filian Respawns (Day 99)",
       "thumbnail": "https://i.ytimg.com/vi/-dI5_XNlWLk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-dI5_XNlWLk",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-23T11:40:00Z",
       "actualStart": "2026-08-23T11:40:12Z",
-      "viewers": 3
+      "actualEnd": "2026-08-23T12:40:40Z"
     },
     {
       "id": "7BMuMwOBT50",
@@ -2629,11 +2596,11 @@
       "title": "VRChatでボイチェン雑談しながら散歩しつつ自撮りしてから運動",
       "thumbnail": "https://i.ytimg.com/vi/7BMuMwOBT50/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7BMuMwOBT50",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:45:00Z",
       "actualStart": "2026-08-23T11:32:20Z",
-      "viewers": 1
+      "actualEnd": "2026-08-23T12:23:09Z"
     },
     {
       "id": "YGoy--y9liw",
@@ -2645,7 +2612,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:30:00Z",
       "actualStart": "2026-08-23T11:14:07Z",
-      "viewers": 13
+      "viewers": 15
     },
     {
       "id": "cEgNrV6XvQY",
@@ -2657,7 +2624,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:30:00Z",
       "actualStart": "2026-08-23T11:36:15Z",
-      "viewers": 12
+      "viewers": 13
     },
     {
       "id": "PnlZYjdVNVw",
@@ -2665,10 +2632,11 @@
       "title": "リミナルスペース空間を歩いて探索するだけの配信【VRChat】",
       "thumbnail": "https://i.ytimg.com/vi/PnlZYjdVNVw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PnlZYjdVNVw",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:00:00Z",
-      "actualStart": "2026-08-23T10:55:10Z"
+      "actualStart": "2026-08-23T10:55:10Z",
+      "actualEnd": "2026-08-23T12:37:13Z"
     },
     {
       "id": "uf7BAghazrQ",
@@ -2711,7 +2679,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T11:58:54Z",
-      "viewers": 9
+      "viewers": 7
     },
     {
       "id": "WUjgfMOFjEI",
@@ -2775,7 +2743,8 @@
       "url": "https://www.youtube.com/watch?v=Wu3akIMIq6A",
       "status": "live",
       "isJapanese": true,
-      "actualStart": "2026-04-06T03:18:35Z"
+      "actualStart": "2026-04-06T03:18:35Z",
+      "viewers": 1
     },
     {
       "id": "8dR_4IEJU0M",
@@ -2931,7 +2900,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:02:47Z",
-      "viewers": 3
+      "viewers": 4
     },
     {
       "id": "FvRy9P3hfJU",
@@ -3033,11 +3002,11 @@
       "title": "【 #誕生日  8/23(日) 20:00～】【#vrchat 】はっぴーばーすでー！　なのじゃ🎉【水無瀬紅葉 / Vtuber】",
       "thumbnail": "https://i.ytimg.com/vi/oXow-8ZDJO0/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=oXow-8ZDJO0",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:00:00Z",
       "actualStart": "2026-08-23T11:00:23Z",
-      "viewers": 8
+      "actualEnd": "2026-08-23T12:41:39Z"
     },
     {
       "id": "SbwCWxHh40o",
@@ -3061,7 +3030,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-18T19:27:09Z",
       "actualStart": "2026-08-18T19:27:56Z",
-      "viewers": 3
+      "viewers": 1
     },
     {
       "id": "M39AQqc8p00",
@@ -3194,18 +3163,6 @@
       "scheduledStart": "2026-08-28T13:00:00Z"
     },
     {
-      "id": "XrQn7_K6ehc",
-      "streamerId": "UCLM14JGg5fHLHSNwhRpAVnQ",
-      "title": "【VRChatニュース】VRChat発「New Meta」がLJL進出！改変記録「きせログ」・シスプリ25周年ワールド再公開ほか｜2026年8月22日",
-      "thumbnail": "https://i.ytimg.com/vi/XrQn7_K6ehc/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=XrQn7_K6ehc",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-22T12:00:49Z",
-      "actualStart": "2026-08-22T12:00:01Z",
-      "actualEnd": "2026-08-22T12:37:48Z"
-    },
-    {
       "id": "agvf_tkdufc",
       "streamerId": "UCoX5KFqr-15Qcd-ogdGu4bg",
       "title": "【VRChat雑談】お誕生日会場inスナックリリィ2026【Vtuber】",
@@ -3296,18 +3253,6 @@
       "scheduledStart": "2026-08-23T10:00:00Z",
       "actualStart": "2026-08-23T09:55:31Z",
       "viewers": 3
-    },
-    {
-      "id": "Rtbm4nb9jjk",
-      "streamerId": "UCRq-_Q4hk1oK0_HpLfUVA8Q",
-      "title": "【雑談】ぶいちゃふっとーく　#VRchat",
-      "thumbnail": "https://i.ytimg.com/vi/Rtbm4nb9jjk/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Rtbm4nb9jjk",
-      "status": "ended",
-      "isJapanese": true,
-      "scheduledStart": "2026-08-22T10:30:00Z",
-      "actualStart": "2026-08-22T10:29:59Z",
-      "actualEnd": "2026-08-22T12:34:14Z"
     },
     {
       "id": "sXFO-OAv6kw",
@@ -3523,18 +3468,6 @@
       "isJapanese": true,
       "actualStart": "2026-08-22T10:59:34Z",
       "actualEnd": "2026-08-22T13:06:02Z"
-    },
-    {
-      "id": "tSywEzcoDME",
-      "streamerId": "UC-q3wU4ji6KZQH7ispJLTyA",
-      "title": "\"I am vengeance... I am the night! I AM BATMAN!\" (VRChat)",
-      "thumbnail": "https://i.ytimg.com/vi/tSywEzcoDME/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=tSywEzcoDME",
-      "status": "ended",
-      "isJapanese": false,
-      "scheduledStart": "2026-08-22T12:30:24Z",
-      "actualStart": "2026-08-22T12:30:31Z",
-      "actualEnd": "2026-08-22T12:40:44Z"
     },
     {
       "id": "Sh6bl_OPf_s",
@@ -4393,7 +4326,7 @@
       "id": "f2UOw1WYfOw",
       "streamerId": "UCnzwm6E8tRUQFd954io7p7g",
       "title": "VRChat - Hanging with Freinds",
-      "thumbnail": "https://i.ytimg.com/vi/f2UOw1WYfOw/hqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/f2UOw1WYfOw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=f2UOw1WYfOw",
       "status": "ended",
       "isJapanese": false,
@@ -4722,7 +4655,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:10:03Z",
-      "viewers": 5
+      "viewers": 6
     },
     {
       "id": "VOqKoEbDmXY",
@@ -4730,9 +4663,11 @@
       "title": "【視聴者参加型VRChat #41 】ママと一緒にレトロな喫茶店でコーヒーを飲もう！【 #ニューハーフ 】",
       "thumbnail": "https://i.ytimg.com/vi/VOqKoEbDmXY/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=VOqKoEbDmXY",
-      "status": "upcoming",
+      "status": "live",
       "isJapanese": true,
-      "scheduledStart": "2026-08-23T12:30:00Z"
+      "scheduledStart": "2026-08-23T12:30:00Z",
+      "actualStart": "2026-08-23T12:28:07Z",
+      "viewers": 1
     },
     {
       "id": "F0-zFC7UDq0",
@@ -4904,7 +4839,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T04:10:00Z",
       "actualStart": "2026-08-23T09:28:36Z",
-      "viewers": 2
+      "viewers": 1
     },
     {
       "id": "AkNnNNt8BOo",
@@ -5093,7 +5028,7 @@
     {
       "id": "sreE3VDFSLs",
       "streamerId": "UCIDV9zoK6fhWi6HzPCPrR9g",
-      "title": "VRChat - Ecliptica ガンマンサーソロ",
+      "title": "VRChat - Ecliptica ガンマンサーソロ [クリア]",
       "thumbnail": "https://i.ytimg.com/vi/sreE3VDFSLs/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=sreE3VDFSLs",
       "status": "ended",
@@ -5146,7 +5081,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T10:45:00Z",
       "actualStart": "2026-08-23T10:49:30Z",
-      "viewers": 6
+      "viewers": 5
     },
     {
       "id": "5NNzFf6_s90",
@@ -5168,7 +5103,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:01:26Z",
-      "viewers": 5
+      "viewers": 4
     },
     {
       "id": "c3EsLxgNZ4E",
@@ -5233,11 +5168,11 @@
       "title": "[参加条件あり][VRChat]💀日曜日は皆で脱出だ！！[フレ申は概要欄][SlashCo VR][ホラワ１人旅297回目][ネタバレ注意]",
       "thumbnail": "https://i.ytimg.com/vi/__BtmiPfsPI/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=__BtmiPfsPI",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T10:00:00Z",
       "actualStart": "2026-08-23T10:00:32Z",
-      "viewers": 7
+      "actualEnd": "2026-08-23T12:15:44Z"
     },
     {
       "id": "VZgP6RT-_O8",
@@ -5259,7 +5194,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T11:58:30Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "6pMbLaKlw6I",
@@ -5319,7 +5254,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T12:00:16Z",
-      "viewers": 21
+      "viewers": 25
     },
     {
       "id": "ChkQdvJnxFs",
@@ -5373,11 +5308,11 @@
       "title": "Doing Flips EVERY DAY Til Filian Respawns (Day 99)",
       "thumbnail": "https://i.ytimg.com/vi/-dI5_XNlWLk/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=-dI5_XNlWLk",
-      "status": "live",
+      "status": "ended",
       "isJapanese": false,
       "scheduledStart": "2026-08-23T11:40:00Z",
       "actualStart": "2026-08-23T11:40:12Z",
-      "viewers": 3
+      "actualEnd": "2026-08-23T12:40:40Z"
     },
     {
       "id": "7BMuMwOBT50",
@@ -5385,11 +5320,11 @@
       "title": "VRChatでボイチェン雑談しながら散歩しつつ自撮りしてから運動",
       "thumbnail": "https://i.ytimg.com/vi/7BMuMwOBT50/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=7BMuMwOBT50",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:45:00Z",
       "actualStart": "2026-08-23T11:32:20Z",
-      "viewers": 1
+      "actualEnd": "2026-08-23T12:23:09Z"
     },
     {
       "id": "YGoy--y9liw",
@@ -5401,7 +5336,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:30:00Z",
       "actualStart": "2026-08-23T11:14:07Z",
-      "viewers": 13
+      "viewers": 15
     },
     {
       "id": "cEgNrV6XvQY",
@@ -5413,7 +5348,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:30:00Z",
       "actualStart": "2026-08-23T11:36:15Z",
-      "viewers": 12
+      "viewers": 13
     },
     {
       "id": "PnlZYjdVNVw",
@@ -5421,10 +5356,11 @@
       "title": "リミナルスペース空間を歩いて探索するだけの配信【VRChat】",
       "thumbnail": "https://i.ytimg.com/vi/PnlZYjdVNVw/hqdefault_live.jpg",
       "url": "https://www.youtube.com/watch?v=PnlZYjdVNVw",
-      "status": "live",
+      "status": "ended",
       "isJapanese": true,
       "scheduledStart": "2026-08-23T11:00:00Z",
-      "actualStart": "2026-08-23T10:55:10Z"
+      "actualStart": "2026-08-23T10:55:10Z",
+      "actualEnd": "2026-08-23T12:37:13Z"
     },
     {
       "id": "uf7BAghazrQ",
@@ -5467,7 +5403,7 @@
       "isJapanese": true,
       "scheduledStart": "2026-08-23T12:00:00Z",
       "actualStart": "2026-08-23T11:58:54Z",
-      "viewers": 9
+      "viewers": 7
     },
     {
       "id": "WUjgfMOFjEI",
@@ -5522,6 +5458,18 @@
       "actualEnd": "2026-08-23T03:37:36Z"
     },
     {
+      "id": "tw-316347526129",
+      "streamerId": "tw-642951155",
+      "title": "ホラー耐性が強まったので試しにホラワに行ってみる  @murasawacat  #VRChat 【no Bits】",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_murasawacat-640x360.jpg",
+      "url": "https://www.twitch.tv/murasawacat",
+      "status": "live",
+      "actualStart": "2026-08-23T12:13:47Z",
+      "viewers": 10,
+      "isJapanese": true,
+      "platform": "twitch"
+    },
+    {
       "id": "tw-316357125106",
       "streamerId": "tw-1447417079",
       "title": "【VRC】テスト配信＆ホラワ",
@@ -5529,19 +5477,7 @@
       "url": "https://www.twitch.tv/kogimei",
       "status": "live",
       "actualStart": "2026-08-23T09:53:46Z",
-      "viewers": 9,
-      "isJapanese": true,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-316413972723",
-      "streamerId": "tw-1149854388",
-      "title": "メルトンさんのようにowをする あと髪がおかしい",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_haribo1154ne-640x360.jpg",
-      "url": "https://www.twitch.tv/haribo1154ne",
-      "status": "live",
-      "actualStart": "2026-08-23T10:47:11Z",
-      "viewers": 7,
+      "viewers": 10,
       "isJapanese": true,
       "platform": "twitch"
     },
@@ -5553,7 +5489,7 @@
       "url": "https://www.twitch.tv/warotti",
       "status": "live",
       "actualStart": "2026-08-23T11:16:22Z",
-      "viewers": 3,
+      "viewers": 7,
       "isJapanese": true,
       "platform": "twitch"
     },
@@ -5577,19 +5513,19 @@
       "url": "https://www.twitch.tv/zayi",
       "status": "live",
       "actualStart": "2026-08-23T10:03:49Z",
-      "viewers": 375,
+      "viewers": 378,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-318850930420",
-      "streamerId": "tw-1054582397",
-      "title": "jugando vrchiat parte 14",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_skylaque28-640x360.jpg",
-      "url": "https://www.twitch.tv/skylaque28",
+      "id": "tw-316347558641",
+      "streamerId": "tw-1449555808",
+      "title": "1K!!!Meow! Dancing Wiggles Nyanya! [Mute!]Im a Cat/Demon",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_aozoravt-640x360.jpg",
+      "url": "https://www.twitch.tv/aozoravt",
       "status": "live",
-      "actualStart": "2026-08-23T10:23:23Z",
-      "viewers": 120,
+      "actualStart": "2026-08-23T12:20:30Z",
+      "viewers": 76,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5601,7 +5537,7 @@
       "url": "https://www.twitch.tv/manukivt",
       "status": "live",
       "actualStart": "2026-08-23T11:01:08Z",
-      "viewers": 51,
+      "viewers": 54,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5613,31 +5549,7 @@
       "url": "https://www.twitch.tv/resekzwolfy",
       "status": "live",
       "actualStart": "2026-08-23T11:01:12Z",
-      "viewers": 45,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-319918195166",
-      "streamerId": "tw-1270455258",
-      "title": "idk what im doing but idc",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rainingvt-640x360.jpg",
-      "url": "https://www.twitch.tv/rainingvt",
-      "status": "live",
-      "actualStart": "2026-08-22T14:49:13Z",
-      "viewers": 23,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-316702199381",
-      "streamerId": "tw-923127937",
-      "title": "Воскресный вечер. Отдыхаем. #furry #kiritobel #Kirito #furrystreamer",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kiritobelfox-640x360.jpg",
-      "url": "https://www.twitch.tv/kiritobelfox",
-      "status": "live",
-      "actualStart": "2026-08-23T11:31:25Z",
-      "viewers": 22,
+      "viewers": 50,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5649,6 +5561,30 @@
       "url": "https://www.twitch.tv/foxynickeis",
       "status": "live",
       "actualStart": "2026-08-23T11:33:31Z",
+      "viewers": 24,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-316702199381",
+      "streamerId": "tw-923127937",
+      "title": "Воскресный вечер. Отдыхаем. #furry #kiritobel #Kirito #furrystreamer",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kiritobelfox-640x360.jpg",
+      "url": "https://www.twitch.tv/kiritobelfox",
+      "status": "live",
+      "actualStart": "2026-08-23T11:31:25Z",
+      "viewers": 24,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-316772916308",
+      "streamerId": "tw-1131443316",
+      "title": "⭐Танцы / Sweat Session",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_icetouvkka-640x360.jpg",
+      "url": "https://www.twitch.tv/icetouvkka",
+      "status": "live",
+      "actualStart": "2026-08-23T11:59:54Z",
       "viewers": 18,
       "isJapanese": false,
       "platform": "twitch"
@@ -5661,7 +5597,7 @@
       "url": "https://www.twitch.tv/refugevr",
       "status": "live",
       "actualStart": "2026-08-23T02:50:37Z",
-      "viewers": 16,
+      "viewers": 17,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5678,26 +5614,14 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-315983896425",
-      "streamerId": "tw-592375257",
-      "title": "8/23 我要在這裡賺大錢",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nu1014-640x360.jpg",
-      "url": "https://www.twitch.tv/nu1014",
+      "id": "tw-315447481455",
+      "streamerId": "tw-94099476",
+      "title": "Game/Anime Sexy Dance",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kth0224-640x360.jpg",
+      "url": "https://www.twitch.tv/kth0224",
       "status": "live",
-      "actualStart": "2026-08-23T03:31:23Z",
+      "actualStart": "2026-08-23T11:28:37Z",
       "viewers": 12,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-315946121960",
-      "streamerId": "tw-53981727",
-      "title": "【玥叛TV】8/23 薰衣草咖啡廳悄悄開幕中。",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_my0003-640x360.jpg",
-      "url": "https://www.twitch.tv/my0003",
-      "status": "live",
-      "actualStart": "2026-08-23T09:07:48Z",
-      "viewers": 10,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5709,42 +5633,54 @@
       "url": "https://www.twitch.tv/mar_goulin",
       "status": "live",
       "actualStart": "2026-08-23T11:46:52Z",
-      "viewers": 10,
+      "viewers": 12,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-315447481455",
-      "streamerId": "tw-94099476",
-      "title": "Game/Anime Sexy Dance",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kth0224-640x360.jpg",
-      "url": "https://www.twitch.tv/kth0224",
+      "id": "tw-319918195166",
+      "streamerId": "tw-1270455258",
+      "title": "idk what im doing but idc",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rainingvt-640x360.jpg",
+      "url": "https://www.twitch.tv/rainingvt",
       "status": "live",
-      "actualStart": "2026-08-23T11:28:37Z",
-      "viewers": 7,
+      "actualStart": "2026-08-22T14:49:13Z",
+      "viewers": 12,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-316772916308",
-      "streamerId": "tw-1131443316",
-      "title": "⭐Танцы / Sweat Session",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_icetouvkka-640x360.jpg",
-      "url": "https://www.twitch.tv/icetouvkka",
+      "id": "tw-315983896425",
+      "streamerId": "tw-592375257",
+      "title": "8/23 我要在這裡賺大錢",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nu1014-640x360.jpg",
+      "url": "https://www.twitch.tv/nu1014",
       "status": "live",
-      "actualStart": "2026-08-23T11:59:54Z",
-      "viewers": 7,
+      "actualStart": "2026-08-23T03:31:23Z",
+      "viewers": 9,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-316356981618",
-      "streamerId": "tw-122841950",
-      "title": "Ecliptica| WE GON GET YOU JIM",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_vivistreamz-640x360.jpg",
-      "url": "https://www.twitch.tv/vivistreamz",
+      "id": "tw-315946121960",
+      "streamerId": "tw-53981727",
+      "title": "【玥叛TV】8/23 薰衣草咖啡廳悄悄開幕中。",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_my0003-640x360.jpg",
+      "url": "https://www.twitch.tv/my0003",
       "status": "live",
-      "actualStart": "2026-08-23T09:13:29Z",
+      "actualStart": "2026-08-23T09:07:48Z",
+      "viewers": 8,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-318198354023",
+      "streamerId": "tw-1312192978",
+      "title": "HUNTING FOR THE SHOES, Vibin~ ( ENG / HUN )",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_puffy_x3-640x360.jpg",
+      "url": "https://www.twitch.tv/puffy_x3",
+      "status": "live",
+      "actualStart": "2026-08-23T12:30:24Z",
       "viewers": 6,
       "isJapanese": false,
       "platform": "twitch"
@@ -5757,6 +5693,18 @@
       "url": "https://www.twitch.tv/vcvc22222",
       "status": "live",
       "actualStart": "2026-08-23T00:35:33Z",
+      "viewers": 5,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-317298653047",
+      "streamerId": "tw-874483831",
+      "title": "Basshouse and stuff",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lootable_-640x360.jpg",
+      "url": "https://www.twitch.tv/lootable_",
+      "status": "live",
+      "actualStart": "2026-08-23T11:18:38Z",
       "viewers": 5,
       "isJapanese": false,
       "platform": "twitch"
@@ -5786,49 +5734,13 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-315984806249",
-      "streamerId": "tw-693876954",
-      "title": "End of week(end) stream???? OwO",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_agentblacktigerstreams-640x360.jpg",
-      "url": "https://www.twitch.tv/agentblacktigerstreams",
+      "id": "tw-320009073500",
+      "streamerId": "tw-444713607",
+      "title": "working",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_melaninkush-640x360.jpg",
+      "url": "https://www.twitch.tv/melaninkush",
       "status": "live",
-      "actualStart": "2026-08-23T08:31:09Z",
-      "viewers": 4,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-317298653047",
-      "streamerId": "tw-874483831",
-      "title": "Basshouse and stuff",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lootable_-640x360.jpg",
-      "url": "https://www.twitch.tv/lootable_",
-      "status": "live",
-      "actualStart": "2026-08-23T11:18:38Z",
-      "viewers": 4,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318390859366",
-      "streamerId": "tw-406029732",
-      "title": "Grubasek.exe",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_szpicu21-640x360.jpg",
-      "url": "https://www.twitch.tv/szpicu21",
-      "status": "live",
-      "actualStart": "2026-08-22T19:26:32Z",
-      "viewers": 4,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-321074460634",
-      "streamerId": "tw-934329598",
-      "title": "No puedo dormir :v✨ ❤️ !discord Usar chatbot !s ❤️ l|l 🔥",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_muzynya-640x360.jpg",
-      "url": "https://www.twitch.tv/muzynya",
-      "status": "live",
-      "actualStart": "2026-08-23T10:12:48Z",
+      "actualStart": "2026-08-22T03:49:08Z",
       "viewers": 4,
       "isJapanese": false,
       "platform": "twitch"
@@ -5846,37 +5758,25 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-317568079715",
-      "streamerId": "tw-1408669633",
-      "title": "chilling stream",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kaimystery-640x360.jpg",
-      "url": "https://www.twitch.tv/kaimystery",
+      "id": "tw-318396983014",
+      "streamerId": "tw-920823862",
+      "title": "lets go new season",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tedkata_64-640x360.jpg",
+      "url": "https://www.twitch.tv/tedkata_64",
       "status": "live",
-      "actualStart": "2026-08-23T11:14:46Z",
+      "actualStart": "2026-08-23T11:55:28Z",
       "viewers": 3,
       "isJapanese": false,
       "platform": "twitch"
     },
     {
-      "id": "tw-320009073500",
-      "streamerId": "tw-444713607",
-      "title": "working",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_melaninkush-640x360.jpg",
-      "url": "https://www.twitch.tv/melaninkush",
+      "id": "tw-318390859366",
+      "streamerId": "tw-406029732",
+      "title": "Grubasek.exe",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_szpicu21-640x360.jpg",
+      "url": "https://www.twitch.tv/szpicu21",
       "status": "live",
-      "actualStart": "2026-08-22T03:49:08Z",
-      "viewers": 3,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-317956462168",
-      "streamerId": "tw-850053920",
-      "title": "legacy community",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_relic66_-640x360.jpg",
-      "url": "https://www.twitch.tv/relic66_",
-      "status": "live",
-      "actualStart": "2026-08-23T11:34:37Z",
+      "actualStart": "2026-08-22T19:26:32Z",
       "viewers": 2,
       "isJapanese": false,
       "platform": "twitch"
@@ -5894,6 +5794,30 @@
       "platform": "twitch"
     },
     {
+      "id": "tw-320065428960",
+      "streamerId": "tw-1486675383",
+      "title": "streaming join up",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zekiromazz-640x360.jpg",
+      "url": "https://www.twitch.tv/zekiromazz",
+      "status": "live",
+      "actualStart": "2026-08-23T12:12:24Z",
+      "viewers": 2,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-321172435163",
+      "streamerId": "tw-40417799",
+      "title": "Swirl Light vol.3",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_minseulji-640x360.jpg",
+      "url": "https://www.twitch.tv/minseulji",
+      "status": "live",
+      "actualStart": "2026-08-23T11:57:08Z",
+      "viewers": 2,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
       "id": "tw-315466741488",
       "streamerId": "tw-769577655",
       "title": "Vrchat Vr챗 Pypydance JustDance 저댄 DDAK : VR / Game / Etc",
@@ -5901,6 +5825,18 @@
       "url": "https://www.twitch.tv/ddak_kor",
       "status": "live",
       "actualStart": "2026-08-23T12:05:52Z",
+      "viewers": 1,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-316773097172",
+      "streamerId": "tw-1522211060",
+      "title": "Первый стрим!!",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_terry_wanderer0-640x360.jpg",
+      "url": "https://www.twitch.tv/terry_wanderer0",
+      "status": "live",
+      "actualStart": "2026-08-23T12:32:36Z",
       "viewers": 1,
       "isJapanese": false,
       "platform": "twitch"
@@ -5978,30 +5914,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-321010458713",
-      "streamerId": "tw-1449472102",
-      "title": "DANGANRONPA VRCHAT!!!",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lysslolll-640x360.jpg",
-      "url": "https://www.twitch.tv/lysslolll",
-      "status": "live",
-      "actualStart": "2026-08-23T10:29:11Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-321172435163",
-      "streamerId": "tw-40417799",
-      "title": "Swirl Light vol.3",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_minseulji-640x360.jpg",
-      "url": "https://www.twitch.tv/minseulji",
-      "status": "live",
-      "actualStart": "2026-08-23T11:57:08Z",
-      "viewers": 1,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-321172414427",
       "streamerId": "tw-582544503",
       "title": "wake and bake on vr",
@@ -6009,9 +5921,67 @@
       "url": "https://www.twitch.tv/kingkevvgoffical",
       "status": "live",
       "actualStart": "2026-08-23T11:53:22Z",
+      "viewers": 1,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-321172586203",
+      "streamerId": "tw-95853960",
+      "title": "talking about spiffy",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_i_link_-640x360.jpg",
+      "url": "https://www.twitch.tv/i_link_",
+      "status": "live",
+      "actualStart": "2026-08-23T12:26:04Z",
+      "viewers": 1,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-315961206995",
+      "streamerId": "tw-667232823",
+      "title": "hey Fortnite Epic Tree Challenge Never stop till i win English PewLookAlike",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_pewalike-640x360.jpg",
+      "url": "https://www.twitch.tv/pewalike",
+      "status": "live",
+      "actualStart": "2026-08-23T12:16:11Z",
       "viewers": 0,
       "isJapanese": false,
       "platform": "twitch"
+    },
+    {
+      "id": "tw-316728901590",
+      "streamerId": "tw-1451321468",
+      "title": "join up or your gey",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_milo67uqt-640x360.jpg",
+      "url": "https://www.twitch.tv/milo67uqt",
+      "status": "live",
+      "actualStart": "2026-08-23T12:17:16Z",
+      "viewers": 0,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "nico-lv351240722",
+      "streamerId": "nico-1018604",
+      "title": "【FE】千紫万紅が楽しみすぎるのでFEやる編",
+      "thumbnail": "https://asset2.dlive.nicovideo.jp/bf2a/6a8aeb0680f0425ab12612ec/screenshot/123/thumbnail-352x198/screenshot.jpg",
+      "url": "https://live.nicovideo.jp/watch/lv351240722",
+      "status": "live",
+      "actualStart": "2026-08-23T12:43:55.000Z",
+      "isJapanese": true,
+      "platform": "niconico"
+    },
+    {
+      "id": "nico-lv351240563",
+      "streamerId": "nico-592838",
+      "title": "【バニーさんの日】バニーさんに囲まれたい凸待ち【Vtuber】",
+      "thumbnail": "https://listing-thumbnail.live.nicovideo.jp?image=prod-lv351240563/thumbnail_1787487930020.png&w=352&h=198&v=1787487949085",
+      "url": "https://live.nicovideo.jp/watch/lv351240563",
+      "status": "live",
+      "actualStart": "2026-08-23T12:30:00.000Z",
+      "isJapanese": true,
+      "platform": "niconico"
     },
     {
       "id": "nico-lv351239819",
@@ -6021,17 +5991,6 @@
       "url": "https://live.nicovideo.jp/watch/lv351239819",
       "status": "live",
       "actualStart": "2026-08-23T12:00:00.000Z",
-      "isJapanese": true,
-      "platform": "niconico"
-    },
-    {
-      "id": "nico-lv351239660",
-      "streamerId": "nico-428931",
-      "title": "[だが男だ] 484　色々お勉強したいねってお話",
-      "thumbnail": "https://asset2.dlive.nicovideo.jp/fb7a/6a8acfdc7e4a9f3d700b3637/screenshot/123/thumbnail-352x198/screenshot.jpg",
-      "url": "https://live.nicovideo.jp/watch/lv351239660",
-      "status": "live",
-      "actualStart": "2026-08-23T10:50:18.000Z",
       "isJapanese": true,
       "platform": "niconico"
     },
