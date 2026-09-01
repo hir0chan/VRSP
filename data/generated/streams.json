@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T01:45:36.960Z",
+  "updatedAt": "2026-09-01T01:46:32.958Z",
   "tracked": [
     {
       "id": "Wu3akIMIq6A",
@@ -94,7 +94,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-18T19:35:00Z",
       "actualStart": "2026-08-18T19:37:11Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "mtDw_vNBszw",
@@ -2479,8 +2479,7 @@
       "status": "live",
       "isJapanese": true,
       "scheduledStart": "2026-08-31T23:31:36Z",
-      "actualStart": "2026-08-31T23:31:46Z",
-      "viewers": 1
+      "actualStart": "2026-08-31T23:31:46Z"
     },
     {
       "id": "MbVGfgtsCx0",
@@ -2626,7 +2625,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-09-01T00:34:53Z",
       "actualStart": "2026-09-01T00:35:07Z",
-      "viewers": 67
+      "viewers": 88
     }
   ],
   "streams": [
@@ -2713,7 +2712,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-08-18T19:35:00Z",
       "actualStart": "2026-08-18T19:37:11Z",
-      "viewers": 2
+      "viewers": 3
     },
     {
       "id": "mtDw_vNBszw",
@@ -5088,8 +5087,7 @@
       "status": "live",
       "isJapanese": true,
       "scheduledStart": "2026-08-31T23:31:36Z",
-      "actualStart": "2026-08-31T23:31:46Z",
-      "viewers": 1
+      "actualStart": "2026-08-31T23:31:46Z"
     },
     {
       "id": "MbVGfgtsCx0",
@@ -5235,7 +5233,7 @@
       "isJapanese": false,
       "scheduledStart": "2026-09-01T00:34:53Z",
       "actualStart": "2026-09-01T00:35:07Z",
-      "viewers": 67
+      "viewers": 88
     },
     {
       "id": "tw-316385251569",
@@ -5246,6 +5244,18 @@
       "status": "live",
       "actualStart": "2026-08-31T22:12:24Z",
       "viewers": 18,
+      "isJapanese": true,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-316452758131",
+      "streamerId": "tw-475832165",
+      "title": "音ズレてたら教えてほしい たまには歌おう",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_garou015-640x360.jpg",
+      "url": "https://www.twitch.tv/garou015",
+      "status": "live",
+      "actualStart": "2026-09-01T01:40:05Z",
+      "viewers": 1,
       "isJapanese": true,
       "platform": "twitch"
     },
@@ -5293,7 +5303,7 @@
       "url": "https://www.twitch.tv/krisuna",
       "status": "live",
       "actualStart": "2026-08-31T23:55:36Z",
-      "viewers": 182,
+      "viewers": 185,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5425,7 +5435,7 @@
       "url": "https://www.twitch.tv/merlinvibes",
       "status": "live",
       "actualStart": "2026-09-01T00:15:29Z",
-      "viewers": 37,
+      "viewers": 34,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5437,7 +5447,7 @@
       "url": "https://www.twitch.tv/gloryboxvr",
       "status": "live",
       "actualStart": "2026-09-01T00:59:56Z",
-      "viewers": 33,
+      "viewers": 34,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5466,18 +5476,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-321320336475",
-      "streamerId": "tw-145848145",
-      "title": "Moving donations still going and Vrchat.",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_candykittyttv-640x360.jpg",
-      "url": "https://www.twitch.tv/candykittyttv",
-      "status": "live",
-      "actualStart": "2026-08-31T23:45:55Z",
-      "viewers": 24,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-320046292446",
       "streamerId": "tw-93640684",
       "title": "Reo Ginan - Mage Like Things in Aether! (Aether Chronicles RP!)",
@@ -5502,6 +5500,18 @@
       "platform": "twitch"
     },
     {
+      "id": "tw-321320336475",
+      "streamerId": "tw-145848145",
+      "title": "Moving donations still going and Vrchat.",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_candykittyttv-640x360.jpg",
+      "url": "https://www.twitch.tv/candykittyttv",
+      "status": "live",
+      "actualStart": "2026-08-31T23:45:55Z",
+      "viewers": 21,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
       "id": "tw-317357698167",
       "streamerId": "tw-1028624231",
       "title": "Episode 1.6.0:  Another Pointless Show!",
@@ -5509,7 +5519,7 @@
       "url": "https://www.twitch.tv/kyroraz",
       "status": "live",
       "actualStart": "2026-09-01T01:01:07Z",
-      "viewers": 18,
+      "viewers": 19,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5550,6 +5560,18 @@
       "platform": "twitch"
     },
     {
+      "id": "tw-318925583988",
+      "streamerId": "tw-259900976",
+      "title": "Oiê :3",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sashi_sh-640x360.jpg",
+      "url": "https://www.twitch.tv/sashi_sh",
+      "status": "live",
+      "actualStart": "2026-09-01T01:18:10Z",
+      "viewers": 15,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
       "id": "tw-320134416348",
       "streamerId": "tw-150814440",
       "title": "The 2nd Redeemed VRChat Stream",
@@ -5557,7 +5579,19 @@
       "url": "https://www.twitch.tv/tooterbootertv",
       "status": "live",
       "actualStart": "2026-08-31T16:26:26Z",
-      "viewers": 14,
+      "viewers": 15,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-318430178277",
+      "streamerId": "tw-1180643052",
+      "title": "Wardens (Layla) - S184",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kanta_storie-640x360.jpg",
+      "url": "https://www.twitch.tv/kanta_storie",
+      "status": "live",
+      "actualStart": "2026-08-31T23:26:52Z",
+      "viewers": 13,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5570,18 +5604,6 @@
       "status": "live",
       "actualStart": "2026-08-31T22:37:14Z",
       "viewers": 13,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318925583988",
-      "streamerId": "tw-259900976",
-      "title": "Oiê :3",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sashi_sh-640x360.jpg",
-      "url": "https://www.twitch.tv/sashi_sh",
-      "status": "live",
-      "actualStart": "2026-09-01T01:18:10Z",
-      "viewers": 12,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5678,18 +5700,6 @@
       "status": "live",
       "actualStart": "2026-09-01T00:38:30Z",
       "viewers": 9,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
-      "id": "tw-318430178277",
-      "streamerId": "tw-1180643052",
-      "title": "Wardens (Layla) - S184",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kanta_storie-640x360.jpg",
-      "url": "https://www.twitch.tv/kanta_storie",
-      "status": "live",
-      "actualStart": "2026-08-31T23:26:52Z",
-      "viewers": 8,
       "isJapanese": false,
       "platform": "twitch"
     },
@@ -5814,18 +5824,6 @@
       "platform": "twitch"
     },
     {
-      "id": "tw-321319993819",
-      "streamerId": "tw-157124828",
-      "title": "VRChat Time! | Bits redeem coming soon.",
-      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_whitenova025-640x360.jpg",
-      "url": "https://www.twitch.tv/whitenova025",
-      "status": "live",
-      "actualStart": "2026-08-31T23:31:36Z",
-      "viewers": 6,
-      "isJapanese": false,
-      "platform": "twitch"
-    },
-    {
       "id": "tw-316039328746",
       "streamerId": "tw-187624169",
       "title": "[SOE] Wardens of Leefside | NPCing (!gg !discord)",
@@ -5845,6 +5843,18 @@
       "url": "https://www.twitch.tv/ravfall",
       "status": "live",
       "actualStart": "2026-09-01T00:29:25Z",
+      "viewers": 5,
+      "isJapanese": false,
+      "platform": "twitch"
+    },
+    {
+      "id": "tw-320045317598",
+      "streamerId": "tw-522009540",
+      "title": "Wanna play Darling? <3",
+      "thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nara_vt_-640x360.jpg",
+      "url": "https://www.twitch.tv/nara_vt_",
+      "status": "live",
+      "actualStart": "2026-08-31T23:58:33Z",
       "viewers": 5,
       "isJapanese": false,
       "platform": "twitch"
